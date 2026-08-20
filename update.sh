@@ -4,7 +4,7 @@ set -e
 
 trap 'echo "UPDATE FAILED at line $LINENO" >> /var/log/mihomo-generator.log' ERR
 
-cd /root/Mihomo-Router-Generator-NG
+cd "$(dirname "$0")"
 
 LOG=/var/log/mihomo-generator.log
 

@@ -5,8 +5,12 @@ import json
 import configparser
 
 
-UPLOADED_DIR = "/root/Mihomo-Router-Generator-NG/UPLOADED"
-CACHE_DIR = "/root/Mihomo-Router-Generator-NG/cache/providers"
+from pathlib import Path
+
+BASE_DIR = Path(__file__).resolve().parents[3]
+
+UPLOADED_DIR = BASE_DIR / "UPLOADED"
+CACHE_DIR = BASE_DIR / "cache/providers"
 OUTPUT = os.path.join(CACHE_DIR, "uploaded-custom.json")
 
 
