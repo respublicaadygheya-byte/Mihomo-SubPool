@@ -2,6 +2,7 @@ import json
 from pathlib import Path
 
 
+IMPORTED = Path("cache/imported/proxies.json")
 AVAILABLE = Path("cache/filtered/available.json")
 UPLOADED = Path("cache/providers/uploaded-custom.json")
 OUTPUT = Path("cache/filtered/all.json")
@@ -26,10 +27,12 @@ def load_json(path):
 
 
 def main():
+    imported = load_json(IMPORTED)
     available = load_json(AVAILABLE)
     uploaded = load_json(UPLOADED)
 
     proxies = []
+    proxies.extend(imported)
     proxies.extend(available)
     proxies.extend(uploaded)
 
@@ -44,6 +47,7 @@ def main():
         )
 
     print("=== MERGE RESULT ===")
+    print(f"Imported:  {len(imported)}")
     print(f"Available: {len(available)}")
     print(f"Uploaded:  {len(uploaded)}")
     print("WARP:      0")

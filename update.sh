@@ -10,6 +10,18 @@ LOG=/var/log/mihomo-generator.log
 
 echo "=== START UPDATE $(date) ===" >> "$LOG"
 
+mkdir -p cache/imported
+
+rm -f cache/imported/raw_proxies.txt
+rm -f cache/imported/proxies.json
+
+python3 src/importer.py \
+    cache/imported/raw_proxies.txt >> "$LOG" 2>&1
+
+python3 src/parser.py \
+    cache/imported/raw_proxies.txt \
+    cache/imported/proxies.json >> "$LOG" 2>&1
+
 python3 -m src.providers.uploaded.provider >> "$LOG" 2>&1
 
 python3 src/merge_providers.py >> "$LOG" 2>&1
