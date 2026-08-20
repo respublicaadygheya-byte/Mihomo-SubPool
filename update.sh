@@ -1,74 +1,45 @@
 #!/bin/bash
+
 set -e
 
-echo "=============================="
-echo "CLASH META ROUTER GENERATOR"
-echo "=============================="
+trap 'echo "UPDATE FAILED at line $LINENO" >> /var/log/mihomo-generator.log' ERR
 
-echo "[1/4] Import sources"
-rm -rf cache/imported/* cache/filtered/*
-mkdir -p cache/imported cache/filtered
+cd /root/Mihomo-Router-Generator-NG
 
-python3 src/importer.py cache/imported/raw_proxies.txt
-python3 src/parser.py cache/imported/raw_proxies.txt cache/imported/proxies.json
+LOG=/var/log/mihomo-generator.log
 
-COUNT=$(jq '. | length' cache/imported/proxies.json 2>/dev/null || echo "0")
-echo "  Proxy imported: $COUNT"
+echo "=== START UPDATE $(date) ===" >> "$LOG"
 
-echo "[2/4] Check proxies"
-python3 src/checker.py cache/imported/proxies.json cache/filtered/available.json
+python3 -m src.providers.uploaded.provider >> "$LOG" 2>&1
 
-AVAIL=$(jq '. | length' cache/filtered/available.json 2>/dev/null || echo "0")
-echo "  Working proxies: $AVAIL"
+python3 src/merge_providers.py >> "$LOG" 2>&1
 
-echo "[3/4] Generate WARP providers"
+python3 src/checker.py \
+    cache/filtered/all.json \
+    cache/filtered/available.json \
+    cache/filtered/available.diagnostics.json >> "$LOG" 2>&1
 
-# python3 -m src.providers.warp.provider
+cp cache/filtered/available.json cache/filtered/all.json
 
-echo "[3/4] Generate WARP MASQUE providers"
+python3 src/merge_providers.py >> "$LOG" 2>&1
 
-# python3 -m src.providers.warp.masque.provider
-
-echo "[3/4] Merge proxy pool"
-
-python3 src/merge_providers.py
-
-POOL_COUNT=$(jq '. | length' cache/filtered/all.json 2>/dev/null || echo "0")
-echo "  Proxy pool: $POOL_COUNT"
-
-echo "[4/4] Generate config"
 python3 src/generator.py \
     --proxies cache/filtered/all.json \
     --ru-direct domains:lists/ru_direct_domains.txt \
     --ru-direct ips:lists/ru_direct_ips.txt \
-    --output publish/mihomo.yaml
+    --output publish/mihomo.yaml >> "$LOG" 2>&1
 
-echo "[5/5] Validate generated config with Mihomo"
-python3 src/filter_mihomo.py \
-    publish/mihomo.yaml \
-    publish/mihomo-filtered.yaml
-
-mv publish/mihomo-filtered.yaml publish/mihomo.yaml
 cp publish/mihomo.yaml publish/openclash.yaml
-
-echo "=============================="
-echo "UPDATE COMPLETE"
-echo "=============================="
-ls -lh publish/
-
-echo
-echo "Checking Git changes..."
-
-cd /root/Mihomo-Router-Generator-NG
 
 git add -f publish/mihomo.yaml publish/openclash.yaml
 
 if git diff --cached --quiet; then
-    echo "No config changes detected."
+    echo "No changes" >> "$LOG"
 else
-    git commit -m "Auto-update Mihomo configs: $(date '+%Y-%m-%d %H:%M:%S')"
-    git push origin main
-    echo "GitHub push completed."
+    git commit -m "Auto-update Mihomo configs $(date '+%Y-%m-%d %H:%M:%S')" >> "$LOG" 2>&1
+    git push >> "$LOG" 2>&1
 fi
 
-echo "Auto update finished: $(date)"
+echo "=== UPDATE COMPLETE $(date) ===" >> "$LOG"
+
+exit 0

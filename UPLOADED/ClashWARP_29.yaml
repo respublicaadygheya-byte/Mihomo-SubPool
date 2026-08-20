@@ -1,0 +1,109 @@
+msq: &msq
+  type: masque
+  private-key: MHcCAQEEIGzkG4xxAsnGF2y8/T5kP1UU01VQkfgZw5K9nBx2b5LioAoGCCqGSM49AwEHoUQDQgAEfUPI23q4fG/AAcyVFCCSPiPwTlmBqd9cjvmS7kuGpkNFLyQTG7BFkXEBr6w4KzWU5FclqIzcxwIpWXMM5NnHSg==
+  public-key: MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==
+  ip: 172.16.0.2
+  ipv6: 2606:4700:110:809f:f8dd:7e3b:e033:3531
+  mtu: 1280
+  udp: true
+  remote-dns-resolve: true
+  dns: [1.1.1.1, 1.0.0.1, 2606:4700:4700::1111, 2606:4700:4700::1001]  
+  
+warp-common: &warp-common
+  type: wireguard
+  ip: 172.16.0.2
+  ipv6: 2606:4700:110:8e5f:e687:82aa:bd9b:da9a
+  private-key: mlHR/Xomqs63jlaryRVpZOndFzPvWK5DolXylLVHSeU=
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  allowed-ips: ['0.0.0.0/0']
+  udp: true
+  mtu: 1280
+  remote-dns-resolve: true
+  dns: [1.1.1.1, 1.0.0.1, 2606:4700:4700::1111, 2606:4700:4700::1001]
+  amnezia-wg-option:
+   jc: 4
+   jmin: 40
+   jmax: 70
+   s1: 0
+   s2: 0
+   h1: 1
+   h2: 2
+   h3: 3
+   h4: 4  
+   i1: <b 0xc800000001018800002b45615e996de27ff5ec5f583061ab38eac69fd8fec356802847cd1c7c15a87402bb0a433d4054defedc066e>
+
+proxies:
+- name: "🇵🇱 PL"
+  <<: [ *warp-common ]
+  server: pl.tribukvy.ltd
+  port: 500
+- name: "🇳🇱 NL"
+  <<: [ *warp-common ]
+  server: nl.tribukvy.ltd
+  port: 500  
+- name: "🇫🇮 FI"
+  <<: [ *warp-common ]
+  server: fi.tribukvy.ltd
+  port: 500
+- name: "🇷🇺 RU"
+  <<: [ *warp-common ]
+  server: ru0.tribukvy.ltd
+  port: 500
+- name: "🇱🇻 LV"
+  <<: [ *warp-common ]
+  server: lv.tribukvy.ltd
+  port: 500
+- name: "🇩🇪 DE"
+  <<: [ *warp-common ]
+  server: de.tribukvy.ltd
+  port: 500
+- name: "🇪🇪 EE"
+  <<: [ *warp-common ]
+  server: ee.tribukvy.ltd
+  port: 500  
+  
+- name: "[LTE] 🇵🇱 PL"
+  <<: [ *warp-common ]
+  server: tel.pl.tribukvy.ltd
+  port: 500
+- name: "[LTE] 🇩🇪 DE"
+  <<: [ *warp-common ]
+  server: tel.de.tribukvy.ltd
+  port: 500  
+- name: "[LTE] 🇫🇮 FI"
+  <<: [ *warp-common ]
+  server: tel.fi.tribukvy.ltd
+  port: 500
+- name: "MASQUE"
+  server: 162.159.198.2
+  port: 443
+  sni: 4pda.to
+  <<: *msq
+- name: "MASQUE h2"
+  server: 162.159.198.2
+  port: 443
+  sni: 4pda.to
+  network: h2
+  <<: *msq
+    
+proxy-groups:
+- name: WARP + llimonix
+  type: select
+  icon: https://www.vectorlogo.zone/logos/cloudflare/cloudflare-icon.svg
+  proxies:
+    - "MASQUE"
+    - "MASQUE h2"
+    - "🇵🇱 PL"
+    - "🇳🇱 NL"
+    - "🇫🇮 FI"
+    - "🇷🇺 RU"
+    - "🇱🇻 LV"
+    - "🇩🇪 DE"
+    - "🇪🇪 EE"
+    - "[LTE] 🇵🇱 PL"
+    - "[LTE] 🇫🇮 FI"
+    - "[LTE] 🇩🇪 DE"
+  url: 'http://speed.cloudflare.com/'
+  interval: 300
+rules:
+- MATCH,WARP + llimonix

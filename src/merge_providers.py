@@ -1,52 +1,41 @@
 import json
 from pathlib import Path
 
-try:
-    from src.warp_storage import merge_warp_history
-except ModuleNotFoundError:
-    from warp_storage import merge_warp_history
-
 
 AVAILABLE = Path("cache/filtered/available.json")
-WARP = Path("cache/providers/warp.json")
-WARP_MASQUE = Path("cache/providers/warp-masque.json")
+UPLOADED = Path("cache/providers/uploaded-custom.json")
 OUTPUT = Path("cache/filtered/all.json")
 
 
 def load_json(path):
-
     if not path.exists():
         return []
 
-    with open(
-        path,
-        "r",
-        encoding="utf-8"
-    ) as f:
+    try:
+        with open(path, "r", encoding="utf-8") as f:
+            data = json.load(f)
+    except Exception as e:
+        print(f"[MERGE] Error reading {path}: {e}")
+        return []
 
-        return json.load(f)
+    if not isinstance(data, list):
+        print(f"[MERGE] WARNING: {path} does not contain a list")
+        return []
+
+    return data
 
 
 def main():
+    available = load_json(AVAILABLE)
+    uploaded = load_json(UPLOADED)
 
     proxies = []
-
-    available = load_json(AVAILABLE)
-    warp = load_json(WARP)
-    warp_masque = load_json(WARP_MASQUE)
-
-    warp = merge_warp_history(warp)
-
     proxies.extend(available)
-    proxies.extend(warp)
-    proxies.extend(warp_masque)
+    proxies.extend(uploaded)
 
-    with open(
-        OUTPUT,
-        "w",
-        encoding="utf-8"
-    ) as f:
+    OUTPUT.parent.mkdir(parents=True, exist_ok=True)
 
+    with open(OUTPUT, "w", encoding="utf-8") as f:
         json.dump(
             proxies,
             f,
@@ -54,11 +43,13 @@ def main():
             ensure_ascii=False
         )
 
+    print("=== MERGE RESULT ===")
     print(f"Available: {len(available)}")
-    print(f"WARP: {len(warp)}")
-    print(f"Total: {len(proxies)}")
+    print(f"Uploaded:  {len(uploaded)}")
+    print("WARP:      0")
+    print("MASQUE:    0")
+    print(f"Total:     {len(proxies)}")
 
 
 if __name__ == "__main__":
-
     main()
