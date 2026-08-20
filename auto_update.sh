@@ -3,7 +3,7 @@ set -e
 
 export PATH=/usr/local/go/bin:/usr/local/bin:/usr/bin:/bin
 
-cd /root/Mihomo-Router-Generator-NG
+cd /root/Mihomo-SubPool
 
 echo "========================================"
 echo "MIHOMO AUTO UPDATE"
