@@ -37,8 +37,6 @@ python3 src/merge_providers.py >> "$LOG" 2>&1
 
 python3 src/generator.py \
     --proxies cache/filtered/all.json \
-    --ru-direct domains:lists/ru_direct_domains.txt \
-    --ru-direct ips:lists/ru_direct_ips.txt \
     --output publish/mihomo.yaml >> "$LOG" 2>&1
 
 cp publish/mihomo.yaml publish/openclash.yaml

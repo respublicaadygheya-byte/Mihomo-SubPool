@@ -4,6 +4,8 @@ import glob
 import json
 import configparser
 
+from src.core.fingerprint import proxy_fingerprint
+
 
 from pathlib import Path
 
@@ -12,6 +14,37 @@ BASE_DIR = Path(__file__).resolve().parents[3]
 UPLOADED_DIR = BASE_DIR / "UPLOADED"
 CACHE_DIR = BASE_DIR / "cache/providers"
 OUTPUT = os.path.join(CACHE_DIR, "uploaded-custom.json")
+
+
+def deduplicate_proxies(proxies):
+    """
+    Remove technical duplicates.
+    Names and source filenames are ignored.
+    """
+
+    result = []
+    seen = set()
+
+    removed = 0
+
+    for proxy in proxies:
+        fp = proxy_fingerprint(proxy)
+
+        if fp in seen:
+            removed += 1
+            continue
+
+        seen.add(fp)
+        result.append(proxy)
+
+    print()
+    print("=== UPLOADED DEDUPE ===")
+    print(f"Before: {len(proxies)}")
+    print(f"After:  {len(result)}")
+    print(f"Removed:{removed}")
+
+    return result
+
 
 
 def normalize_proxy(proxy, source_file=None):
@@ -283,7 +316,7 @@ def main():
         if proxy:
             normalized.append(proxy)
 
-    all_proxies = normalized
+    all_proxies = deduplicate_proxies(normalized)
 
     with open(OUTPUT, "w", encoding="utf-8") as f:
         json.dump(

@@ -114,29 +114,16 @@ def generate_config(proxy_list, ru_domains, ru_ips):
         proxies.append(p)
 
     # --------------------------------------------------------
-    # DIRECT: только RU domains/IP.
+    # GEO ROUTING
+    # RU -> DIRECT
+    # Everything else -> PROXY
     # --------------------------------------------------------
 
-    rules = []
-
-    for domain in ru_domains:
-        domain = domain.strip().lower()
-
-        if domain and not domain.startswith('#'):
-            rules.append(
-                f"DOMAIN-SUFFIX,{domain},DIRECT"
-            )
-
-    for ip in ru_ips:
-        ip = ip.strip()
-
-        if ip and not ip.startswith('#'):
-            rules.append(
-                f"IP-CIDR,{ip},DIRECT,no-resolve"
-            )
-
-    # Всё остальное -> PROXY
-    rules.append("MATCH,PROXY")
+    rules = [
+        "GEOSITE,category-ru,DIRECT",
+        "GEOIP,RU,DIRECT,no-resolve",
+        "MATCH,PROXY"
+    ]
 
     # --------------------------------------------------------
     # Целевая схема:
@@ -227,23 +214,41 @@ def generate_config(proxy_list, ru_domains, ru_ips):
         'allow-lan': True,
         'bind-address': '*',
         'mode': 'rule',
-        'log-level': 'warning',
+        'log-level': 'info',
         'external-controller': '127.0.0.1:9090',
+
+        'dns': {
+            'enable': True,
+            'listen': '0.0.0.0:1053',
+            'enhanced-mode': 'fake-ip',
+            'fake-ip-range': '198.18.0.1/16',
+            'nameserver': [
+                'https://1.1.1.1/dns-query',
+                'https://8.8.8.8/dns-query'
+            ]
+        },
+
+        'sniffer': {
+            'enable': True,
+            'parse-pure-ip': True,
+            'override-destination': False
+        },
 
         'proxies': proxies,
 
         'proxy-groups': [
+
             {
                 'name': 'PROXY',
                 'type': 'select',
                 'proxies': (
-                    (['FOREIGN'] if vpn_names else [])
+                    (['🔥 AWG AUTO'] if awg_names else [])
                     + (['🚀 WARP AUTO'] if warp_names else [])
-                    + (['🔥 AWG AUTO'] if awg_names else [])
                     + (['🌀 MASQUE AUTO'] if masque_names else [])
-                    + ['DIRECT']
+                    + (['FOREIGN'] if vpn_names else [])
                 )
             },
+
             *(
                 [{
                     'name': 'FOREIGN',
@@ -255,17 +260,7 @@ def generate_config(proxy_list, ru_domains, ru_ips):
                 }]
                 if vpn_names else []
             ),
-            *(
-                [{
-                    'name': '🚀 WARP AUTO',
-                    'type': 'url-test',
-                    'url': 'http://cp.cloudflare.com/generate_204',
-                    'interval': 300,
-                    'tolerance': 50,
-                    'proxies': warp_names
-                }]
-                if warp_names else []
-            ),
+
             *(
                 [{
                     'name': '🔥 AWG AUTO',
@@ -277,6 +272,19 @@ def generate_config(proxy_list, ru_domains, ru_ips):
                 }]
                 if awg_names else []
             ),
+
+            *(
+                [{
+                    'name': '🚀 WARP AUTO',
+                    'type': 'url-test',
+                    'url': 'http://cp.cloudflare.com/generate_204',
+                    'interval': 300,
+                    'tolerance': 50,
+                    'proxies': warp_names
+                }]
+                if warp_names else []
+            ),
+
             *(
                 [{
                     'name': '🌀 MASQUE AUTO',
@@ -316,12 +324,6 @@ def main():
     )
 
     parser.add_argument(
-        '--ru-direct',
-        action='append',
-        help='RU direct lists'
-    )
-
-    parser.add_argument(
         '--output',
         required=True,
         help='Output file'
@@ -350,19 +352,6 @@ def main():
     ru_ips = []
 
 
-    if args.ru_direct:
-
-        for item in args.ru_direct:
-
-            if ':' in item:
-
-                typ, path = item.split(':', 1)
-
-                if typ == 'domains':
-                    ru_domains.extend(load_list(path))
-
-                elif typ == 'ips':
-                    ru_ips.extend(load_list(path))
 
 
     # --------------------------------------------------------
