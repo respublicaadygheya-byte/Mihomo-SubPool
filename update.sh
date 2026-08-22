@@ -24,7 +24,7 @@ python3 src/parser.py \
 
 python3 -m src.providers.uploaded.provider >> "$LOG" 2>&1
 
-python3 src/merge_providers.py >> "$LOG" 2>&1
+python3 -m src.merge_providers >> "$LOG" 2>&1
 
 python3 src/checker.py \
     cache/filtered/all.json \
@@ -33,11 +33,19 @@ python3 src/checker.py \
 
 cp cache/filtered/available.json cache/filtered/all.json
 
-python3 src/merge_providers.py >> "$LOG" 2>&1
-
 python3 src/generator.py \
     --proxies cache/filtered/all.json \
     --output publish/mihomo.yaml >> "$LOG" 2>&1
+
+echo "=== FINAL MIHOMO CONFIG VALIDATION ===" >> "$LOG"
+
+if ! ./bin/mihomo -t -f publish/mihomo.yaml >> "$LOG" 2>&1; then
+    echo "ERROR: Generated Mihomo config failed validation" | tee -a "$LOG"
+    echo "ERROR: Git push aborted" | tee -a "$LOG"
+    exit 1
+fi
+
+echo "=== MIHOMO CONFIG VALIDATION PASSED ===" >> "$LOG"
 
 cp publish/mihomo.yaml publish/openclash.yaml
 
