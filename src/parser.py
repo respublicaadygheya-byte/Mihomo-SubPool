@@ -104,6 +104,21 @@ def parse_vless(link):
             if ws_opts:
                 proxy["ws-opts"] = ws_opts
 
+        if params.get("type") == "httpupgrade":
+            ws_opts = {}
+
+            if params.get("path"):
+                ws_opts["path"] = params["path"]
+
+            if params.get("eh"):
+                ws_opts["early-data-header-name"] = params["eh"]
+
+            if params.get("ed"):
+                ws_opts["v2ray-http-upgrade-fast-open"] = True
+
+            if ws_opts:
+                proxy["ws-opts"] = ws_opts
+
 
         if params.get("type") == "grpc":
             grpc_opts = {}
