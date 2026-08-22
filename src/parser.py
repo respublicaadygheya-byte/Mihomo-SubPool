@@ -46,6 +46,9 @@ def parse_vless(link):
 
         server, port = server_port.rsplit(":", 1)
 
+        if server.startswith("[") and server.endswith("]"):
+            server = server[1:-1]
+
         proxy = {
             "name": name,
             "type": "vless",
@@ -67,20 +70,29 @@ def parse_vless(link):
         if "flow" in params and params["flow"]:
             proxy["flow"] = params["flow"]
 
+        packet_encoding = params.get("packetEncoding")
+
+        if packet_encoding == "packet":
+            proxy["packet-addr"] = True
+        elif packet_encoding != "none":
+            proxy["xudp"] = True
+
         security = params.get("security")
 
         if security == "reality":
-            public_key = params.get("pbk")
-            if not public_key:
-                return None
-
             proxy["tls"] = True
-            reality_opts = {"public-key": public_key}
 
-            if params.get("sid"):
-                reality_opts["short-id"] = params["sid"]
+            public_key = params.get("pbk")
 
-            proxy["reality-opts"] = reality_opts
+            if public_key:
+                reality_opts = {
+                    "public-key": public_key
+                }
+
+                if params.get("sid"):
+                    reality_opts["short-id"] = params["sid"]
+
+                proxy["reality-opts"] = reality_opts
 
             if params.get("sni"):
                 proxy["servername"] = params["sni"]
@@ -97,12 +109,40 @@ def parse_vless(link):
 
         if params.get("type") == "ws":
             ws_opts = {}
+
             if params.get("path"):
-                ws_opts["path"] = params["path"]
-            if params.get("host"):
-                ws_opts["headers"] = {"Host": params["host"]}
-            if ws_opts:
-                proxy["ws-opts"] = ws_opts
+                path = params["path"]
+
+                if "?ed=" in path:
+                    try:
+                        base_path, ed_part = path.split("?ed=", 1)
+                        ed = ed_part.split("&", 1)[0]
+
+                        ws_opts["path"] = base_path
+                        ws_opts["max-early-data"] = int(ed)
+
+                    except ValueError:
+                        ws_opts["path"] = path
+                else:
+                    ws_opts["path"] = path
+
+            ws_opts["headers"] = {
+                "User-Agent": "Mozilla/5.0",
+                "Host": params.get("host", "")
+            }
+
+            if params.get("ed"):
+                try:
+                    ws_opts["max-early-data"] = int(params["ed"])
+                except ValueError:
+                    pass
+
+            if params.get("eh"):
+                ws_opts["early-data-header-name"] = params["eh"]
+            elif "max-early-data" in ws_opts:
+                ws_opts["early-data-header-name"] = "Sec-WebSocket-Protocol"
+
+            proxy["ws-opts"] = ws_opts
 
         if params.get("type") == "httpupgrade":
             ws_opts = {}
@@ -110,14 +150,18 @@ def parse_vless(link):
             if params.get("path"):
                 ws_opts["path"] = params["path"]
 
+            ws_opts["headers"] = {
+                "User-Agent": "Mozilla/5.0",
+                "Host": params.get("host", "")
+            }
+
             if params.get("eh"):
                 ws_opts["early-data-header-name"] = params["eh"]
 
             if params.get("ed"):
                 ws_opts["v2ray-http-upgrade-fast-open"] = True
 
-            if ws_opts:
-                proxy["ws-opts"] = ws_opts
+            proxy["ws-opts"] = ws_opts
 
 
         if params.get("type") == "grpc":
@@ -125,9 +169,6 @@ def parse_vless(link):
 
             if params.get("serviceName"):
                 grpc_opts["grpc-service-name"] = params["serviceName"]
-
-            if params.get("authority"):
-                grpc_opts["grpc-authority"] = params["authority"]
 
             if grpc_opts:
                 proxy["grpc-opts"] = grpc_opts
@@ -179,6 +220,9 @@ def parse_hysteria2(link):
             return None
 
         server, port = server_port.rsplit(":", 1)
+
+        if server.startswith("[") and server.endswith("]"):
+            server = server[1:-1]
 
         proxy = {
             "name": name,
