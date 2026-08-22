@@ -104,6 +104,36 @@ def parse_vless(link):
             if ws_opts:
                 proxy["ws-opts"] = ws_opts
 
+
+        if params.get("type") == "grpc":
+            grpc_opts = {}
+
+            if params.get("serviceName"):
+                grpc_opts["grpc-service-name"] = params["serviceName"]
+
+            if params.get("authority"):
+                grpc_opts["grpc-authority"] = params["authority"]
+
+            if grpc_opts:
+                proxy["grpc-opts"] = grpc_opts
+
+
+        if params.get("type") == "xhttp":
+            xhttp_opts = {}
+
+            if params.get("path"):
+                xhttp_opts["path"] = params["path"]
+
+            if params.get("mode"):
+                xhttp_opts["mode"] = params["mode"]
+
+            if params.get("host"):
+                xhttp_opts["host"] = params["host"]
+
+            if xhttp_opts:
+                proxy["xhttp-opts"] = xhttp_opts
+
+
         return proxy
     except Exception:
         return None
@@ -188,7 +218,24 @@ def main():
     name_counts = {}
 
     for p in proxies:
-        key = (p.get("server"), p.get("port"), p.get("uuid") or p.get("password"))
+        key = json.dumps(
+            {
+                "type": p.get("type"),
+                "server": p.get("server"),
+                "port": p.get("port"),
+                "uuid": p.get("uuid"),
+                "password": p.get("password"),
+                "network": p.get("network"),
+                "flow": p.get("flow"),
+                "tls": p.get("tls"),
+                "reality": p.get("reality-opts"),
+                "ws": p.get("ws-opts"),
+                "grpc": p.get("grpc-opts"),
+                "xhttp": p.get("xhttp-opts"),
+            },
+            sort_keys=True,
+            ensure_ascii=False
+        )
         if key in seen_configs:
             continue
         seen_configs.add(key)

@@ -17,7 +17,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 
 MIHOMO = "./bin/mihomo.bin"
 
-TEST_URL = "http://cp.cloudflare.com/generate_204"
+TEST_URL = "https://cp.cloudflare.com/generate_204"
 
 MAX_WORKERS = 10
 TIMEOUT = 5
@@ -49,6 +49,15 @@ def make_config(proxy, port):
         "allow-lan": False,
         "mode": "global",
         "log-level": "info",
+        "unified-delay": True,
+        "tcp-concurrent": True,
+        "dns": {
+            "enable": True,
+            "enhanced-mode": "fake-ip",
+            "nameserver": [
+                "https://1.1.1.1/dns-query"
+            ]
+        },
         "proxies": [
             proxy
         ],
@@ -90,6 +99,7 @@ def check_proxy(proxy):
         "stage": "init",
         "error": None,
         "mihomo_log": "",
+        "delay_ms": None,
     }
 
     proc = None
@@ -174,6 +184,8 @@ def check_proxy(proxy):
 
             proxy_url = f"http://127.0.0.1:{port}"
 
+            started = time.monotonic()
+
             try:
                 response = requests.get(
                     TEST_URL,
@@ -185,24 +197,22 @@ def check_proxy(proxy):
                 )
 
             except requests.RequestException as e:
-                if "SSLEOFError" not in str(e):
-                    result["mihomo_log"] = read_stderr(proc)
-                    result["error"] = str(e)
-                    return None, result
+                result["delay_ms"] = round(
+                    (time.monotonic() - started) * 1000,
+                    1
+                )
 
-                try:
-                    response = requests.get(
-                        TEST_URL,
-                        proxies={
-                            "http": proxy_url,
-                            "https": proxy_url,
-                        },
-                        timeout=TIMEOUT
-                    )
-                except requests.RequestException as retry_error:
-                    result["mihomo_log"] = read_stderr(proc)
-                    result["error"] = str(retry_error)
-                    return None, result
+                result["mihomo_log"] = read_stderr(proc)
+                result["error"] = str(e)
+
+                return None, result
+
+            result["delay_ms"] = round(
+                (time.monotonic() - started) * 1000,
+                1
+            )
+
+            result["http_status"] = response.status_code
 
             if response.status_code in (200, 204):
                 result["stage"] = "success"
