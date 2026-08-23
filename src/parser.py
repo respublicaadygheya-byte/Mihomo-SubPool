@@ -249,10 +249,13 @@ def parse_trojan(link):
         if params.get("alpn"):
             proxy["alpn"] = params["alpn"].split(",")
 
+        if params.get("pcs"):
+            proxy["fingerprint"] = params["pcs"]
+
         if params.get("allowInsecure") in ("1", "true"):
             proxy["skip-cert-verify"] = True
 
-        network = params.get("type")
+        network = params.get("type", "").lower()
 
         if network:
             proxy["network"] = network
