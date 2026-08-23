@@ -194,6 +194,96 @@ def parse_vless(link):
     except Exception:
         return None
 
+
+def parse_trojan(link):
+    link = link.strip()
+
+    if not link.startswith("trojan://"):
+        return None
+
+    try:
+        body = link[len("trojan://"):]
+
+        if "#" in body:
+            body, raw_name = body.split("#", 1)
+            name = clean_name(raw_name)
+        else:
+            name = "Trojan Proxy"
+
+        query = ""
+
+        if "?" in body:
+            body, query = body.split("?", 1)
+
+        if "@" not in body:
+            return None
+
+        password, server_port = body.rsplit("@", 1)
+
+        if ":" not in server_port:
+            return None
+
+        server, port = server_port.rsplit(":", 1)
+
+        if server.startswith("[") and server.endswith("]"):
+            server = server[1:-1]
+
+        proxy = {
+            "name": name,
+            "type": "trojan",
+            "server": server,
+            "port": int(port),
+            "password": password,
+            "udp": True,
+            "client-fingerprint": "chrome"
+        }
+
+        params = parse_query(query) if query else {}
+
+        if params.get("sni"):
+            proxy["sni"] = params["sni"]
+
+        if params.get("fp"):
+            proxy["client-fingerprint"] = params["fp"]
+
+        if params.get("alpn"):
+            proxy["alpn"] = params["alpn"].split(",")
+
+        if params.get("allowInsecure") in ("1", "true"):
+            proxy["skip-cert-verify"] = True
+
+        network = params.get("type")
+
+        if network:
+            proxy["network"] = network
+
+        if network == "ws":
+            ws_opts = {}
+
+            if params.get("path"):
+                ws_opts["path"] = params["path"]
+
+            ws_opts["headers"] = {
+                "User-Agent": "Mozilla/5.0"
+            }
+
+            proxy["ws-opts"] = ws_opts
+
+        if network == "grpc":
+            grpc_opts = {}
+
+            if params.get("serviceName"):
+                grpc_opts["grpc-service-name"] = params["serviceName"]
+
+            if grpc_opts:
+                proxy["grpc-opts"] = grpc_opts
+
+        return proxy
+
+    except Exception:
+        return None
+
+
 def parse_hysteria2(link):
     link = link.strip()
     prefix = "hysteria2://" if link.startswith("hysteria2://") else "hy2://" if link.startswith("hy2://") else None
@@ -266,6 +356,8 @@ def main():
             p = parse_vless(line)
         elif line.startswith(("hysteria2://", "hy2://")):
             p = parse_hysteria2(line)
+        elif line.startswith("trojan://"):
+            p = parse_trojan(line)
         else:
             p = None
 
