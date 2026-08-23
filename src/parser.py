@@ -3,6 +3,7 @@
 import base64
 import binascii
 import json
+from json import JSONDecodeError
 import re
 import sys
 from urllib.parse import unquote, urlparse
@@ -194,6 +195,130 @@ def parse_vless(link):
 
         return proxy
     except Exception:
+        return None
+
+
+
+def _decode_vmess_base64(value):
+    value = value.strip()
+
+    padded = value + "=" * (-len(value) % 4)
+
+    for decoder in (
+        base64.b64decode,
+        base64.urlsafe_b64decode,
+    ):
+        try:
+            return decoder(padded).decode("utf-8")
+        except (
+            ValueError,
+            UnicodeDecodeError,
+            binascii.Error,
+        ):
+            continue
+
+    raise ValueError("invalid vmess base64")
+
+
+def parse_vmess(link):
+    if not link.startswith("vmess://"):
+        return None
+
+    try:
+        body = link[len("vmess://"):]
+
+        if "#" in body:
+            body = body.split("#", 1)[0]
+
+        decoded = _decode_vmess_base64(body)
+        values = json.loads(decoded)
+
+        if not isinstance(values, dict):
+            return None
+
+        server = values.get("add")
+        port = values.get("port")
+        uuid = values.get("id")
+
+        if not server or not port or not uuid:
+            return None
+
+        proxy = {
+            "name": clean_name(values.get("ps", "")),
+            "type": "vmess",
+            "server": server,
+            "port": int(port),
+            "uuid": uuid,
+            "alterId": int(values.get("aid", 0)),
+            "cipher": values.get("scy") or "auto",
+            "udp": True,
+        "tls": False,
+        "skip-cert-verify": False,
+            "xudp": True,
+        }
+
+        tls = str(values.get("tls", "")).lower()
+
+        if tls.endswith("tls"):
+            proxy["tls"] = True
+
+        if values.get("sni"):
+            proxy["servername"] = values["sni"]
+
+        if values.get("alpn"):
+            proxy["alpn"] = values["alpn"].split(",")
+
+        network = str(
+            values.get("net")
+            or values.get("type")
+            or ""
+        ).lower()
+
+        if network == "http":
+            network = "h2"
+
+        if network:
+            proxy["network"] = network
+
+        host = values.get("host")
+        path = values.get("path")
+
+        if network == "ws":
+            ws_opts = {
+                "path": path or "/",
+                "headers": {},
+            }
+
+            if host:
+                ws_opts["headers"]["Host"] = host
+
+            proxy["ws-opts"] = ws_opts
+
+        elif network == "h2":
+            h2_opts = {
+                "path": path or "/",
+                "headers": {},
+            }
+
+            if host:
+                h2_opts["headers"]["Host"] = [host]
+
+            proxy["h2-opts"] = h2_opts
+
+        elif network == "grpc":
+            if path:
+                proxy["grpc-opts"] = {
+                    "grpc-service-name": path
+                }
+
+        return proxy
+
+    except (
+        ValueError,
+        JSONDecodeError,
+        TypeError,
+        KeyError,
+    ):
         return None
 
 
@@ -528,6 +653,8 @@ def main():
             continue
         if line.startswith("vless://"):
             p = parse_vless(line)
+        elif line.startswith("vmess://"):
+            p = parse_vmess(line)
         elif line.startswith(("hysteria2://", "hy2://")):
             p = parse_hysteria2(line)
         elif line.startswith("trojan://"):

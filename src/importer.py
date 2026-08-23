@@ -19,10 +19,10 @@ def fetch_url(url):
         with urllib.request.urlopen(req, timeout=12) as response:
             content = response.read().decode("utf-8", errors="ignore").strip()
             
-            if not any(content.startswith(p) for p in ["vless://", "hysteria2://", "hy2://", "ss://", "trojan://"]):
+            if not any(content.startswith(p) for p in ["vless://", "vmess://", "hysteria2://", "hy2://", "ss://", "trojan://"]):
                 try:
                     decoded = base64.b64decode(content).decode("utf-8", errors="ignore")
-                    if any(p in decoded for p in ["vless://", "hy2://", "hysteria2://"]):
+                    if any(p in decoded for p in ["vless://", "vmess://", "hy2://", "hysteria2://"]):
                         return decoded
                 except Exception:
                     pass
