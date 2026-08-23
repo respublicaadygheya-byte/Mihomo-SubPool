@@ -431,19 +431,29 @@ def parse_ss(link):
 
 def parse_hysteria2(link):
     link = link.strip()
-    prefix = "hysteria2://" if link.startswith("hysteria2://") else "hy2://" if link.startswith("hy2://") else None
+
+    prefix = (
+        "hysteria2://"
+        if link.startswith("hysteria2://")
+        else "hy2://"
+        if link.startswith("hy2://")
+        else None
+    )
+
     if not prefix:
         return None
 
     try:
         body = link[len(prefix):]
+
         if "#" in body:
             body, raw_name = body.split("#", 1)
             name = clean_name(raw_name)
         else:
-            name = "Hysteria2 Proxy"
+            name = ""
 
         query = ""
+
         if "?" in body:
             body, query = body.split("?", 1)
 
@@ -451,6 +461,7 @@ def parse_hysteria2(link):
             return None
 
         password, server_port = body.rsplit("@", 1)
+
         if ":" not in server_port:
             return None
 
@@ -465,22 +476,40 @@ def parse_hysteria2(link):
             "server": server,
             "port": int(port),
             "password": unquote(password),
-            "udp": True
         }
 
         params = parse_query(query) if query else {}
+
         if params.get("sni"):
             proxy["sni"] = params["sni"]
-        if params.get("insecure") in ("1", "true"):
-            proxy["skip-cert-verify"] = True
+
+        if params.get("insecure"):
+            if params["insecure"].lower() in ("1", "true", "yes"):
+                proxy["skip-cert-verify"] = True
+
         if params.get("obfs") and params["obfs"] != "none":
             proxy["obfs"] = params["obfs"]
+
         if params.get("obfs-password"):
             proxy["obfs-password"] = params["obfs-password"]
 
+        if params.get("alpn"):
+            proxy["alpn"] = params["alpn"].split(",")
+
+        if params.get("pinSHA256"):
+            proxy["fingerprint"] = params["pinSHA256"]
+
+        if params.get("down"):
+            proxy["down"] = params["down"]
+
+        if params.get("up"):
+            proxy["up"] = params["up"]
+
         return proxy
+
     except Exception:
         return None
+
 
 def main():
     if len(sys.argv) != 3:
