@@ -1,9 +1,11 @@
 #!/usr/bin/env python3
 
+import base64
+import binascii
 import json
 import re
 import sys
-from urllib.parse import unquote
+from urllib.parse import unquote, urlparse
 
 def clean_name(name):
     name = unquote(name).strip()
@@ -287,6 +289,146 @@ def parse_trojan(link):
         return None
 
 
+
+def _decode_ss_base64(value):
+    value = value.strip()
+
+    for decoder in (
+        base64.urlsafe_b64decode,
+        base64.b64decode,
+    ):
+        try:
+            padded = value + "=" * (-len(value) % 4)
+            return decoder(padded).decode("utf-8")
+        except (ValueError, UnicodeDecodeError, binascii.Error):
+            continue
+
+    raise ValueError("invalid base64")
+
+
+def _parse_ss_plugin(plugin):
+    parts = plugin.split(";")
+
+    if not parts:
+        return None, None
+
+    name = parts[0]
+    opts = {}
+
+    for item in parts[1:]:
+        if "=" in item:
+            k, v = item.split("=", 1)
+            opts[k] = v
+
+    if "obfs" in name:
+        result = {}
+
+        if opts.get("obfs"):
+            result["mode"] = opts["obfs"]
+
+        if opts.get("obfs-host"):
+            result["host"] = opts["obfs-host"]
+
+        return "obfs", result or None
+
+    if "v2ray-plugin" in name:
+        result = {}
+
+        for key in ("mode", "host", "path"):
+            if opts.get(key):
+                result[key] = opts[key]
+
+        if "tls" in plugin:
+            result["tls"] = True
+
+        return "v2ray-plugin", result or None
+
+    return None, None
+
+
+def parse_ss(link):
+    link = link.strip()
+
+    if not link.startswith("ss://"):
+        return None
+
+    try:
+        raw = link[len("ss://"):]
+
+        if "#" in raw:
+            raw, raw_name = raw.split("#", 1)
+            name = clean_name(raw_name)
+        else:
+            name = ""
+
+        query = ""
+
+        if "?" in raw:
+            raw, query = raw.split("?", 1)
+
+        parsed = urlparse("ss://" + raw)
+
+        try:
+            port = parsed.port
+        except ValueError:
+            port = None
+
+        if parsed.hostname is None or port is None:
+            decoded = _decode_ss_base64(raw)
+            parsed = urlparse("ss://" + decoded)
+
+        if parsed.username is not None:
+            cipher = parsed.username
+            password = parsed.password or ""
+            server = parsed.hostname
+            port = parsed.port
+        else:
+            decoded = _decode_ss_base64(raw)
+            userinfo, server_port = decoded.rsplit("@", 1)
+
+            cipher, password = userinfo.split(":", 1)
+            server, port = server_port.rsplit(":", 1)
+
+            port = int(port)
+
+        if not server or not port:
+            return None
+
+        if server.startswith("[") and server.endswith("]"):
+            server = server[1:-1]
+
+        proxy = {
+            "name": name,
+            "type": "ss",
+            "server": server,
+            "port": int(port),
+            "password": password,
+            "cipher": cipher,
+            "udp": True,
+        }
+
+        params = parse_query(query) if query else {}
+
+        if params.get("plugin"):
+            plugin_name, plugin_opts = _parse_ss_plugin(
+                params["plugin"]
+            )
+
+            if plugin_name:
+                proxy["plugin"] = plugin_name
+
+            if plugin_opts:
+                proxy["plugin-opts"] = plugin_opts
+
+        if params.get("udp-over-tcp") == "true" or params.get("uot") == "1":
+            proxy["udp-over-tcp"] = True
+
+        return proxy
+
+    except Exception:
+        return None
+
+
 def parse_hysteria2(link):
     link = link.strip()
     prefix = "hysteria2://" if link.startswith("hysteria2://") else "hy2://" if link.startswith("hy2://") else None
@@ -361,6 +503,8 @@ def main():
             p = parse_hysteria2(line)
         elif line.startswith("trojan://"):
             p = parse_trojan(line)
+        elif line.startswith("ss://"):
+            p = parse_ss(line)
         else:
             p = None
 
@@ -379,6 +523,10 @@ def main():
                 "port": p.get("port"),
                 "uuid": p.get("uuid"),
                 "password": p.get("password"),
+                "cipher": p.get("cipher"),
+                "plugin": p.get("plugin"),
+                "plugin-opts": p.get("plugin-opts"),
+                "udp-over-tcp": p.get("udp-over-tcp"),
                 "network": p.get("network"),
                 "flow": p.get("flow"),
                 "tls": p.get("tls"),
