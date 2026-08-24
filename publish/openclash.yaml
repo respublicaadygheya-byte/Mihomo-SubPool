@@ -17,6 +17,24 @@ sniffer:
   parse-pure-ip: true
   override-destination: false
 proxies:
+- name: 🇩🇪 admin 2
+  type: vless
+  server: 150.241.70.138
+  port: 8445
+  uuid: dc1ac4b4-1ba2-4efe-bfac-a1b4965d0342
+  udp: true
+  network: xhttp
+  encryption: none
+  xudp: true
+  tls: true
+  reality-opts:
+    public-key: GkzxfJieLwgdFurfZJ5nvYOwatEyo38iiU1DV5j-EEI
+    short-id: a4edf1f185d35bb2
+  servername: music.yandex.ru
+  client-fingerprint: firefox
+  xhttp-opts:
+    path: /xhttp
+    mode: auto
 - name: 🇩🇪 admin
   type: vless
   server: 150.241.70.138
@@ -62,24 +80,6 @@ proxies:
     h4: 130360269
     i1: <r 2><b 0x858000010001000000000669636c6f756403636f6d0000010001c00c000100010000105a00044d583737>
   _uploaded_source: v1admin.conf
-- name: 🇩🇪 admin 2
-  type: vless
-  server: 150.241.70.138
-  port: 8445
-  uuid: dc1ac4b4-1ba2-4efe-bfac-a1b4965d0342
-  udp: true
-  network: xhttp
-  encryption: none
-  xudp: true
-  tls: true
-  reality-opts:
-    public-key: GkzxfJieLwgdFurfZJ5nvYOwatEyo38iiU1DV5j-EEI
-    short-id: a4edf1f185d35bb2
-  servername: music.yandex.ru
-  client-fingerprint: firefox
-  xhttp-opts:
-    path: /xhttp
-    mode: auto
 - type: wireguard
   name: admin
   server: 150.241.70.138
@@ -120,8 +120,8 @@ proxy-groups:
   interval: 300
   tolerance: 100
   proxies:
-  - 🇩🇪 admin
   - 🇩🇪 admin 2
+  - 🇩🇪 admin
 - name: 🔥 AWG AUTO
   type: url-test
   url: http://cp.cloudflare.com/generate_204
