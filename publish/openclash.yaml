@@ -17,34 +17,6 @@ sniffer:
   parse-pure-ip: true
   override-destination: false
 proxies:
-- type: wireguard
-  name: admin
-  server: 150.241.70.138
-  port: 51820
-  ip: 10.8.1.2
-  private-key: CJifAitsZmJ6sYk4JDaCuxsL33xm2jcAhG8RhN5+6Fc=
-  public-key: e7sZuHx4iVYXB3qk9SZu9SOEdZ3MejrWFcGi7PZr7QU=
-  udp: true
-  provider: warp
-  protocol: amnezia-wg
-  dns:
-  - 8.8.4.4
-  - 9.9.9.9
-  allowed-ips:
-  - 0.0.0.0/0
-  - ::/0
-  amnezia-wg-option:
-    jc: 7
-    jmin: 10
-    jmax: 262
-    s1: 61
-    s2: 85
-    h1: 1099092339-1141547212
-    h2: 1221782902-1286563102
-    h3: 2822730403-2895649598
-    h4: 2928079519-2959719952
-    i1: <r 2><b 0x858000010001000000000669636c6f756403636f6d0000010001c00c000100010000105a00044d583737>
-  _uploaded_source: admin.conf
 - name: 🇩🇪 admin
   type: vless
   server: 150.241.70.138
@@ -80,6 +52,34 @@ proxies:
   xhttp-opts:
     path: /xhttp
     mode: auto
+- type: wireguard
+  name: admin
+  server: 150.241.70.138
+  port: 51820
+  ip: 10.8.1.2
+  private-key: CJifAitsZmJ6sYk4JDaCuxsL33xm2jcAhG8RhN5+6Fc=
+  public-key: e7sZuHx4iVYXB3qk9SZu9SOEdZ3MejrWFcGi7PZr7QU=
+  udp: true
+  provider: warp
+  protocol: amnezia-wg
+  dns:
+  - 8.8.4.4
+  - 9.9.9.9
+  allowed-ips:
+  - 0.0.0.0/0
+  - ::/0
+  amnezia-wg-option:
+    jc: 7
+    jmin: 10
+    jmax: 262
+    s1: 61
+    s2: 85
+    h1: 1099092339-1141547212
+    h2: 1221782902-1286563102
+    h3: 2822730403-2895649598
+    h4: 2928079519-2959719952
+    i1: <r 2><b 0x858000010001000000000669636c6f756403636f6d0000010001c00c000100010000105a00044d583737>
+  _uploaded_source: admin.conf
 - type: wireguard
   name: v1admin
   server: 150.241.70.138
