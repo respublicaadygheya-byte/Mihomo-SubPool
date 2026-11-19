@@ -88,9 +88,32 @@ def load_list(filepath):
 
 
 def clean_proxy(proxy):
-    """Удаляет только внутренние служебные поля."""
-    proxy.pop("alive", None)
-    proxy.pop("_id", None)
+    """Remove ALL internal pipeline fields so third-party clients can parse the config."""
+    internal = {
+        "alive", "_id", "latency", "provider", "protocol",
+        "_uploaded_source", "_source", "diagnostics", "fail_reason",
+        "timeout", "checked_at", "source",
+    }
+    for key in list(proxy.keys()):
+        if key in internal or key.startswith("_"):
+            proxy.pop(key, None)
+
+    # Fix AmneziaWG options that were serialized as Python bytes repr like "<b 0x1234>"
+    awg = proxy.get("amnezia-wg-option")
+    if isinstance(awg, dict):
+        fixed = {}
+        for k, v in awg.items():
+            if isinstance(v, int):
+                fixed[k] = v
+            else:
+                import re
+                m = re.search(r"0x([0-9a-fA-F]+)", str(v))
+                if m:
+                    fixed[k] = int(m.group(1), 16)
+        if fixed:
+            proxy["amnezia-wg-option"] = fixed
+        else:
+            proxy.pop("amnezia-wg-option", None)
     return proxy
 
 
@@ -102,7 +125,12 @@ def generate_config(proxy_list, ru_domains, ru_ips):
 
     # Все VPN-ноды идут в единый пул.
     # FOREIGN содержит весь набор доступных прокси.
-    all_proxies = list(proxy_list)
+    # MASQUE requires a very recent Mihomo core; drop it for broad client compatibility
+    all_proxies = [
+        p for p in proxy_list
+        if str(p.get("type", "")).lower() != "masque"
+        and str(p.get("protocol", "")).lower() != "masque"
+    ]
 
     for p in all_proxies:
         p = clean_proxy(p)
