@@ -5,8 +5,10 @@ import sys
 import os
 
 SOURCES = [
-    "https://raw.githubusercontent.com/luxxuria/harvester/refs/heads/main/top_600.txt",
-    "https://raw.githubusercontent.com/AvenCores/goida-vpn-configs/refs/heads/main/githubmirror/23.txt",
+    # DISABLED 2026-11-20: HTTP 404, source/file no longer exists
+    #     "https://raw.githubusercontent.com/luxxuria/harvester/refs/heads/main/top_600.txt",
+    # DISABLED 2026-11-20: HTTP 404, source/file no longer exists
+    #     "https://raw.githubusercontent.com/AvenCores/goida-vpn-configs/refs/heads/main/githubmirror/23.txt",
     "https://raw.githack.com/igareck/vpn-configs-for-russia/main/BLACK_VLESS_RUS_mobile.txt",
     "https://raw.githubusercontent.com/hiztin/VLESS-PO-GRIBI/main/deploy/subscriptions/1.txt",
     "https://raw.githack.com/igareck/vpn-configs-for-russia/main/Vless-Reality-White-Lists-Rus-Mobile.txt"
