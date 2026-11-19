@@ -36,6 +36,7 @@ cp cache/filtered/available.json cache/filtered/all.json
 python3 src/generator.py \
     --proxies cache/filtered/all.json \
     --output publish/mihomo.yaml >> "$LOG" 2>&1
+python3 src/export_subscription.py publish/mihomo.yaml publish/subscription.txt >> "$LOG" 2>&1
 
 echo "=== FINAL MIHOMO CONFIG VALIDATION ===" >> "$LOG"
 
@@ -49,7 +50,7 @@ echo "=== MIHOMO CONFIG VALIDATION PASSED ===" >> "$LOG"
 
 cp publish/mihomo.yaml publish/openclash.yaml
 
-git add -f publish/mihomo.yaml publish/openclash.yaml
+git add -f publish/mihomo.yaml publish/openclash.yaml publish/subscription.txt
 
 if git diff --cached --quiet; then
     echo "No changes" >> "$LOG"

@@ -24,6 +24,7 @@ mkdir -p site
 
 cp publish/mihomo.yaml site/mihomo.yaml
 cp publish/openclash.yaml site/openclash.yaml
+cp publish/subscription.txt site/subscription.txt
 
 echo "GitHub Pages files updated"
 
@@ -35,6 +36,7 @@ echo "Checking secrets..."
 if find publish -type f \
     ! -name "mihomo.yaml" \
     ! -name "openclash.yaml" \
+    ! -name "subscription.txt" \
     -exec grep -l "private-key\\|private_key\\|secret" {} \; | grep .; then
     echo "ERROR: Secret data detected in unexpected publish file!"
     exit 1
@@ -47,7 +49,7 @@ fi
 
 echo "No unexpected secrets detected"
 
-git add -f publish/mihomo.yaml publish/openclash.yaml
+git add -f publish/mihomo.yaml publish/openclash.yaml publish/subscription.txt
 
 if git diff --cached --quiet; then
     echo "No changes to publish."
