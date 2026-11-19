@@ -1,0 +1,5 @@
+# === USER RULES (highest priority, above all generated rules) ===
+# All Russian zones go DIRECT regardless of server/geosite naming
+DOMAIN-SUFFIX,ru,DIRECT
+DOMAIN-SUFFIX,рф,DIRECT
+# Everything else is handled by generated rules -> MATCH,PROXY (selected VPN)

@@ -119,7 +119,16 @@ def generate_config(proxy_list, ru_domains, ru_ips):
     # Everything else -> PROXY
     # --------------------------------------------------------
 
+    # --------------------------------------------------------
+    # USER RULES - HIGHEST PRIORITY
+    # Everything from config/user_rules.txt is inserted BEFORE
+    # generated rules, so user overrides always win.
+    # --------------------------------------------------------
+    user_rules_file = Path(__file__).resolve().parent.parent / 'config' / 'user_rules.txt'
+    user_rules = load_list(user_rules_file)
+
     rules = [
+        *user_rules,
         "GEOSITE,category-ru,DIRECT",
         "GEOIP,RU,DIRECT,no-resolve",
         "MATCH,PROXY"
