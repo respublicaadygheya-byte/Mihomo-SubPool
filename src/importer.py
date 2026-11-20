@@ -11,7 +11,8 @@ import sys
 # "https://raw.githubusercontent.com/AvenCores/goida-vpn-configs/refs/heads/main/githubmirror/23.txt",
 
 SOURCES = [
-    ("igareck_BLACK", "https://raw.githack.com/igareck/vpn-configs-for-russia/main/BLACK_VLESS_RUS_mobile.txt"),
+    # DISABLED 2026-11-20 by user request: overloaded nodes, YouTube video fails
+    # ("igareck_BLACK", "https://raw.githack.com/igareck/vpn-configs-for-russia/main/BLACK_VLESS_RUS_mobile.txt"),
     ("hiztin_PO_GRIBI", "https://raw.githubusercontent.com/hiztin/VLESS-PO-GRIBI/main/deploy/subscriptions/1.txt"),
     ("igareck_WHITE", "https://raw.githack.com/igareck/vpn-configs-for-russia/main/Vless-Reality-White-Lists-Rus-Mobile.txt"),
 ]
