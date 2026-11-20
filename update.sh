@@ -31,7 +31,20 @@ python3 src/checker.py \
     cache/filtered/available.json \
     cache/filtered/available.diagnostics.json >> "$LOG" 2>&1
 
-cp cache/filtered/available.json cache/filtered/all.json
+# --- YouTube second stage: keep only nodes that can reach YouTube, sorted by ping ---
+python3 src/checker_youtube.py \
+    cache/filtered/available.json \
+    cache/filtered/youtube.json \
+    cache/filtered/youtube.diagnostics.json >> "$LOG" 2>&1
+
+YT_COUNT=$(python3 -c "import json;print(len(json.load(open('cache/filtered/youtube.json', encoding='utf-8'))))")
+echo "YouTube-passing nodes: $YT_COUNT" >> "$LOG"
+if [ "$YT_COUNT" -lt 5 ]; then
+    echo "ERROR: YouTube check produced only $YT_COUNT nodes - aborting to keep previous publish" | tee -a "$LOG"
+    exit 1
+fi
+
+cp cache/filtered/youtube.json cache/filtered/all.json
 
 python3 src/generator.py \
     --proxies cache/filtered/all.json \

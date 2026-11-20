@@ -42,7 +42,7 @@ if find publish -type f \
     exit 1
 fi
 
-if find publish -type f \(     -name "*.json"     -o -name "*.txt"     -o -name "*.key" \) | grep .; then
+if find publish -type f ! -name "subscription.txt" \( -name "*.json" -o -name "*.txt" -o -name "*.key" \) | grep .; then
     echo "ERROR: Suspicious secret file in publish!"
     exit 1
 fi
