@@ -1,0 +1,12 @@
+# Optional configurable proxy groups (SubConv-style regex groups).
+# Each entry: name, type (select|url-test|fallback|load-balance), optional regex.
+# If empty/absent, generator builds legacy FOREIGN + WARP AUTO groups.
+#
+# Examples:
+# - name: 🌍 Telegram/Instagram/WhatsApp
+#   type: url-test
+#   regex: "Telegram|Instagram|WhatsApp"
+# - name: 🇷🇺 Russia
+#   type: select
+#   regex: "Росс|Russia|RU "
+[]
