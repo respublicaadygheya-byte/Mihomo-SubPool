@@ -18,13 +18,6 @@ sniffer:
   parse-pure-ip: true
   override-destination: false
 proxies:
-- name: 🇨🇭_瑞士 6 t.me/rjsxrd
-  type: ss
-  server: 186.190.215.251
-  port: 19999
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  udp: true
 - name: 🇫🇷_法国 8 t.me/rjsxrd
   type: ss
   server: 38.109.228.110
@@ -32,9 +25,23 @@ proxies:
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   udp: true
-- name: 🇩🇪_德国 32 t.me/rjsxrd
+- name: 🇬🇧_英国 37 t.me/rjsxrd
   type: ss
-  server: 193.108.116.98
+  server: 198.244.202.215
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  udp: true
+- name: 🇳🇱_荷兰 25 t.me/rjsxrd
+  type: ss
+  server: 193.29.139.198
+  port: 8080
+  cipher: chacha20-ietf-poly1305
+  password: k1dBOmOB4oqi7Ump37a1bQ
+  udp: true
+- name: 🇨🇭_瑞士 6 t.me/rjsxrd
+  type: ss
+  server: 186.190.215.251
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
@@ -53,23 +60,9 @@ proxies:
   cipher: chacha20-ietf-poly1305
   password: Xd4G9xn7AgT88msCYC9MZfavMUqd3dWFNAvswi6KfaD9YcexptMbPn4cSECEMzDgvAMomAWJHyweqJer99ssMVYGH6TK8k4c
   udp: true
-- name: 🇳🇱_荷兰 25 t.me/rjsxrd
+- name: 🇩🇪_德国 23 t.me/rjsxrd
   type: ss
-  server: 193.29.139.198
-  port: 8080
-  cipher: chacha20-ietf-poly1305
-  password: k1dBOmOB4oqi7Ump37a1bQ
-  udp: true
-- name: 🇩🇪_德国 41 t.me/rjsxrd
-  type: ss
-  server: 57.129.76.233
-  port: 19999
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  udp: true
-- name: 🇬🇧_英国 37 t.me/rjsxrd
-  type: ss
-  server: 198.244.202.215
+  server: 57.129.83.85
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
@@ -81,9 +74,59 @@ proxies:
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   udp: true
-- name: 🇩🇪_德国 23 t.me/rjsxrd
+- name: 🇩🇪_德国 41 t.me/rjsxrd
   type: ss
-  server: 57.129.83.85
+  server: 57.129.76.233
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  udp: true
+- name: 🇩🇪_德国 32 t.me/rjsxrd
+  type: ss
+  server: 193.108.116.98
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  udp: true
+- name: '🇳🇱 Netherlands TG: @HardVpn_robot t.me/rjsxrd'
+  type: vless
+  server: 193.111.248.54
+  port: 443
+  uuid: a8e5585a-6020-4649-a364-c1ebf3a40548
+  udp: true
+  tls: true
+  client-fingerprint: edge
+  servername: tagderdeutscheneinheit.de
+  reality-opts:
+    public-key: 0KDql59THS-DXg30wMR0QGgFB6rXARDhr8WoWyfVA2M
+    short-id: 6f0091ebe3029ebb
+  network: tcp
+  flow: xtls-rprx-vision
+- name: 意大利 @ripaojiedian t.me/rjsxrd
+  type: ss
+  server: 202.50.253.63
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  udp: true
+- name: '🇷🇺 Russian Federation TG: @HardVpn_robot t.me/rjsxrd'
+  type: vless
+  server: 83.217.201.82
+  port: 443
+  uuid: ebd1c0d6-7ff4-4b9f-8692-237517a27a64
+  udp: true
+  tls: true
+  client-fingerprint: firefox
+  servername: skvoz-dpi.com
+  reality-opts:
+    public-key: mza5Hn1aolSz65qu-UwvBP3oesxMe25r11o4nxvikF0
+    short-id: 64c1fe36c7846400
+  network: tcp
+  flow: xtls-rprx-vision
+  encryption: none
+- name: 🇬🇧_英国 41 t.me/rjsxrd
+  type: ss
+  server: 198.244.201.129
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
@@ -95,16 +138,9 @@ proxies:
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   udp: true
-- name: 🇮🇹 Italy сервер 🌐 Выход не определён @RaViraNet t.me/rjsxrd
+- name: 🇫🇷_法国 7 t.me/rjsxrd
   type: ss
-  server: 202.50.253.81
-  port: 19999
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  udp: true
-- name: 🇬🇧_英国 41 t.me/rjsxrd
-  type: ss
-  server: 198.244.201.129
+  server: 167.17.64.175
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
@@ -123,20 +159,6 @@ proxies:
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   udp: true
-- name: 🇫🇷_法国 7 t.me/rjsxrd
-  type: ss
-  server: 167.17.64.175
-  port: 19999
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  udp: true
-- name: 意大利 @ripaojiedian t.me/rjsxrd
-  type: ss
-  server: 202.50.253.63
-  port: 19999
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  udp: true
 - name: 🇳🇴_挪威 t.me/rjsxrd
   type: ss
   server: 185.213.23.63
@@ -144,20 +166,25 @@ proxies:
   cipher: chacha20-ietf-poly1305
   password: ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44=
   udp: true
-- name: '🇷🇺 Russian Federation TG: @HardVpn_robot t.me/rjsxrd'
+- name: 🇸🇪_瑞典 t.me/rjsxrd
+  type: ss
+  server: 138.199.55.243
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  udp: true
+- name: '🇷🇺 Russian Federation TG: @HardVpn_robot t.me/rjsxrd-03'
   type: vless
-  server: 83.217.201.82
+  server: 81.200.158.26
   port: 443
-  uuid: ebd1c0d6-7ff4-4b9f-8692-237517a27a64
+  uuid: 0b6a7fe0-206b-4071-9f96-cd397d1ec01a
   udp: true
   tls: true
-  client-fingerprint: firefox
-  servername: skvoz-dpi.com
-  reality-opts:
-    public-key: mza5Hn1aolSz65qu-UwvBP3oesxMe25r11o4nxvikF0
-    short-id: 64c1fe36c7846400
-  network: tcp
-  flow: xtls-rprx-vision
+  client-fingerprint: ios
+  servername: fernglade.gerqix.online
+  network: grpc
+  grpc-opts:
+    grpc-service-name: glush.de1.v1
   encryption: none
 - name: '🇷🇺 Russian Federation TG: @HardVpn_robot t.me/rjsxrd-01'
   type: vless
@@ -174,19 +201,6 @@ proxies:
   network: tcp
   flow: xtls-rprx-vision
   encryption: none
-- name: '🇷🇺 Russian Federation TG: @HardVpn_robot t.me/rjsxrd-03'
-  type: vless
-  server: 81.200.158.26
-  port: 443
-  uuid: 0b6a7fe0-206b-4071-9f96-cd397d1ec01a
-  udp: true
-  tls: true
-  client-fingerprint: ios
-  servername: fernglade.gerqix.online
-  network: grpc
-  grpc-opts:
-    grpc-service-name: glush.de1.v1
-  encryption: none
 - name: 🇮🇹
   type: ss
   server: 57.131.27.21
@@ -194,6 +208,60 @@ proxies:
   cipher: aes-256-gcm
   password: itzvpn@321
   udp: true
+- name: '🇷🇺 Russian Federation TG: @HardVpn_robot t.me/rjsxrd-02'
+  type: vless
+  server: 81.200.158.26
+  port: 443
+  uuid: 0b6a7fe0-206b-4071-9f96-cd397d1ec01a
+  udp: true
+  tls: true
+  client-fingerprint: random
+  servername: fernglade.gerqix.online
+  network: grpc
+  grpc-opts:
+    grpc-service-name: glush.de1.v1
+  encryption: none
+- name: '83. VMESS SNI: xmfhlpy.com CIDR: ? TG: @wlrustg'
+  type: vmess
+  server: 185.177.229.95
+  port: 1270
+  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
+  alterId: 0
+  cipher: auto
+  udp: true
+  servername: xmfhlpy.com
+  tls: true
+  alpn:
+  - ''
+  network: tcp
+- name: 🇸🇪
+  type: vless
+  server: 138.124.86.230
+  port: 48115
+  uuid: b2fe1fa4-6a79-4938-a3f4-63b54ae7f16b
+  udp: true
+  tls: true
+  client-fingerprint: firefox
+  servername: 138-124-86-230.sslip.io
+  network: grpc
+  grpc-opts:
+    grpc-service-name: 138-124-86-230-sslip-io
+- name: 🇳🇱
+  type: vless
+  server: 51.158.206.80
+  port: 23576
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+  udp: true
+  tls: true
+  client-fingerprint: chrome
+  servername: fuck.rkn
+  reality-opts:
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+    short-id: '01'
+  xudp: true
+  network: tcp
+  flow: xtls-rprx-vision
+  encryption: none
 - name: 45.🇳🇱Нидерланды @LimeVPNFREE t.me/rjsxrd
   type: vless
   server: 51.158.206.93
@@ -209,6 +277,17 @@ proxies:
   network: tcp
   flow: xtls-rprx-vision
   encryption: none
+- name: 🇺🇸_美国 11
+  type: vmess
+  server: 67.220.85.46
+  port: 18000
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  alterId: 0
+  cipher: auto
+  udp: true
+  alpn:
+  - ''
+  network: tcp
 - name: 🇺🇸_美国 26 t.me/rjsxrd
   type: ss
   server: 38.91.100.39
@@ -216,32 +295,25 @@ proxies:
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   udp: true
-- name: 🇩🇪 德国 DEU t.me/rjsxrd
-  type: ss
-  server: 47.85.227.36
+- name: '🇷🇺 Russian Federation TG: @HardVpn_robot t.me/rjsxrd-04'
+  type: vless
+  server: xsru2.freeddns.org
   port: 443
-  cipher: 2022-blake3-chacha20-poly1305
-  password: 3NBsnBLanPfG6i3S2GTHineswr6EeSJPb0PCeMQoGoA=
+  uuid: c90395e6-2140-47ad-a54d-9b166729d3ef
   udp: true
+  tls: true
+  client-fingerprint: ios
+  servername: xsru2.freeddns.org
+  network: ws
+  ws-opts:
+    path: /wsru
+    headers:
+      User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like
+        Gecko) Chrome/131.0.0.0 Safari/537.36
+      Host: xsru2.freeddns.org
 - name: 🇳🇱-01
   type: vless
   server: 51.158.206.26
-  port: 23576
-  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
-  udp: true
-  tls: true
-  client-fingerprint: chrome
-  servername: fuck.rkn
-  reality-opts:
-    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
-    short-id: '01'
-  xudp: true
-  network: tcp
-  flow: xtls-rprx-vision
-  encryption: none
-- name: 🇳🇱-02
-  type: vless
-  server: 51.158.206.20
   port: 23576
   uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
   udp: true
@@ -262,6 +334,22 @@ proxies:
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   udp: true
+- name: 🇳🇱-02
+  type: vless
+  server: 51.158.206.20
+  port: 23576
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+  udp: true
+  tls: true
+  client-fingerprint: chrome
+  servername: fuck.rkn
+  reality-opts:
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+    short-id: '01'
+  xudp: true
+  network: tcp
+  flow: xtls-rprx-vision
+  encryption: none
 - name: '🇳🇱 Netherlands TG: @HardVpn_robot t.me/rjsxrd-01'
   type: vless
   server: 193.111.248.54
@@ -274,6 +362,36 @@ proxies:
   reality-opts:
     public-key: 0KDql59THS-DXg30wMR0QGgFB6rXARDhr8WoWyfVA2M
     short-id: 6f0091ebe3029ebb
+  network: tcp
+  flow: xtls-rprx-vision
+  encryption: none
+- name: 🇮🇹 意大利 ITA t.me/rjsxrd
+  type: ss
+  server: 202.50.253.54
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  udp: true
+- name: 🇺🇸_美国 51 t.me/rjsxrd
+  type: ss
+  server: 67.220.73.178
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  udp: true
+- name: 🇳🇱-03
+  type: vless
+  server: 51.158.206.86
+  port: 23576
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+  udp: true
+  tls: true
+  client-fingerprint: chrome
+  servername: fuck.rkn
+  reality-opts:
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+    short-id: '01'
+  xudp: true
   network: tcp
   flow: xtls-rprx-vision
   encryption: none
@@ -291,28 +409,6 @@ proxies:
     path: /api/v1/upload
     host: 185.86.145.173
   encryption: none
-- name: '🇷🇺 Russian Federation TG: @HardVpn_robot t.me/rjsxrd-05'
-  type: vless
-  server: 176.98.176.60
-  port: 443
-  uuid: 7ad63b26-bf70-4872-8fab-ebaf73a1e19d
-  udp: true
-  tls: true
-  client-fingerprint: chrome
-  servername: mosaic.topp-con.xyz
-  network: tcp
-  flow: xtls-rprx-vision
-- name: 🇺🇸_美国 41
-  type: vmess
-  server: 67.220.95.3
-  port: 18000
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-  alterId: 0
-  cipher: auto
-  udp: true
-  alpn:
-  - ''
-  network: tcp
 - name: 🇫🇮 Finland сервер 🇫🇮 Finland выход 2.26.52.121 @RaViraNet t.
   type: vless
   server: fi-b2.golangwikito.cfd
@@ -327,6 +423,36 @@ proxies:
     short-id: dfff7a7a4c7e5f33
   network: raw
   flow: xtls-rprx-vision
+- name: '🇺🇸 United States TG: @HardVpn_robot t.me/rjsxrd'
+  type: vless
+  server: 188.114.98.0
+  port: 443
+  uuid: 53bbdad4-2f4e-45db-8df4-fa491a6a7227
+  udp: true
+  tls: true
+  client-fingerprint: unsafe
+  alpn:
+  - http/1.1
+  servername: freeceshi6.frii.site
+  network: ws
+  ws-opts:
+    path: /proxyip=ProxyIP.JP.CMLiussss.net
+    headers:
+      User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
+        like Gecko) Chrome/131.0.0.0 Safari/537.36
+      Host: freeceshi6.frii.site
+  encryption: none
+- name: 🇺🇸_美国 41
+  type: vmess
+  server: 67.220.95.3
+  port: 18000
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  alterId: 0
+  cipher: auto
+  udp: true
+  alpn:
+  - ''
+  network: tcp
 - name: 🇨🇦_加拿大 11 t.me/rjsxrd
   type: ss
   server: 158.51.121.221
@@ -350,13 +476,6 @@ proxies:
   network: tcp
   flow: xtls-rprx-vision
   encryption: none
-- name: 🇺🇸_美国 38 t.me/rjsxrd
-  type: ss
-  server: 84.20.27.183
-  port: 19999
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  udp: true
 - name: 🇺🇸_美国 43 t.me/rjsxrd
   type: ss
   server: 38.128.66.32
@@ -364,6 +483,43 @@ proxies:
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   udp: true
+- name: 🇺🇸_美国 38 t.me/rjsxrd
+  type: ss
+  server: 84.20.27.183
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  udp: true
+- name: 16.🇳🇱Нидерланды @LimeVPNFREE t.me/rjsxrd
+  type: vless
+  server: 51.158.206.26
+  port: 23576
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+  udp: true
+  tls: true
+  client-fingerprint: chrome
+  servername: fuck.rkn
+  reality-opts:
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+    short-id: '01'
+  network: tcp
+  flow: xtls-rprx-vision
+  encryption: none
+- name: 🇳🇱 The Netherlands CIDR t.me/rjsxrd
+  type: vless
+  server: 91.132.190.161
+  port: 443
+  uuid: 04920673-035c-410d-94e4-5b1469d3fb6f
+  udp: true
+  tls: true
+  client-fingerprint: edge
+  alpn:
+  - h2
+  - http/1.1
+  servername: 171.22.183.166
+  network: tcp
+  flow: xtls-rprx-vision
+  encryption: none
 - name: 🇷🇺 Russia 🌐 CIDR VK t.me/rjsxrd-01
   type: vless
   server: 185.86.145.173
@@ -376,22 +532,6 @@ proxies:
   network: xhttp
   xhttp-opts:
     path: /api/v1/upload
-  encryption: none
-- name: 🇳🇱-04
-  type: vless
-  server: 51.158.206.87
-  port: 23576
-  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
-  udp: true
-  tls: true
-  client-fingerprint: chrome
-  servername: fuck.rkn
-  reality-opts:
-    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
-    short-id: '01'
-  xudp: true
-  network: tcp
-  flow: xtls-rprx-vision
   encryption: none
 - name: '🇩🇪 Germany TG: @HardVpn_robot t.me/rjsxrd-01'
   type: vless
@@ -406,6 +546,22 @@ proxies:
   xhttp-opts:
     host: mama544.baklajann.ru
   encryption: none
+- name: 🇺🇸
+  type: vless
+  server: 172.64.154.113
+  port: 8443
+  uuid: 53bbdad4-2f4e-45db-8df4-fa491a6a7227
+  udp: true
+  tls: true
+  client-fingerprint: chrome
+  servername: freeceshi6.frii.site
+  network: ws
+  ws-opts:
+    path: /proxyip=ProxyIP.JP.CMLiussss.net
+    headers:
+      User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
+        like Gecko) Chrome/131.0.0.0 Safari/537.36
+      Host: freeceshi6.frii.site
 - name: 🇷🇺 Russia 🌐 CIDR VK t.me/rjsxrd-01-01
   type: vless
   server: 185.86.145.173
@@ -424,22 +580,17 @@ proxies:
     host: wholebeam.com
     mode: auto
   encryption: none
-- name: 🇺🇸
-  type: vless
-  server: 172.64.154.113
-  port: 8443
-  uuid: 53bbdad4-2f4e-45db-8df4-fa491a6a7227
+- name: 🇨🇦_加拿大 6
+  type: vmess
+  server: 134.195.196.211
+  port: 18000
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  alterId: 0
+  cipher: auto
   udp: true
-  tls: true
-  client-fingerprint: chrome
-  servername: freeceshi6.frii.site
-  network: ws
-  ws-opts:
-    path: /proxyip=ProxyIP.JP.CMLiussss.net
-    headers:
-      User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:133.0) Gecko/20100101
-        Firefox/133.0
-      Host: freeceshi6.frii.site
+  alpn:
+  - ''
+  network: tcp
 - name: 🇺🇸_美国 58 t.me/rjsxrd
   type: ss
   server: 167.88.63.99
@@ -475,8 +626,8 @@ proxies:
   ws-opts:
     path: /api/se1k2rfxlsuer3ry4u6e84kl8rqp721p
     headers:
-      User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101
-        Firefox/133.0
+      User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36
+        (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36
       Host: o685y.save-node.com
 - name: '🇺🇸 United States TG: @HardVpn_robot t.me/rjsxrd-01'
   type: vless
@@ -491,8 +642,8 @@ proxies:
   ws-opts:
     path: /700gvl
     headers:
-      User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:133.0) Gecko/20100101
-        Firefox/133.0
+      User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like
+        Gecko) Chrome/131.0.0.0 Safari/537.36
       Host: fr-free.fastestrelay.com
 - name: 1301ms
   type: vless
@@ -541,25 +692,6 @@ proxies:
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   udp: true
-- name: '🇺🇸 United States TG: @HardVpn_robot t.me/rjsxrd-02'
-  type: vless
-  server: 188.114.98.0
-  port: 443
-  uuid: 88e79aa6-f431-4453-8dcc-652a0c747198
-  udp: true
-  tls: true
-  client-fingerprint: firefox
-  alpn:
-  - http/1.1
-  servername: o685y.save-node.com
-  network: ws
-  ws-opts:
-    path: /api/se1k2rfxlsuer3ry4u6e84kl8rqp721p
-    headers:
-      User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:133.0) Gecko/20100101
-        Firefox/133.0
-      Host: o685y.save-node.com
-  encryption: none
 - name: 454ms
   type: vless
   server: 185.86.145.78
@@ -576,13 +708,35 @@ proxies:
   grpc-opts:
     grpc-service-name: null
   encryption: none
-- name: 🇺🇸_美国 49 t.me/rjsxrd
-  type: ss
-  server: 38.121.43.225
-  port: 19999
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: '🇷🇺 Russian Federation TG: @HardVpn_robot t.me/rjsxrd-07'
+  type: vless
+  server: archive.filnex.baby
+  port: 443
+  uuid: 0b6a7fe0-206b-4071-9f96-cd397d1ec01a
   udp: true
+  tls: true
+  client-fingerprint: edge
+  servername: elmharbor.gerqix.online
+  network: grpc
+  grpc-opts:
+    grpc-service-name: glush.de7.v1
+- name: 🇷🇺 Russia сервер 🇷🇺 Russia выход 147.45.175.81 @RaViraNet t.
+  type: vless
+  server: 147.45.175.81
+  port: 443
+  uuid: c90395e6-2140-47ad-a54d-9b166729d3ef
+  udp: true
+  tls: true
+  client-fingerprint: firefox
+  servername: xsru2.freeddns.org
+  network: ws
+  ws-opts:
+    path: /wsru
+    headers:
+      User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:133.0) Gecko/20100101
+        Firefox/133.0
+      Host: xsru2.freeddns.org
+  encryption: none
 - name: '🇺🇸 United States TG: @HardVpn_robot t.me/rjsxrd-03'
   type: vless
   server: 188.114.98.0
@@ -620,18 +774,6 @@ proxies:
     host: grovewood.moltex.click
     mode: auto
   encryption: none
-- name: '🇷🇺 Russian Federation TG: @HardVpn_robot t.me/rjsxrd-07'
-  type: vless
-  server: archive.filnex.baby
-  port: 443
-  uuid: 0b6a7fe0-206b-4071-9f96-cd397d1ec01a
-  udp: true
-  tls: true
-  client-fingerprint: edge
-  servername: elmharbor.gerqix.online
-  network: grpc
-  grpc-opts:
-    grpc-service-name: glush.de7.v1
 - name: 🇺🇸-01
   type: ss
   server: 15.204.246.132
@@ -639,6 +781,25 @@ proxies:
   cipher: aes-256-gcm
   password: FoOiGlkAA9yPEGP
   udp: true
+- name: '🇺🇸 United States TG: @HardVpn_robot t.me/rjsxrd-04'
+  type: vless
+  server: 188.114.98.0
+  port: 443
+  uuid: 53bbdad4-2f4e-45db-8df4-fa491a6a7227
+  udp: true
+  tls: true
+  client-fingerprint: unsafe
+  alpn:
+  - http/1.1
+  servername: freeceshi6.frii.site
+  network: ws
+  ws-opts:
+    path: /?TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=2560
+    headers:
+      User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:133.0) Gecko/20100101
+        Firefox/133.0
+      Host: freeceshi6.frii.site
+  encryption: none
 - name: '85. VLESS SNI: dualarrow.net CIDR: ? TG: @wlrustg t.me/rjsxr'
   type: vless
   server: 78.159.250.83
@@ -653,51 +814,31 @@ proxies:
   network: tcp
   flow: xtls-rprx-vision
   encryption: none
-- name: 🇫🇷 France 🌐 CIDR t.me/rjsxrd
-  type: vless
-  server: 45.67.215.111
-  port: 443
-  uuid: 2b7a122f-f6ff-4860-a919-7bf51be03c02
+- name: 🇺🇸_美国 23
+  type: vmess
+  server: 84.17.41.2
+  port: 18000
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  alterId: 0
+  cipher: auto
   udp: true
-  tls: true
-  client-fingerprint: chrome
   alpn:
-  - h3
-  - h2
-  - http/1.1
-  servername: mama1455.baklajann.ru
-  network: xhttp
-  xhttp-opts:
-    path: /
-    host: mama1455.baklajann.ru
-    mode: auto
-  encryption: none
-- name: 🇷🇺
+  - ''
+  network: tcp
+- name: 1091ms
   type: vless
-  server: xssite.webredirect.org
-  port: 443
-  uuid: c90395e6-2140-47ad-a54d-9b166729d3ef
+  server: 185.229.9.174
+  port: 49094
+  uuid: 00da270a-c35a-4102-afbc-2788ef40003a
   udp: true
   tls: true
-  client-fingerprint: random
-  servername: xssite.webredirect.org
-  network: grpc
-  grpc-opts:
-    grpc-service-name: grpc-ru
-- name: '🇷🇺 Russian Federation TG: @HardVpn_robot t.me/rjsxrd-09'
-  type: vless
-  server: honeycomb.merlano.monster
-  port: 443
-  uuid: 0b6a7fe0-206b-4071-9f96-cd397d1ec01a
-  udp: true
-  tls: true
-  client-fingerprint: safari
-  alpn:
-  - h2
-  servername: honeycomb.merlano.monster
-  network: grpc
-  grpc-opts:
-    grpc-service-name: glush.de7.v1
+  client-fingerprint: firefox
+  servername: max.ru
+  reality-opts:
+    public-key: Td6o-BHBTNeIugm0r2RjtHgYFkhbRoInB1VxEQtOjyg
+    short-id: c95f
+  network: raw
+  flow: xtls-rprx-vision
   encryption: none
 - name: 🇳🇱 The Netherlands CIDR t.me/rjsxrd-02
   type: vless
@@ -712,6 +853,31 @@ proxies:
   - http/1.1
   network: tcp
   flow: xtls-rprx-vision
+- name: 🇺🇸_美国 25 t.me/rjsxrd
+  type: ss
+  server: 23.150.152.38
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  udp: true
+- name: '🇷🇺 Russian Federation TG: @HardVpn_robot t.me/rjsxrd-10'
+  type: vless
+  server: cedar.filnex.baby
+  port: 443
+  uuid: 0b6a7fe0-206b-4071-9f96-cd397d1ec01a
+  udp: true
+  tls: true
+  client-fingerprint: ios
+  alpn:
+  - http/1.1
+  servername: fieldstone.moltex.click
+  network: ws
+  ws-opts:
+    path: /api/de7/stream
+    headers:
+      User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101
+        Firefox/133.0
+      Host: fieldstone.moltex.click
 - name: '🇷🇺 Russian Federation TG: @HardVpn_robot t.me/rjsxrd-11'
   type: vless
   server: garden.elvano.website
@@ -730,6 +896,22 @@ proxies:
     host: garden.elvano.website
     mode: auto
   encryption: none
+- name: 🇩🇪_德国 8 t.me/rjsxrd
+  type: vless
+  server: 91.107.188.129
+  port: 2083
+  uuid: bd6c11e0-0233-4fb1-ba97-8d5f16d7155f
+  udp: true
+  tls: true
+  client-fingerprint: chrome
+  servername: site.check-looks.space
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:133.0) Gecko/20100101
+        Firefox/133.0
+  encryption: none
 - name: 🇺🇸_美国 33 t.me/rjsxrd
   type: ss
   server: 169.197.142.68
@@ -737,21 +919,13 @@ proxies:
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   udp: true
-- name: '🇷🇺 Russian Federation TG: @HardVpn_robot t.me/rjsxrd-12'
-  type: vless
-  server: vellum.filnex.baby
-  port: 443
-  uuid: 0b6a7fe0-206b-4071-9f96-cd397d1ec01a
+- name: 🇳🇱_荷兰 20 t.me/rjsxrd
+  type: ss
+  server: 77.221.132.206
+  port: 24759
+  cipher: chacha20-ietf-poly1305
+  password: hCgbUnMaoAfSgvE8IKdnGu
   udp: true
-  tls: true
-  client-fingerprint: safari
-  alpn:
-  - h2
-  servername: rookery.moltex.click
-  network: grpc
-  grpc-opts:
-    grpc-service-name: glush.de3.v1
-  encryption: none
 - name: 🇺🇸-02
   type: ss
   server: 15.204.246.108
@@ -759,18 +933,13 @@ proxies:
   cipher: aes-256-gcm
   password: kDWvXYZoTBcGkC4
   udp: true
-- name: 761ms
-  type: vless
-  server: archive.filnex.baby
-  port: 443
-  uuid: 0b6a7fe0-206b-4071-9f96-cd397d1ec01a
+- name: 🇸🇬_新加坡 9 t.me/rjsxrd
+  type: ss
+  server: 149.88.106.74
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   udp: true
-  tls: true
-  client-fingerprint: ios
-  servername: elmharbor.gerqix.online
-  network: grpc
-  grpc-opts:
-    grpc-service-name: glush.de7.v1
 - name: 529ms
   type: vless
   server: 212.192.3.237
@@ -786,26 +955,62 @@ proxies:
   network: tcp
   flow: xtls-rprx-vision
   encryption: none
-- name: 🇷🇺 Russia 🌐 CIDR VK t.me/rjsxrd-02
-  type: vless
-  server: 185.86.145.173
-  port: 443
-  uuid: 37af0181-5598-4aad-a040-d926bcb65757
-  udp: true
-  tls: true
-  client-fingerprint: edge
-  servername: wholebeam.com
-  network: xhttp
-  xhttp-opts:
-    path: /api/v1/upload
-    host: wholebeam.com
-  encryption: none
 - name: 电报群：t.me/vvkj11 t.me/rjsxrd
   type: ss
   server: 43.160.213.146
   port: 8388
   cipher: 2022-blake3-aes-256-gcm
   password: ClzJLvRzIxivCXbf5X5jnSU0pLg5ffCEUL2AZoeLg94=
+  udp: true
+- name: 🇺🇸_美国 50 t.me/rjsxrd
+  type: ss
+  server: news.bushyjenz.cyou
+  port: 42878
+  cipher: chacha20-ietf-poly1305
+  password: ijoUwfdnkz7mX4pWdkSpmEixTZCt2TRm1JDr4BSaBAWkLxYGoXBHXadFKY5D5ZfoVTwqsx46jCmEUDnQUizJDYrM7B5anhnu
+  udp: true
+- name: '🇺🇸 United States TG: @HardVpn_robot t.me/rjsxrd-05'
+  type: vless
+  server: 104.19.45.195
+  port: 443
+  uuid: 88e79aa6-f431-4453-8dcc-652a0c747198
+  udp: true
+  tls: true
+  client-fingerprint: chrome
+  alpn:
+  - http/1.1
+  servername: o685y.save-node.com
+  network: ws
+  ws-opts:
+    path: /api/se1k2rfxlsuer3ry4u6e84kl8rqp721p
+    headers:
+      User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
+        like Gecko) Chrome/131.0.0.0 Safari/537.36
+      Host: o685y.save-node.com
+- name: '🇷🇺 Russian Federation TG: @HardVpn_robot t.me/rjsxrd-13'
+  type: vless
+  server: cedar.filnex.baby
+  port: 443
+  uuid: 0b6a7fe0-206b-4071-9f96-cd397d1ec01a
+  udp: true
+  tls: true
+  client-fingerprint: edge
+  alpn:
+  - http/1.1
+  servername: fieldstone.moltex.click
+  network: ws
+  ws-opts:
+    path: /api/de7/stream
+    headers:
+      User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
+        like Gecko) Chrome/131.0.0.0 Safari/537.36
+  encryption: none
+- name: 🇺🇸_美国 31 t.me/rjsxrd
+  type: ss
+  server: 95.215.201.18
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   udp: true
 - name: '🇩🇪 Germany TG: @HardVpn_robot t.me/rjsxrd-02'
   type: vless
@@ -824,56 +1029,6 @@ proxies:
     path: /xh-7f3a9c
     mode: auto
   encryption: none
-- name: '🇺🇸 United States TG: @HardVpn_robot t.me/rjsxrd-05'
-  type: vless
-  server: 104.19.45.195
-  port: 443
-  uuid: 88e79aa6-f431-4453-8dcc-652a0c747198
-  udp: true
-  tls: true
-  client-fingerprint: chrome
-  alpn:
-  - http/1.1
-  servername: o685y.save-node.com
-  network: ws
-  ws-opts:
-    path: /api/se1k2rfxlsuer3ry4u6e84kl8rqp721p
-    headers:
-      User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:133.0) Gecko/20100101
-        Firefox/133.0
-      Host: o685y.save-node.com
-- name: 🇺🇸_美国 31 t.me/rjsxrd
-  type: ss
-  server: 95.215.201.18
-  port: 19999
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  udp: true
-- name: 🇸🇬_新加坡 14 t.me/rjsxrd
-  type: ss
-  server: 149.88.107.74
-  port: 19999
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  udp: true
-- name: '🇷🇺 Russian Federation TG: @HardVpn_robot t.me/rjsxrd-13'
-  type: vless
-  server: cedar.filnex.baby
-  port: 443
-  uuid: 0b6a7fe0-206b-4071-9f96-cd397d1ec01a
-  udp: true
-  tls: true
-  client-fingerprint: edge
-  alpn:
-  - http/1.1
-  servername: fieldstone.moltex.click
-  network: ws
-  ws-opts:
-    path: /api/de7/stream
-    headers:
-      User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36
-        (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36
-  encryption: none
 - name: '🇷🇺 Russian Federation TG: @HardVpn_robot t.me/rjsxrd-14'
   type: vless
   server: 72.56.238.135
@@ -890,23 +1045,37 @@ proxies:
       User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36
         (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36
       Host: parchment.merlano.monster
-- name: '🇷🇺 Russian Federation TG: @HardVpn_robot t.me/rjsxrd-16'
+- name: '🇷🇺 Russian Federation TG: @HardVpn_robot t.me/rjsxrd-15'
   type: vless
-  server: gesso.merlano.monster
+  server: grovewood.moltex.click
   port: 443
   uuid: 0b6a7fe0-206b-4071-9f96-cd397d1ec01a
   udp: true
   tls: true
-  client-fingerprint: chrome
-  alpn:
-  - h2
-  - http/1.1
-  servername: gesso.merlano.monster
+  client-fingerprint: firefox
+  servername: grovewood.moltex.click
   network: xhttp
   xhttp-opts:
     path: /api/de5/sync
-    host: gesso.merlano.monster
+    host: grovewood.moltex.click
     mode: auto
+- name: '🇷🇺 Russian Federation TG: @HardVpn_robot t.me/rjsxrd-17'
+  type: vless
+  server: cabinet.filnex.baby
+  port: 443
+  uuid: 0b6a7fe0-206b-4071-9f96-cd397d1ec01a
+  udp: true
+  tls: true
+  client-fingerprint: qq
+  alpn:
+  - http/1.1
+  servername: claywick.elvano.website
+  network: ws
+  ws-opts:
+    path: /api/de7/stream
+    headers:
+      User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:133.0) Gecko/20100101
+        Firefox/133.0
   encryption: none
 - name: 🇸🇬_新加坡 10 t.me/rjsxrd
   type: ss
@@ -915,49 +1084,6 @@ proxies:
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   udp: true
-- name: 🇸🇬_新加坡
-  type: vmess
-  server: 149.88.23.207
-  port: 18000
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-  alterId: 0
-  cipher: auto
-  udp: true
-  alpn:
-  - ''
-  network: tcp
-- name: 🇸🇬_新加坡 11 t.me/rjsxrd
-  type: ss
-  server: 149.88.106.73
-  port: 19999
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  udp: true
-- name: '🇷🇺 Russian Federation TG: @HardVpn_robot t.me/rjsxrd-18'
-  type: vless
-  server: xssite.webredirect.org
-  port: 443
-  uuid: c90395e6-2140-47ad-a54d-9b166729d3ef
-  udp: true
-  tls: true
-  client-fingerprint: chrome
-  servername: xssite.webredirect.org
-  network: grpc
-  grpc-opts:
-    grpc-service-name: grpc-ru
-  encryption: none
-- name: 519ms
-  type: vless
-  server: 81.200.158.26
-  port: 443
-  uuid: 0b6a7fe0-206b-4071-9f96-cd397d1ec01a
-  udp: true
-  tls: true
-  client-fingerprint: edge
-  servername: fernglade.gerqix.online
-  network: grpc
-  grpc-opts:
-    grpc-service-name: glush.de1.v1
 - name: 🇺🇸_美国 28 t.me/rjsxrd
   type: ss
   server: 137.184.89.151
@@ -965,6 +1091,20 @@ proxies:
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   udp: true
+- name: 🇷🇺 Russia 🌐 CIDR VK t.me/rjsxrd-01-02
+  type: vless
+  server: 185.86.145.173
+  port: 443
+  uuid: 37af0181-5598-4aad-a040-d926bcb65757
+  udp: true
+  tls: true
+  client-fingerprint: chrome
+  servername: wholebeam.com
+  network: xhttp
+  xhttp-opts:
+    path: /api/v1/upload
+    host: 185.86.145.173
+  encryption: none
 - name: '🇩🇪 Germany TG: @HardVpn_robot t.me/rjsxrd-03'
   type: vless
   server: 80cb66x.nl13.h1clayd.click
@@ -982,24 +1122,18 @@ proxies:
     path: /d610f026b146
     mode: auto
   encryption: none
-- name: '🇩🇪 Germany TG: @HardVpn_robot t.me/rjsxrd-04'
-  type: vless
-  server: 80cb66x.nl13.h1clayd.click
-  port: 443
-  uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839
+- name: 🇸🇬_新加坡 2
+  type: vmess
+  server: 149.88.23.202
+  port: 18000
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  alterId: 0
+  cipher: auto
   udp: true
-  tls: true
-  client-fingerprint: qq
-  servername: 80cb66x.nl13.h1clayd.click
-  reality-opts:
-    public-key: jhVdP7NFUaEXGfrmOqJlMCHTvqn3fymbzPfPT6NO4i0
-    short-id: f72d4a2c7cbbacb1
-  network: xhttp
-  xhttp-opts:
-    path: /d610f026b146
-    mode: auto
-  encryption: none
-- name: 🇷🇺 Russia 🌐 CIDR VK t.me/rjsxrd-02-01
+  alpn:
+  - ''
+  network: tcp
+- name: 🇷🇺 Russia 🌐 CIDR VK t.me/rjsxrd-02
   type: vless
   server: 185.86.145.173
   port: 443
@@ -1014,17 +1148,6 @@ proxies:
     host: wholebeam.com
     mode: auto
   encryption: none
-- name: 🇸🇬_新加坡 2
-  type: vmess
-  server: 149.88.23.202
-  port: 18000
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-  alterId: 0
-  cipher: auto
-  udp: true
-  alpn:
-  - ''
-  network: tcp
 - name: '🇷🇺 Russian Federation TG: @HardVpn_robot t.me/rjsxrd-19'
   type: vless
   server: archive.filnex.baby
@@ -1054,15 +1177,24 @@ proxies:
     path: api/v1/upload
     host: wholebeam.com
   encryption: none
-- name: OpenRay 🇺🇸 US-15122
-  type: vmess
-  server: 38.91.107.49
-  port: 18000
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-  alterId: 0
-  cipher: auto
+- name: 1010ms
+  type: vless
+  server: marina.gerqix.online
+  port: 443
+  uuid: 0b6a7fe0-206b-4071-9f96-cd397d1ec01a
   udp: true
-  network: tcp
+  tls: true
+  client-fingerprint: safari
+  alpn:
+  - http/1.1
+  servername: marina.gerqix.online
+  network: ws
+  ws-opts:
+    path: /api/de3/stream
+    headers:
+      User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101
+        Firefox/133.0
+  encryption: none
 - name: 未知13
   type: vmess
   server: 186.190.215.4
@@ -1074,6 +1206,43 @@ proxies:
   servername: xmfhlpy.com
   tls: true
   network: tcp
+- name: OpenRay 🇺🇸 US-15122
+  type: vmess
+  server: 38.91.107.49
+  port: 18000
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  alterId: 0
+  cipher: auto
+  udp: true
+  network: tcp
+- name: 🇳🇱 The Netherlands CIDR t.me/rjsxrd-03
+  type: vless
+  server: 91.132.190.161
+  port: 443
+  uuid: 04920673-035c-410d-94e4-5b1469d3fb6f
+  udp: true
+  tls: true
+  client-fingerprint: ios
+  servername: 171.22.183.166
+  network: tcp
+  flow: xtls-rprx-vision
+- name: '🇩🇪 Germany TG: @HardVpn_robot t.me/rjsxrd-04'
+  type: vless
+  server: 80cb66x.nl13.h1clayd.click
+  port: 443
+  uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839
+  udp: true
+  tls: true
+  client-fingerprint: qq
+  servername: 80cb66x.nl13.h1clayd.click
+  reality-opts:
+    public-key: jhVdP7NFUaEXGfrmOqJlMCHTvqn3fymbzPfPT6NO4i0
+    short-id: f72d4a2c7cbbacb1
+  network: xhttp
+  xhttp-opts:
+    path: /d610f026b146
+    mode: auto
+  encryption: none
 - name: 🇷🇺 Russia 🌐 CIDR VK t.me/rjsxrd-03-01
   type: vless
   server: 185.86.145.173
@@ -1086,50 +1255,6 @@ proxies:
   network: xhttp
   xhttp-opts:
     path: /api/v1/upload
-  encryption: none
-- name: 🇳🇱 The Netherlands CIDR t.me/rjsxrd-03
-  type: vless
-  server: 91.132.190.161
-  port: 443
-  uuid: 04920673-035c-410d-94e4-5b1469d3fb6f
-  udp: true
-  tls: true
-  client-fingerprint: ios
-  servername: 171.22.183.166
-  network: tcp
-  flow: xtls-rprx-vision
-- name: '🇺🇸 United States TG: @HardVpn_robot t.me/rjsxrd-06'
-  type: vless
-  server: 188.114.98.0
-  port: 443
-  uuid: 364D2D52-E61E-4E52-80EC-2BC6BDF15349
-  udp: true
-  tls: true
-  client-fingerprint: chrome
-  alpn:
-  - http/1.1
-  servername: fr-free.fastestrelay.com
-  network: ws
-  ws-opts:
-    path: /700gvl
-    headers:
-      User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like
-        Gecko) Chrome/131.0.0.0 Safari/537.36
-      Host: fr-free.fastestrelay.com
-- name: '🇫🇮 Finland TG: @HardVpn_robot t.me/rjsxrd'
-  type: vless
-  server: durov.sky-vault.top
-  port: 8443
-  uuid: c53ea5e9-ed8b-4990-805d-7f1d6451426c
-  udp: true
-  tls: true
-  client-fingerprint: chrome
-  servername: durov.sky-vault.top
-  reality-opts:
-    public-key: fSVfR9NB-6J6smrZlavi0GWd8JfDh0aXuEkKbtuFzUI
-    short-id: 3cbc3d737fb9c4af
-  network: tcp
-  flow: xtls-rprx-vision
   encryption: none
 - name: '🇷🇺 Russian Federation TG: @HardVpn_robot t.me/rjsxrd-20'
   type: vless
@@ -1146,31 +1271,8 @@ proxies:
   ws-opts:
     path: /api/de7/stream
     headers:
-      User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like
-        Gecko) Chrome/131.0.0.0 Safari/537.36
-  encryption: none
-- name: 🇸🇬_新加坡 12 t.me/rjsxrd
-  type: ss
-  server: 149.88.107.47
-  port: 19999
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  udp: true
-- name: '🇷🇺 Russian Federation TG: @HardVpn_robot t.me/rjsxrd-21'
-  type: vless
-  server: 5.129.253.99
-  port: 443
-  uuid: 0b6a7fe0-206b-4071-9f96-cd397d1ec01a
-  udp: true
-  tls: true
-  client-fingerprint: firefox
-  alpn:
-  - h2
-  - http/1.1
-  servername: rookery.moltex.click
-  network: grpc
-  grpc-opts:
-    grpc-service-name: glush.de3.v1
+      User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36
+        (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36
   encryption: none
 - name: '🇷🇺 Russian Federation TG: @HardVpn_robot t.me/rjsxrd-22'
   type: vless
@@ -1199,41 +1301,8 @@ proxies:
   ws-opts:
     path: /api/de7/stream
     headers:
-      User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
-        like Gecko) Chrome/131.0.0.0 Safari/537.36
-  encryption: none
-- name: '🇷🇺 Russian Federation TG: @HardVpn_robot t.me/rjsxrd-23'
-  type: vless
-  server: seedling.elvano.website
-  port: 443
-  uuid: 0b6a7fe0-206b-4071-9f96-cd397d1ec01a
-  udp: true
-  tls: true
-  client-fingerprint: chrome
-  alpn:
-  - h2
-  - http/1.1
-  servername: seedling.elvano.website
-  network: xhttp
-  xhttp-opts:
-    path: /api/de4/sync
-    host: seedling.elvano.website
-    mode: auto
-  encryption: none
-- name: '🇷🇺 Russian Federation TG: @HardVpn_robot t.me/rjsxrd-25'
-  type: vless
-  server: honeycomb.merlano.monster
-  port: 443
-  uuid: 0b6a7fe0-206b-4071-9f96-cd397d1ec01a
-  udp: true
-  tls: true
-  client-fingerprint: random
-  alpn:
-  - h2
-  servername: honeycomb.merlano.monster
-  network: grpc
-  grpc-opts:
-    grpc-service-name: glush.de7.v1
+      User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101
+        Firefox/133.0
   encryption: none
 - name: '🇷🇺 Russian Federation TG: @HardVpn_robot t.me/rjsxrd-26'
   type: vless
@@ -1250,21 +1319,23 @@ proxies:
   ws-opts:
     path: /api/de7/stream
     headers:
-      User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like
-        Gecko) Chrome/131.0.0.0 Safari/537.36
-- name: 🇨🇦 Join+Telegram:@SolVPN 🇨🇦
-  type: vmess
-  server: 158.51.121.246
-  port: 1270
-  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
-  alterId: 0
-  cipher: auto
+      User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101
+        Firefox/133.0
+- name: '🇷🇺 Russian Federation TG: @HardVpn_robot t.me/rjsxrd-25'
+  type: vless
+  server: honeycomb.merlano.monster
+  port: 443
+  uuid: 0b6a7fe0-206b-4071-9f96-cd397d1ec01a
   udp: true
-  servername: xmfhlpy.com
   tls: true
+  client-fingerprint: random
   alpn:
-  - ''
-  network: tcp
+  - h2
+  servername: honeycomb.merlano.monster
+  network: grpc
+  grpc-opts:
+    grpc-service-name: glush.de7.v1
+  encryption: none
 - name: '🇺🇸 United States — #688 t.me/rjsxrd'
   type: vless
   server: 159.89.87.21
@@ -1305,19 +1376,19 @@ proxies:
   network: tcp
   flow: xtls-rprx-vision
   encryption: none
-- name: 🇷🇺 Russia 🌐 CIDR VK t.me/rjsxrd-04
-  type: vless
-  server: 185.86.145.173
-  port: 443
-  uuid: 37af0181-5598-4aad-a040-d926bcb65757
+- name: 🇨🇦 Join+Telegram:@SolVPN 🇨🇦
+  type: vmess
+  server: 158.51.121.246
+  port: 1270
+  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
+  alterId: 0
+  cipher: auto
   udp: true
+  servername: xmfhlpy.com
   tls: true
-  client-fingerprint: chrome
-  servername: wholebeam.com
-  network: xhttp
-  xhttp-opts:
-    path: /api/v1/upload
-  encryption: none
+  alpn:
+  - ''
+  network: tcp
 - name: 🇪🇸 机场推荐:dafei.de 西班牙 07 t.me/rjsxrd
   type: vless
   server: api.ferrin.uk
@@ -1349,21 +1420,6 @@ proxies:
       User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:133.0) Gecko/20100101
         Firefox/133.0
       Host: estuary.gerqix.online
-- name: '🇷🇺 Russian Federation TG: @HardVpn_robot t.me/rjsxrd-30'
-  type: vless
-  server: birchbark.gerqix.online
-  port: 443
-  uuid: 0b6a7fe0-206b-4071-9f96-cd397d1ec01a
-  udp: true
-  tls: true
-  client-fingerprint: edge
-  alpn:
-  - h2
-  servername: birchbark.gerqix.online
-  network: grpc
-  grpc-opts:
-    grpc-service-name: glush.de7.v1
-  encryption: none
 - name: 🇩🇪_德国 4 t.me/rjsxrd
   type: vless
   server: 94.103.168.62
@@ -1375,6 +1431,22 @@ proxies:
   servername: uuyjnfbv.localip.ir
   network: tcp
   encryption: none
+- name: 🇺🇸_美国 30
+  type: vmess
+  server: 129.146.77.248
+  port: 39495
+  uuid: f836c736-87fc-4fde-aabc-00857ecdff3e
+  alterId: 0
+  cipher: auto
+  udp: true
+  servername: 129.146.77.248
+  alpn:
+  - ''
+  network: ws
+  ws-opts:
+    path: /cctv13.m3u8
+    headers:
+      Host: 129.146.77.248
 - name: '🇷🇺 Russian Federation TG: @HardVpn_robot t.me/rjsxrd-28'
   type: vless
   server: mosaic.merlano.monster
@@ -1393,17 +1465,24 @@ proxies:
     host: mosaic.merlano.monster
     mode: auto
   encryption: none
-- name: 🇺🇸 Join+Telegram:@SolVPN 🇺🇸
-  type: vmess
-  server: 129.146.77.248
-  port: 39495
-  uuid: f836c736-87fc-4fde-aabc-00857ecdff3e
-  alterId: 0
-  cipher: auto
+- name: '🇷🇺 Russian Federation TG: @HardVpn_robot t.me/rjsxrd-29'
+  type: vless
+  server: cabinet.filnex.baby
+  port: 443
+  uuid: 0b6a7fe0-206b-4071-9f96-cd397d1ec01a
   udp: true
+  tls: true
+  client-fingerprint: safari
+  alpn:
+  - http/1.1
+  servername: claywick.elvano.website
   network: ws
   ws-opts:
-    path: /cctv13.m3u8
+    path: /api/de7/stream
+    headers:
+      User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101
+        Firefox/133.0
+  encryption: none
 - name: '🇷🇺 Russian Federation TG: @HardVpn_robot t.me/rjsxrd-31'
   type: vless
   server: honeycomb.merlano.monster
@@ -1416,35 +1495,19 @@ proxies:
   network: grpc
   grpc-opts:
     grpc-service-name: glush.de7.v1
-- name: '🇩🇪 Germany TG: @HardVpn_robot t.me/rjsxrd-05'
+- name: 🇷🇺 Russia сервер 🇬🇧 United Kingdom выход 2a06:7e00:ade:600:b
   type: vless
-  server: f0d7aft.nl13.h1clayd.click
-  port: 443
-  uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839
+  server: 116.206.95.231
+  port: 43000
+  uuid: 4a923161-156f-4914-8cac-762fb2433bfb
   udp: true
   tls: true
   client-fingerprint: chrome
-  servername: f0d7aft.nl13.h1clayd.click
   reality-opts:
-    public-key: kkCGiCQCKnkozJR1KKCRNtmdBECmThCgI9VSv7iDcWI
-    short-id: 8956c57cb4c4f8d2
-  network: tcp
-  encryption: none
-- name: 1071ms
-  type: vless
-  server: 146.103.42.165
-  port: 9543
-  uuid: 920b3cd9-4f82-4669-bbd2-d4a28b9052c6
-  udp: true
-  tls: true
-  client-fingerprint: firefox
-  servername: storage.yandexcloud.net
-  reality-opts:
-    public-key: M6Ck7wUfOLhQl4582CBnaXwscPEP6SCpdEkUDzoj4Fc
-    short-id: 123abcdf
+    public-key: CG0mVPuvPcfZjplA21zehlqoDpGHihJBK8K_u1zfhgQ
+    short-id: ee4ea980
   network: tcp
   flow: xtls-rprx-vision
-  encryption: none
 - name: 🇩🇪 机场推荐:dafei.de 德国 26 t.me/rjsxrd
   type: vless
   server: chess.com
@@ -1464,6 +1527,68 @@ proxies:
     host: nor.mouse-moj.site
     mode: auto
   encryption: mlkem768x25519plus.native.0rtt.gTIwU8DMK2WdhWvK0WSf5-CKf2YBE9kECcTD1EidSYakqXlXFPYxfMtw0jlqrDmwtAbCegiiViTKlPKnFJp0WahH3dAXV4ZA3vhI6DhTvZBPpAowAJpbjGR0qLGaI8QackClAhiNUHlAGJGZ_7wc5gsIMmuveZhp_vyiezBOt-QmnxltCvdMFLdAENxcVCXPnbUG_1LAL_hhEIsEUxNStEpZA4s7XcB18ftJP-Mf1JsLuToCr3VyZhq2S-qWQ_AatUFQXcE0OsIdKzeQhooEFhuO9gpfsQpDDGKxSCSDkiZUMyyNMfZ1G6KZShjN90YOj-eLFHIu-wJ4pkVnC6C9KvxWR4ZfVvXN3pDH0bZ49xkXRby6sluhBvd5DQOWNPsQQzaWwsI3t1dNhaasHWVqQSIrvABcpKYLi2aWTExZP3QcPNuTVSJepRlhRoIkjnRY6EdpqrsbPBa8yGZvqCbEcvys1VCxbCh2abYjSoVYK2cNiaIuLxS8OBiaemETKDsnrFFElnhtN_kJ2GUaY-M_JuuNb3I_ETalFwATdGypItGcHRmH1bc-nXQ0CpOKXEAHAoGgSRqtdCRO3YsqCUyGU3rD16mDd0G3BRGggKxwzPWW_hfMw1K3rmebY1FcE4PEgZG2ZJkpJflanwRJFWB6YiopZ4ErVyUjfyK6-gluuOqGgeVCXYxgE7AQnRSxyYY3gdgBWNef8valPKqVWnxPMuEVDqYPl6OLUOxlmLhthyqdj5BkhxyUPFIcqduY_KseHaphj1GP11egfVMORyqTXARwzwh4MEw_aJIoRlM0_LEPUbkK4Ei0I0FriNlffUUjU7FBcnJmfSGxR3pL-4DD2WdhWCEzhqs99fQwNimADCxKgLQQCSWP7Ba8gvi7gcM89JucOnDHIJuZd1mapeCwPAMgARpibqybunqFHUfMmiELXIyfoLO6fIMDXUwOCYCC5xbBTrqa72hOdXNvwBEeLtCFe1orVIl_eWNO8ccpm6IgaxmA9acmdySroeN0cpi_2LuRnYxylajFrjppR3p9XSzH1eujVXy95Pcn9sGRTquNVDhxZaplBUnMLJUe0cfBJbQDkKtt0vJaoPSWJtKNYrulRwYBXiMRe9E3RMKS15qD4GZgSmCsxlSSaNFIl8GxjbYBxEvILmVeUNdYS_SdyuYUSDQurbwatqaiKYQ_njxWvwIV0hs5dfS7tlMZf8lBzEKT0QCNJGVHccqKCba__8CocWMseAKoDdINQ9CW7nTA0nVHfADH13OCoPRZRjNjQQM1n_wlQyln78d6JfpiYge3mIsmUzl6RqZ6WdA0KcgI88xx9oC-jBNmhXBHtILEtnnGPGWHeVtI2KudvdNm2dat9uOJX9wdvVRL8ghjx0AeT3VKtgPFUmo5y_eDJqjMDKjKfBIEHmRyvVVj9txxn5hTiDu2ubM2e3nKx6SLMSRxuTiAC3efeCNyOQUvOBjP5fmO_HKVuMWxVSqOH2ltnzx0_rlHk_e1MllAsIoaNau5T-Iz4oA98UvLINmjfsxLdcexC_aMzKo-wFPBXntHAqeupe0A9hwzKLCtdNdwZe8
+- name: 74.🇳🇱Нидерланды @LimeVPNFREE t.me/rjsxrd
+  type: vless
+  server: 51.158.206.97
+  port: 23576
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+  udp: true
+  tls: true
+  client-fingerprint: chrome
+  servername: fuck.rkn
+  reality-opts:
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+    short-id: '01'
+  network: tcp
+  flow: xtls-rprx-vision
+  encryption: none
+- name: 🇫🇮 Finland сервер 🇫🇮 Finland выход 196.196.204.135 @RaViraNe
+  type: vless
+  server: 4c980ft.fi15.h1clayd.click
+  port: 443
+  uuid: f15a2e25-6859-4bcc-b4c4-a14bb8ae0fbb
+  udp: true
+  tls: true
+  client-fingerprint: firefox
+  servername: 4c980ft.fi15.h1clayd.click
+  reality-opts:
+    public-key: -ZN1kT3JlPFxu1E906JRqLAGoQQucSmL6xPiuAyasTk
+    short-id: 597e1c279d224774
+  network: raw
+  flow: xtls-rprx-vision
+- name: '🇳🇱 Netherlands TG: @HardVpn_robot t.me/rjsxrd-02'
+  type: vless
+  server: 194.85.249.29
+  port: 443
+  uuid: b7791707-83d9-444b-9d05-f5c99e90acd4
+  udp: true
+  tls: true
+  client-fingerprint: firefox
+  servername: n1.sklserv.com
+  reality-opts:
+    public-key: GqhAFTkRQ1HkNXyF2dUl3wUzJDHfgx3O9qocK01SLWU
+    short-id: 38e0c84b27d01e0d
+  network: tcp
+  flow: xtls-rprx-vision
+  encryption: none
+- name: '🇷🇺 Russian Federation TG: @HardVpn_robot t.me/rjsxrd-33'
+  type: vless
+  server: cabinet.filnex.baby
+  port: 443
+  uuid: 0b6a7fe0-206b-4071-9f96-cd397d1ec01a
+  udp: true
+  tls: true
+  client-fingerprint: chrome
+  alpn:
+  - http/1.1
+  servername: claywick.elvano.website
+  network: ws
+  ws-opts:
+    path: /api/de7/stream
+    headers:
+      User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like
+        Gecko) Chrome/131.0.0.0 Safari/537.36
+  encryption: none
 - name: '1. 🇧🇬 VLESS SNI: plaindune.com CIDR: ? TG: @wlrustg t.me/rjs'
   type: vless
   server: 78.159.240.72
@@ -1495,87 +1620,6 @@ proxies:
   xhttp-opts:
     path: /d610f026b146
     mode: auto
-- name: '🇳🇱 Netherlands TG: @HardVpn_robot t.me/rjsxrd-02'
-  type: vless
-  server: 194.85.249.29
-  port: 443
-  uuid: b7791707-83d9-444b-9d05-f5c99e90acd4
-  udp: true
-  tls: true
-  client-fingerprint: firefox
-  servername: n1.sklserv.com
-  reality-opts:
-    public-key: GqhAFTkRQ1HkNXyF2dUl3wUzJDHfgx3O9qocK01SLWU
-    short-id: 38e0c84b27d01e0d
-  network: tcp
-  flow: xtls-rprx-vision
-  encryption: none
-- name: 🇦🇹
-  type: ss
-  server: 152.53.1.57
-  port: 8388
-  cipher: chacha20-ietf-poly1305
-  password: AdawffFMHymlasRb0VOP3HFf7sTG5sJx
-  udp: true
-- name: 🇨🇦
-  type: ss
-  server: 51.79.85.185
-  port: 8118
-  cipher: aes-256-gcm
-  password: cdBIDV42DCwnfIN
-  udp: true
-- name: '🇺🇸 United States TG: @HardVpn_robot t.me/rjsxrd-07'
-  type: vless
-  server: 188.114.98.0
-  port: 443
-  uuid: 53bbdad4-2f4e-45db-8df4-fa491a6a7227
-  udp: true
-  tls: true
-  client-fingerprint: chrome
-  servername: freeceshi6.frii.site
-  network: ws
-  ws-opts:
-    path: /proxyip=ProxyIP.JP.CMLiussss.net
-    headers:
-      User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101
-        Firefox/133.0
-      Host: freeceshi6.frii.site
-- name: '🇩🇪 Germany TG: @HardVpn_robot t.me/rjsxrd-08'
-  type: vless
-  server: 80cb66x.nl13.h1clayd.click
-  port: 443
-  uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839
-  udp: true
-  tls: true
-  client-fingerprint: chrome
-  servername: 80cb66x.nl13.h1clayd.click
-  reality-opts:
-    public-key: jhVdP7NFUaEXGfrmOqJlMCHTvqn3fymbzPfPT6NO4i0
-    short-id: f72d4a2c7cbbacb1
-  xudp: true
-  network: xhttp
-  xhttp-opts:
-    path: /d610f026b146
-    mode: auto
-  encryption: none
-- name: '🇷🇺 Russian Federation TG: @HardVpn_robot t.me/rjsxrd-34'
-  type: vless
-  server: cedar.filnex.baby
-  port: 443
-  uuid: 0b6a7fe0-206b-4071-9f96-cd397d1ec01a
-  udp: true
-  tls: true
-  client-fingerprint: chrome
-  alpn:
-  - http/1.1
-  servername: fieldstone.moltex.click
-  network: ws
-  ws-opts:
-    path: /api/de7/stream
-    headers:
-      User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36
-        (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36
-  encryption: none
 - name: '🇷🇺 Russian Federation TG: @HardVpn_robot t.me/rjsxrd-35'
   type: vless
   server: inlay.merlano.monster
@@ -1605,39 +1649,6 @@ proxies:
   alpn:
   - ''
   network: tcp
-- name: '🇷🇺 Russian Federation TG: @HardVpn_robot t.me/rjsxrd-36'
-  type: vless
-  server: larkspur.gerqix.online
-  port: 443
-  uuid: 83706ae4-be2f-4b2b-8079-c3eb4e0b2e3e
-  udp: true
-  tls: true
-  client-fingerprint: firefox
-  alpn:
-  - h2
-  servername: paperbirch.merlano.monster
-  network: xhttp
-  xhttp-opts:
-    path: /api/de1/preview/
-    host: paperbirch.merlano.monster
-    mode: packet-up
-  encryption: none
-- name: '🇷🇺 Russian Federation TG: @HardVpn_robot t.me/rjsxrd-37'
-  type: vless
-  server: cedar.filnex.baby
-  port: 443
-  uuid: 0b6a7fe0-206b-4071-9f96-cd397d1ec01a
-  udp: true
-  tls: true
-  client-fingerprint: chrome
-  servername: fieldstone.moltex.click
-  network: ws
-  ws-opts:
-    path: /api/de7/stream
-    headers:
-      User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
-        like Gecko) Chrome/131.0.0.0 Safari/537.36
-      Host: cedar.filnex.baby
 - name: 🇺🇸_美国 25 t.me/rjsxrd-01
   type: ss
   server: 23.230.52.119
@@ -1658,9 +1669,51 @@ proxies:
   grpc-opts:
     grpc-service-name: glush.de1.v1
   encryption: none
-- name: 🇺🇸 Join+Telegram:@SolVPN 🇺🇸-01
+- name: '🇷🇺 Russian Federation TG: @HardVpn_robot t.me/rjsxrd-38'
+  type: vless
+  server: birchbark.gerqix.online
+  port: 443
+  uuid: 0b6a7fe0-206b-4071-9f96-cd397d1ec01a
+  udp: true
+  tls: true
+  client-fingerprint: firefox
+  alpn:
+  - h2
+  servername: birchbark.gerqix.online
+  network: grpc
+  grpc-opts:
+    grpc-service-name: glush.de7.v1
+  encryption: none
+- name: '🇷🇺 Russian Federation TG: @HardVpn_robot t.me/rjsxrd-41'
+  type: vless
+  server: honeycomb.merlano.monster
+  port: 443
+  uuid: 0b6a7fe0-206b-4071-9f96-cd397d1ec01a
+  udp: true
+  tls: true
+  client-fingerprint: chrome
+  alpn:
+  - h2
+  servername: honeycomb.merlano.monster
+  network: grpc
+  grpc-opts:
+    grpc-service-name: glush.de7.v1
+  encryption: none
+- name: '🇩🇪 Germany TG: @HardVpn_robot t.me/rjsxrd-09'
+  type: vless
+  server: 109.248.17.252
+  port: 443
+  uuid: 9000a7f3-df2a-49a8-ae56-3e7777bd32f7
+  udp: true
+  tls: true
+  client-fingerprint: chrome
+  servername: v4.clequinix.globalinetforallalwaysandneverbanyoubelieveme.com
+  network: grpc
+  grpc-opts:
+    grpc-service-name: v4-clequinix-globalinetforallalwaysandneverbanyoubelieveme-com
+- name: US11
   type: vmess
-  server: 172.111.36.126
+  server: 38.91.107.188
   port: 1270
   uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
   alterId: 0
@@ -1668,8 +1721,6 @@ proxies:
   udp: true
   servername: xmfhlpy.com
   tls: true
-  alpn:
-  - ''
   network: tcp
 - name: US13
   type: vmess
@@ -1682,24 +1733,6 @@ proxies:
   servername: xmfhlpy.com
   tls: true
   network: tcp
-- name: '🇷🇺 Russian Federation TG: @HardVpn_robot t.me/rjsxrd-40'
-  type: vless
-  server: lowland.moltex.click
-  port: 443
-  uuid: 0b6a7fe0-206b-4071-9f96-cd397d1ec01a
-  udp: true
-  tls: true
-  client-fingerprint: ios
-  alpn:
-  - h2
-  - http/1.1
-  servername: lowland.moltex.click
-  network: xhttp
-  xhttp-opts:
-    path: /api/de3/sync
-    host: lowland.moltex.click
-    mode: auto
-  encryption: none
 - name: US7
   type: vmess
   server: 162.251.62.44
@@ -1711,33 +1744,18 @@ proxies:
   servername: xmfhlpy.com
   tls: true
   network: tcp
-- name: US11
-  type: vmess
-  server: 38.91.107.188
-  port: 1270
-  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
-  alterId: 0
-  cipher: auto
-  udp: true
-  servername: xmfhlpy.com
-  tls: true
-  network: tcp
-- name: '🇷🇺 Russian Federation TG: @HardVpn_robot t.me/rjsxrd-44'
+- name: '🇷🇺 Russian Federation TG: @HardVpn_robot t.me/rjsxrd-43'
   type: vless
-  server: cabinet.filnex.baby
+  server: 185.86.145.173
   port: 443
-  uuid: 0b6a7fe0-206b-4071-9f96-cd397d1ec01a
+  uuid: 37af0181-5598-4aad-a040-d926bcb65757
   udp: true
   tls: true
-  client-fingerprint: chrome
-  servername: claywick.elvano.website
-  network: ws
-  ws-opts:
-    path: /api/de7/stream
-    headers:
-      User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:133.0) Gecko/20100101
-        Firefox/133.0
-      Host: cabinet.filnex.baby
+  client-fingerprint: firefox
+  servername: wholebeam.com
+  network: xhttp
+  xhttp-opts:
+    path: /api/v1/upload
 - name: 🇺🇸-03
   type: vless
   server: 15.204.97.209
@@ -1765,6 +1783,17 @@ proxies:
   servername: kuruish.org
   network: tcp
   encryption: none
+- name: 🇺🇸_美国 29
+  type: vmess
+  server: 129.146.143.80
+  port: 48111
+  uuid: d4603cc2-e0ee-4651-83f5-1db5b7168177
+  alterId: 0
+  cipher: auto
+  udp: true
+  alpn:
+  - ''
+  network: tcp
 - name: '🇷🇺 Russian Federation TG: @HardVpn_robot t.me/rjsxrd-45'
   type: vless
   server: cloverleaf.moltex.click
@@ -1817,6 +1846,17 @@ proxies:
   network: tcp
   flow: xtls-rprx-vision
   encryption: none
+- name: US8
+  type: vmess
+  server: 67.220.74.188
+  port: 1270
+  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
+  alterId: 0
+  cipher: auto
+  udp: true
+  servername: xmfhlpy.com
+  tls: true
+  network: tcp
 - name: 🇺🇸-05
   type: vless
   server: 15.204.97.214
@@ -1833,252 +1873,168 @@ proxies:
   network: tcp
   flow: xtls-rprx-vision
   encryption: none
-- name: US8
-  type: vmess
-  server: 67.220.74.188
-  port: 1270
-  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
-  alterId: 0
-  cipher: auto
-  udp: true
-  servername: xmfhlpy.com
-  tls: true
-  network: tcp
-- name: 🇩🇿 Algeria CIDR
+- name: .𖥔 ݁ ˖ִ🛸༄˖°. CIDR
   type: vless
-  server: 168.113.252.145
+  server: 95.129.236.239
   port: 443
-  uuid: 1b7ee703-fa08-4305-8469-ae3e30e61e44
+  uuid: a71d6c6d-c95e-4ec1-a892-22e21733bf09
   udp: true
   tls: true
-  client-fingerprint: firefox
-  servername: tarakan.belka.tv
-  reality-opts:
-    public-key: _qSbW4JL4Ffqvj25vX-6a2ul9Qlj6PBdlF0ghsf_0RQ
-    short-id: a9dc98a7dc87a7dc
-  network: tcp
-  flow: xtls-rprx-vision
-- name: 🇩🇿 Algeria CIDR -03
-  type: vless
-  server: 168.113.252.145
-  port: 443
-  uuid: 1b7ee703-fa08-4305-8469-ae3e30e61e44
-  udp: true
-  tls: true
-  client-fingerprint: safari
-  servername: tarakan.belka.tv
-  reality-opts:
-    public-key: _qSbW4JL4Ffqvj25vX-6a2ul9Qlj6PBdlF0ghsf_0RQ
-    short-id: a9dc98a7dc87a7dc
-  network: tcp
-  flow: xtls-rprx-vision
-- name: 🇩🇿 Algeria CIDR -02
-  type: vless
-  server: 168.113.252.145
-  port: 443
-  uuid: 1b7ee703-fa08-4305-8469-ae3e30e61e44
-  udp: true
-  tls: true
-  client-fingerprint: chrome
-  servername: tarakan.belka.tv
-  reality-opts:
-    public-key: _qSbW4JL4Ffqvj25vX-6a2ul9Qlj6PBdlF0ghsf_0RQ
-    short-id: a9dc98a7dc87a7dc
-  network: tcp
-  flow: xtls-rprx-vision
-- name: 🇦🇹 Austria CIDR
-  type: vless
-  server: 189.74.115.2
-  port: 443
-  uuid: 101f4da5-cad5-4009-888d-8d24f496bbd9
-  udp: true
-  tls: true
-  client-fingerprint: firefox
-  servername: api.mediaroshcha.cc
-  reality-opts:
-    public-key: r5WB5FnSCt4eeBC1FJMfkWHbzsMuabo0Rc6wuAhlZUs
-    short-id: a8
-  network: tcp
-  flow: xtls-rprx-vision
-- name: 🇩🇿 Algeria CIDR -04
-  type: vless
-  server: 168.113.252.145
-  port: 443
-  uuid: 1b7ee703-fa08-4305-8469-ae3e30e61e44
-  udp: true
-  tls: true
-  client-fingerprint: qq
-  servername: tarakan.belka.tv
-  reality-opts:
-    public-key: _qSbW4JL4Ffqvj25vX-6a2ul9Qlj6PBdlF0ghsf_0RQ
-    short-id: a9dc98a7dc87a7dc
-  network: tcp
-  flow: xtls-rprx-vision
-- name: 🇦🇹 Austria CIDR -01
-  type: vless
-  server: api.mediaroshcha.cc
-  port: 443
-  uuid: 101f4da5-cad5-4009-888d-8d24f496bbd9
-  udp: true
-  tls: true
-  client-fingerprint: firefox
-  servername: api.mediaroshcha.cc
-  reality-opts:
-    public-key: r5WB5FnSCt4eeBC1FJMfkWHbzsMuabo0Rc6wuAhlZUs
-    short-id: a8
-  network: tcp
-  flow: xtls-rprx-vision
+  client-fingerprint: edge
+  servername: files-qzgs.login.opendns.stream
+  network: ws
+  ws-opts:
+    path: /origin/246825491/fetch
+    headers:
+      User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
+        like Gecko) Chrome/131.0.0.0 Safari/537.36
+      Host: files-qzgs.login.opendns.stream
   encryption: none
-- name: 🇦🇹 Austria CIDR -02
+- name: .𖥔 ݁ ˖ִ🛸༄˖°. CIDR -02
   type: vless
-  server: 189.74.115.2
+  server: files-qzgs.login.opendns.stream
   port: 443
-  uuid: 2570eecd-e2d2-411a-b474-b7a63454484b
+  uuid: a71d6c6d-c95e-4ec1-a892-22e21733bf09
+  udp: true
+  tls: true
+  client-fingerprint: edge
+  alpn:
+  - http/1.1
+  servername: files-qzgs.login.opendns.stream
+  network: ws
+  ws-opts:
+    path: /origin/246825491/fetch
+    headers:
+      User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101
+        Firefox/133.0
+  encryption: none
+- name: .𖥔 ݁ ˖ִ🛸༄˖°. CIDR -03
+  type: vless
+  server: files-qzgs.login.opendns.stream
+  port: 443
+  uuid: a71d6c6d-c95e-4ec1-a892-22e21733bf09
   udp: true
   tls: true
   client-fingerprint: firefox
-  servername: api.mediaroshcha.cc
-  reality-opts:
-    public-key: r5WB5FnSCt4eeBC1FJMfkWHbzsMuabo0Rc6wuAhlZUs
-    short-id: a8
-  network: tcp
-  flow: xtls-rprx-vision
-- name: 🇦🇿 Azerbaijan 🌐 CIDR
+  alpn:
+  - http/1.1
+  servername: files-qzgs.login.opendns.stream
+  network: ws
+  ws-opts:
+    path: /origin/246825491/fetch
+    headers:
+      User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36
+        (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36
+  encryption: none
+- name: .𖥔 ݁ ˖ִ🛸༄˖°. CIDR -06
   type: vless
-  server: 95.129.234.108
-  port: 8443
-  uuid: d86e6fda-e519-46ab-98eb-9ff9a9da5984
+  server: files-qzgs.login.opendns.stream
+  port: 443
+  uuid: a71d6c6d-c95e-4ec1-a892-22e21733bf09
   udp: true
   tls: true
-  client-fingerprint: chrome
-  servername: rowan-quay.cdn.cachefleet.com
-  network: grpc
-  grpc-opts:
-    grpc-service-name: 01ef4cdceb3b3439
-- name: 🇦🇿 Azerbaijan 🌐 CIDR -02
+  client-fingerprint: edge
+  alpn:
+  - http%2F1.1
+  servername: files-qzgs.login.opendns.stream
+  network: ws
+  ws-opts:
+    path: /origin/246825491/fetch
+    headers:
+      User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36
+        (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36
+- name: .𖥔 ݁ ˖ִ🛸༄˖°. CIDR -05
   type: vless
-  server: 95.129.234.108
-  port: 8443
-  uuid: d86e6fda-e519-46ab-98eb-9ff9a9da5984
+  server: files-qzgs.login.opendns.stream
+  port: 443
+  uuid: a71d6c6d-c95e-4ec1-a892-22e21733bf09
   udp: true
   tls: true
   client-fingerprint: android
-  servername: rowan-quay.cdn.cachefleet.com
-  network: grpc
-  grpc-opts:
-    grpc-service-name: 01ef4cdceb3b3439
-- name: 🇦🇿 Azerbaijan 🌐 CIDR -03
+  alpn:
+  - http%2F1.1
+  servername: files-qzgs.login.opendns.stream
+  network: ws
+  ws-opts:
+    path: /origin/246825491/fetch
+    headers:
+      User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36
+        (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36
+- name: 🇫🇷 France 🌐 CIDR -01
   type: vless
-  server: 95.129.234.108
-  port: 8443
-  uuid: d86e6fda-e519-46ab-98eb-9ff9a9da5984
-  udp: true
-  tls: true
-  client-fingerprint: qq
-  servername: rowan-quay.cdn.cachefleet.com
-  network: grpc
-  grpc-opts:
-    grpc-service-name: 01ef4cdceb3b3439
-- name: 🇨🇿 Czechia CIDR -01
-  type: vless
-  server: 176.108.245.73
+  server: 45.67.215.20
   port: 443
-  uuid: 1b7ee703-fa08-4305-8469-ae3e30e61e44
+  uuid: 2b7a122f-f6ff-4860-a919-7bf51be03c02
+  udp: true
+  tls: true
+  client-fingerprint: firefox
+  alpn:
+  - h2
+  - h3
+  - http/1.1
+  servername: mama1472.baklajann.ru
+  network: xhttp
+  xhttp-opts:
+    path: /
+    mode: auto
+- name: 🇫🇷 France 🌐 CIDR -03
+  type: vless
+  server: 45.67.215.20
+  port: 443
+  uuid: 2b7a122f-f6ff-4860-a919-7bf51be03c02
   udp: true
   tls: true
   client-fingerprint: qq
-  servername: pawuk.belka.tv
-  reality-opts:
-    public-key: _qSbW4JL4Ffqvj25vX-6a2ul9Qlj6PBdlF0ghsf_0RQ
-    short-id: a9dc98a7dc87a7dc
-  network: tcp
-  flow: xtls-rprx-vision
-- name: 🇦🇿 Azerbaijan 🌐 CIDR -04
+  alpn:
+  - h2
+  - h3
+  - http/1.1
+  servername: mama1472.baklajann.ru
+  network: xhttp
+  xhttp-opts:
+    path: /
+    mode: auto
+- name: 🇫🇷 France 🌐 CIDR -04
   type: vless
-  server: 95.129.234.108
-  port: 8443
-  uuid: d86e6fda-e519-46ab-98eb-9ff9a9da5984
+  server: 45.67.215.20
+  port: 443
+  uuid: 2b7a122f-f6ff-4860-a919-7bf51be03c02
   udp: true
   tls: true
   client-fingerprint: safari
-  servername: rowan-quay.cdn.cachefleet.com
-  network: grpc
-  grpc-opts:
-    grpc-service-name: 01ef4cdceb3b3439
-- name: 🇩🇰 Denmark CIDR
+  alpn:
+  - h2
+  - h3
+  - http/1.1
+  servername: mama1472.baklajann.ru
+  network: xhttp
+  xhttp-opts:
+    path: /
+    mode: auto
+- name: 🇫🇷 France 🌐 CIDR -05
   type: vless
-  server: 82.202.139.215
-  port: 9881
-  uuid: e460e7b2-a146-4468-87ed-52510b2caae6
-  udp: true
-  tls: true
-  client-fingerprint: qq
-  servername: dl.google.com
-  reality-opts:
-    public-key: Dfgu8Ey0M8Hz4gXGZAwQ3H9jLt2HByVsjAOTWiuKDB0
-    short-id: aa
-  network: grpc
-  grpc-opts:
-    grpc-service-name: grpc-tunnel
-  encryption: none
-- name: 🇨🇿 Czechia CIDR
-  type: vless
-  server: 176.108.245.73
+  server: 45.67.215.20
   port: 443
-  uuid: 1b7ee703-fa08-4305-8469-ae3e30e61e44
+  uuid: 2b7a122f-f6ff-4860-a919-7bf51be03c02
   udp: true
   tls: true
-  client-fingerprint: firefox
-  servername: pawuk.belka.tv
-  reality-opts:
-    public-key: _qSbW4JL4Ffqvj25vX-6a2ul9Qlj6PBdlF0ghsf_0RQ
-    short-id: a9dc98a7dc87a7dc
-  network: tcp
-  flow: xtls-rprx-vision
-- name: 🇪🇪 Estonia CIDR
+  client-fingerprint: edge
+  servername: mama1472.baklajann.ru
+  network: xhttp
+  xhttp-opts:
+    mode: auto
+- name: 🇫🇷 France 🌐 CIDR -06
   type: vless
-  server: 45.132.178.247
-  port: 9881
-  uuid: e460e7b2-a146-4468-87ed-52510b2caae6
-  udp: true
-  tls: true
-  client-fingerprint: qq
-  servername: dl.google.com
-  reality-opts:
-    public-key: Dfgu8Ey0M8Hz4gXGZAwQ3H9jLt2HByVsjAOTWiuKDB0
-    short-id: aabb
-  network: grpc
-  grpc-opts:
-    grpc-service-name: grpc-tunnel
-  encryption: none
-- name: 🇫🇷 France CIDR
-  type: vless
-  server: 189.74.117.15
+  server: 45.67.215.20
   port: 443
-  uuid: 101f4da5-cad5-4009-888d-8d24f496bbd9
+  uuid: 2b7a122f-f6ff-4860-a919-7bf51be03c02
   udp: true
   tls: true
-  client-fingerprint: firefox
-  servername: api.videodolina.cc
-  reality-opts:
-    public-key: r5WB5FnSCt4eeBC1FJMfkWHbzsMuabo0Rc6wuAhlZUs
-    short-id: a8
-  network: tcp
-  flow: xtls-rprx-vision
-- name: 🇫🇷 France CIDR -01
-  type: vless
-  server: 189.74.117.15
-  port: 443
-  uuid: 2570eecd-e2d2-411a-b474-b7a63454484b
-  udp: true
-  tls: true
-  client-fingerprint: firefox
-  servername: api.videodolina.cc
-  reality-opts:
-    public-key: r5WB5FnSCt4eeBC1FJMfkWHbzsMuabo0Rc6wuAhlZUs
-    short-id: a8
-  network: tcp
-  flow: xtls-rprx-vision
+  client-fingerprint: ios
+  servername: mama1472.baklajann.ru
+  network: xhttp
+  xhttp-opts:
+    mode: auto
 - name: 🇫🇷 France 🌐 CIDR -02
   type: vless
   server: 45.67.215.111
@@ -2086,11 +2042,7 @@ proxies:
   uuid: 2b7a122f-f6ff-4860-a919-7bf51be03c02
   udp: true
   tls: true
-  client-fingerprint: edge
-  alpn:
-  - h3
-  - h2
-  - http/1.1
+  client-fingerprint: ios
   servername: mama1455.baklajann.ru
   network: xhttp
   xhttp-opts:
@@ -2098,7 +2050,37 @@ proxies:
     host: mama1455.baklajann.ru
     mode: auto
   encryption: none
-- name: 🇫🇷 France 🌐 CIDR -01
+- name: 🇫🇷 France 🌐 CIDR
+  type: vless
+  server: 45.67.215.111
+  port: 443
+  uuid: 2b7a122f-f6ff-4860-a919-7bf51be03c02
+  udp: true
+  tls: true
+  client-fingerprint: chrome
+  servername: mama1455.baklajann.ru
+  network: xhttp
+  xhttp-opts:
+    path: /
+    host: mama1455.baklajann.ru
+    mode: auto
+  encryption: none
+- name: 🇫🇷 France 🌐 CIDR -03-01
+  type: vless
+  server: 45.67.215.111
+  port: 443
+  uuid: 2b7a122f-f6ff-4860-a919-7bf51be03c02
+  udp: true
+  tls: true
+  client-fingerprint: android
+  servername: newmama.baklajann.ru
+  network: xhttp
+  xhttp-opts:
+    path: /
+    host: newmama.baklajann.ru
+    mode: auto
+  encryption: none
+- name: 🇫🇷 France 🌐 CIDR -04-01
   type: vless
   server: 45.67.215.111
   port: 443
@@ -2113,7 +2095,56 @@ proxies:
     host: newmama.baklajann.ru
     mode: auto
   encryption: none
-- name: 🇫🇷 France 🌐 CIDR -04
+- name: 🇫🇷 France 🌐 CIDR -01-01
+  type: vless
+  server: 45.67.215.111
+  port: 443
+  uuid: 2b7a122f-f6ff-4860-a919-7bf51be03c02
+  udp: true
+  tls: true
+  client-fingerprint: edge
+  servername: mama1455.baklajann.ru
+  network: xhttp
+  xhttp-opts:
+    path: /
+    host: mama1455.baklajann.ru
+    mode: auto
+  encryption: none
+- name: 🇫🇷 France 🌐 CIDR -05-01
+  type: vless
+  server: 45.67.215.111
+  port: 443
+  uuid: 2b7a122f-f6ff-4860-a919-7bf51be03c02
+  udp: true
+  tls: true
+  client-fingerprint: edge
+  servername: newmama.baklajann.ru
+  network: xhttp
+  xhttp-opts:
+    path: /
+    host: newmama.baklajann.ru
+    mode: auto
+  encryption: none
+- name: 🇫🇷 France 🌐 CIDR -06-01
+  type: vless
+  server: 45.67.215.111
+  port: 443
+  uuid: 2b7a122f-f6ff-4860-a919-7bf51be03c02
+  udp: true
+  tls: true
+  client-fingerprint: android
+  alpn:
+  - h3
+  - h2
+  - http/1.1
+  servername: mama1455.baklajann.ru
+  network: xhttp
+  xhttp-opts:
+    path: /
+    host: mama1455.baklajann.ru
+    mode: auto
+  encryption: none
+- name: 🇫🇷 France 🌐 CIDR -08
   type: vless
   server: 45.67.215.17
   port: 443
@@ -2128,7 +2159,7 @@ proxies:
     host: mama51.baklajann.ru
     mode: auto
   encryption: none
-- name: 🇫🇷 France 🌐 CIDR -05
+- name: 🇫🇷 France 🌐 CIDR -11
   type: vless
   server: 45.67.215.20
   port: 443
@@ -2143,7 +2174,37 @@ proxies:
     host: 19.baklajann.ru
     mode: auto
   encryption: none
-- name: 🇫🇷 France 🌐 CIDR -06
+- name: 🇫🇷 France 🌐 CIDR -12
+  type: vless
+  server: 45.67.215.20
+  port: 443
+  uuid: 2b7a122f-f6ff-4860-a919-7bf51be03c02
+  udp: true
+  tls: true
+  client-fingerprint: ios
+  servername: 19.baklajann.ru
+  network: xhttp
+  xhttp-opts:
+    path: /
+    host: 19.baklajann.ru
+    mode: auto
+  encryption: none
+- name: 🇫🇷 France 🌐 CIDR -13
+  type: vless
+  server: 45.67.215.20
+  port: 443
+  uuid: 2b7a122f-f6ff-4860-a919-7bf51be03c02
+  udp: true
+  tls: true
+  client-fingerprint: qq
+  servername: 19.baklajann.ru
+  network: xhttp
+  xhttp-opts:
+    path: /
+    host: 19.baklajann.ru
+    mode: auto
+  encryption: none
+- name: 🇫🇷 France 🌐 CIDR -14
   type: vless
   server: 45.67.215.20
   port: 443
@@ -2158,70 +2219,7 @@ proxies:
     host: mama1472.baklajann.ru
     mode: auto
   encryption: none
-- name: 🇫🇷 France 🌐 CIDR -07
-  type: vless
-  server: 45.67.215.20
-  port: 443
-  uuid: 2b7a122f-f6ff-4860-a919-7bf51be03c02
-  udp: true
-  tls: true
-  client-fingerprint: firefox
-  alpn:
-  - h2
-  - h3
-  - http/1.1
-  servername: mama1472.baklajann.ru
-  network: xhttp
-  xhttp-opts:
-    path: /
-    mode: auto
-- name: 🇫🇷 France 🌐 CIDR -09
-  type: vless
-  server: 45.67.215.20
-  port: 443
-  uuid: 2b7a122f-f6ff-4860-a919-7bf51be03c02
-  udp: true
-  tls: true
-  client-fingerprint: qq
-  alpn:
-  - h2
-  - h3
-  - http/1.1
-  servername: mama1472.baklajann.ru
-  network: xhttp
-  xhttp-opts:
-    path: /
-    mode: auto
-- name: 🇫🇷 France 🌐 CIDR -10
-  type: vless
-  server: 45.67.215.20
-  port: 443
-  uuid: 2b7a122f-f6ff-4860-a919-7bf51be03c02
-  udp: true
-  tls: true
-  client-fingerprint: safari
-  alpn:
-  - h2
-  - h3
-  - http/1.1
-  servername: mama1472.baklajann.ru
-  network: xhttp
-  xhttp-opts:
-    path: /
-    mode: auto
-- name: 🇫🇷 France 🌐 CIDR -11
-  type: vless
-  server: 45.67.215.20
-  port: 443
-  uuid: 2b7a122f-f6ff-4860-a919-7bf51be03c02
-  udp: true
-  tls: true
-  client-fingerprint: firefox
-  servername: mama1472.baklajann.ru
-  network: xhttp
-  xhttp-opts:
-    mode: auto
-- name: 🇫🇷 France 🌐 CIDR -13
+- name: 🇫🇷 France 🌐 CIDR -15
   type: vless
   server: 45.67.215.20
   port: 443
@@ -2232,52 +2230,81 @@ proxies:
   servername: mama1472.baklajann.ru
   network: xhttp
   xhttp-opts:
+    path: /
+    host: mama1472.baklajann.ru
     mode: auto
-- name: 🇩🇪 Germany CIDR -03
+  encryption: none
+- name: 🇫🇷 France 🌐 CIDR -16
   type: vless
-  server: sw-api.telemetryapi.org
+  server: 45.67.215.20
   port: 443
-  uuid: 6bd1d88f-0a26-4d21-b325-15d85120b883
+  uuid: 2b7a122f-f6ff-4860-a919-7bf51be03c02
   udp: true
   tls: true
-  client-fingerprint: android
-  alpn:
-  - http/1.1
-  servername: sw-api.telemetryapi.org
-  network: ws
-  ws-opts:
-    path: /api/v2/client/session/connect
-    headers:
-      User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like
-        Gecko) Chrome/131.0.0.0 Safari/537.36
+  client-fingerprint: safari
+  servername: mama1472.baklajann.ru
+  network: xhttp
+  xhttp-opts:
+    path: /
+    host: mama1472.baklajann.ru
+    mode: auto
   encryption: none
+- name: 🇫🇷 France 🌐 CIDR -18
+  type: vless
+  server: 45.67.215.20
+  port: 443
+  uuid: da500c8e-990b-4d84-abca-b675280c1651
+  udp: true
+  tls: true
+  client-fingerprint: edge
+  servername: mama1472.baklajann.ru
+  network: xhttp
+  xhttp-opts:
+    mode: auto
+- name: 🇫🇷 France 🌐 CIDR -20
+  type: vless
+  server: 45.67.215.20
+  port: 443
+  uuid: da500c8e-990b-4d84-abca-b675280c1651
+  udp: true
+  tls: true
+  client-fingerprint: qq
+  servername: mama1472.baklajann.ru
+  network: xhttp
+  xhttp-opts:
+    mode: auto
+- name: 🇫🇷 France 🌐 CIDR -19
+  type: vless
+  server: 45.67.215.20
+  port: 443
+  uuid: da500c8e-990b-4d84-abca-b675280c1651
+  udp: true
+  tls: true
+  client-fingerprint: firefox
+  servername: mama1472.baklajann.ru
+  network: xhttp
+  xhttp-opts:
+    mode: auto
+- name: 🇫🇷 France 🌐 CIDR -17
+  type: vless
+  server: 45.67.215.20
+  port: 443
+  uuid: 2b7a122f-f6ff-4860-a919-7bf51be03c02
+  udp: true
+  tls: true
+  client-fingerprint: firefox
+  servername: mama1472.baklajann.ru
+  network: xhttp
+  xhttp-opts:
+    mode: auto
 - name: 🇩🇪 Germany CIDR
   type: vless
-  server: 185.178.208.167
-  port: 443
-  uuid: 6bd1d88f-0a26-4d21-b325-15d85120b883
-  udp: true
-  tls: true
-  client-fingerprint: safari
-  servername: sw-api.telemetryapi.org
-  network: ws
-  ws-opts:
-    path: /api/v2/client/session/connect
-    headers:
-      User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101
-        Firefox/133.0
-      Host: sw-api.telemetryapi.org
-  encryption: none
-- name: 🇩🇪 Germany CIDR -04
-  type: vless
   server: sw-api.telemetryapi.org
   port: 443
   uuid: 6bd1d88f-0a26-4d21-b325-15d85120b883
   udp: true
   tls: true
-  client-fingerprint: safari
-  alpn:
-  - http/1.1
+  client-fingerprint: chrome
   servername: sw-api.telemetryapi.org
   network: ws
   ws-opts:
@@ -2285,6 +2312,57 @@ proxies:
     headers:
       User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36
         (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36
+  encryption: none
+- name: 🇩🇪 Germany CIDR -02
+  type: vless
+  server: 95.129.236.239
+  port: 443
+  uuid: a71d6c6d-c95e-4ec1-a892-22e21733bf09
+  udp: true
+  tls: true
+  client-fingerprint: safari
+  servername: files-qzgs.login.opendns.stream
+  network: ws
+  ws-opts:
+    path: /origin/246825491/fetch
+    headers:
+      User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36
+        (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36
+      Host: files-qzgs.login.opendns.stream
+  encryption: none
+- name: 🇩🇪 Germany CIDR -01
+  type: vless
+  server: 185.178.208.167
+  port: 443
+  uuid: 6bd1d88f-0a26-4d21-b325-15d85120b883
+  udp: true
+  tls: true
+  client-fingerprint: edge
+  servername: sw-api.telemetryapi.org
+  network: ws
+  ws-opts:
+    path: /api/v2/client/session/connect
+    headers:
+      User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like
+        Gecko) Chrome/131.0.0.0 Safari/537.36
+      Host: sw-api.telemetryapi.org
+  encryption: none
+- name: 🇩🇪 Germany CIDR-01
+  type: vless
+  server: 185.178.208.167
+  port: 443
+  uuid: 6bd1d88f-0a26-4d21-b325-15d85120b883
+  udp: true
+  tls: true
+  client-fingerprint: chrome
+  servername: sw-api.telemetryapi.org
+  network: ws
+  ws-opts:
+    path: /api/v2/client/session/connect
+    headers:
+      User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36
+        (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36
+      Host: sw-api.telemetryapi.org
   encryption: none
 - name: 🇩🇪 Germany CIDR -05
   type: vless
@@ -2293,7 +2371,7 @@ proxies:
   uuid: 6bd1d88f-0a26-4d21-b325-15d85120b883
   udp: true
   tls: true
-  client-fingerprint: qq
+  client-fingerprint: ios
   alpn:
   - http/1.1
   servername: sw-api.telemetryapi.org
@@ -2304,48 +2382,14 @@ proxies:
       User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
         like Gecko) Chrome/131.0.0.0 Safari/537.36
   encryption: none
-- name: 🇩🇪 Germany CIDR -07
+- name: 🇩🇪 Germany CIDR -03
   type: vless
   server: sw-api.telemetryapi.org
   port: 443
   uuid: 6bd1d88f-0a26-4d21-b325-15d85120b883
   udp: true
   tls: true
-  client-fingerprint: chrome
-  alpn:
-  - http%252F1.1
-  servername: sw-api.telemetryapi.org
-  network: ws
-  ws-opts:
-    path: /api/v2/client/session/connect
-    headers:
-      User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36
-        (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36
-- name: 🇩🇪 Germany CIDR -09
-  type: vless
-  server: sw-api.telemetryapi.org
-  port: 443
-  uuid: 6bd1d88f-0a26-4d21-b325-15d85120b883
-  udp: true
-  tls: true
-  client-fingerprint: edge
-  alpn:
-  - http%2F1.1
-  servername: sw-api.telemetryapi.org
-  network: ws
-  ws-opts:
-    path: /api/v2/client/session/connect
-    headers:
-      User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
-        like Gecko) Chrome/131.0.0.0 Safari/537.36
-- name: 🇩🇪 Germany CIDR -10
-  type: vless
-  server: sw-api.telemetryapi.org
-  port: 443
-  uuid: 6bd1d88f-0a26-4d21-b325-15d85120b883
-  udp: true
-  tls: true
-  client-fingerprint: firefox
+  client-fingerprint: android
   servername: sw-api.telemetryapi.org
   network: ws
   ws-opts:
@@ -2353,116 +2397,278 @@ proxies:
     headers:
       User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like
         Gecko) Chrome/131.0.0.0 Safari/537.36
-      Host: sw-api.telemetryapi.org
-- name: 🇩🇪 Germany CIDR -08
+  encryption: none
+- name: 🇩🇪 Germany CIDR -06
   type: vless
   server: sw-api.telemetryapi.org
   port: 443
   uuid: 6bd1d88f-0a26-4d21-b325-15d85120b883
-  udp: true
-  tls: true
-  client-fingerprint: chrome
-  alpn:
-  - http%252F1.1
-  servername: sw-api.telemetryapi.org
-  network: ws
-  ws-opts:
-    path: /api/v2/client/session/connect
-    headers:
-      User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:133.0) Gecko/20100101
-        Firefox/133.0
-- name: 🇩🇪 Germany CIDR -11
-  type: vless
-  server: sw-api.telemetryapi.org
-  port: 443
-  uuid: 6bd1d88f-0a26-4d21-b325-15d85120b883
-  udp: true
-  tls: true
-  client-fingerprint: safari
-  servername: sw-api.telemetryapi.org
-  network: ws
-  ws-opts:
-    path: /api/v2/client/session/connect
-    headers:
-      User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36
-        (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36
-      Host: sw-api.telemetryapi.org
-- name: 🇩🇪 Germany CIDR -13
-  type: vless
-  server: 45.132.176.111
-  port: 9880
-  uuid: e460e7b2-a146-4468-87ed-52510b2caae6
   udp: true
   tls: true
   client-fingerprint: qq
-  servername: dl.google.com
-  reality-opts:
-    public-key: Dfgu8Ey0M8Hz4gXGZAwQ3H9jLt2HByVsjAOTWiuKDB0
-  network: grpc
-  grpc-opts:
-    grpc-service-name: grpc-tunnel
+  alpn:
+  - http/1.1
+  servername: sw-api.telemetryapi.org
+  network: ws
+  ws-opts:
+    path: /api/v2/client/session/connect
+    headers:
+      User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101
+        Firefox/133.0
   encryption: none
-- name: 🇩🇪 Germany CIDR -12
+- name: 🇩🇪 Germany CIDR -08
   type: vless
   server: files-qzgs.login.opendns.stream
   port: 443
   uuid: a71d6c6d-c95e-4ec1-a892-22e21733bf09
   udp: true
   tls: true
-  client-fingerprint: chrome
-  alpn:
-  - http%252F1.1
+  client-fingerprint: firefox
   servername: files-qzgs.login.opendns.stream
+  xudp: true
+  network: ws
+  ws-opts:
+    path: /origin/246825491/fetch
+    headers:
+      User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like
+        Gecko) Chrome/131.0.0.0 Safari/537.36
+  encryption: none
+- name: 🇩🇪 Germany CIDR -07
+  type: vless
+  server: files-qzgs.login.opendns.stream
+  port: 443
+  uuid: a71d6c6d-c95e-4ec1-a892-22e21733bf09
+  udp: true
+  tls: true
+  client-fingerprint: edge
+  servername: files-qzgs.login.opendns.stream
+  xudp: true
   network: ws
   ws-opts:
     path: /origin/246825491/fetch
     headers:
       User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
         like Gecko) Chrome/131.0.0.0 Safari/537.36
-- name: 🇳🇴 Norway CIDR
+  encryption: none
+- name: 🇩🇪 Germany CIDR -09
   type: vless
-  server: 45.132.179.46
-  port: 9881
-  uuid: e460e7b2-a146-4468-87ed-52510b2caae6
+  server: files-qzgs.login.opendns.stream
+  port: 443
+  uuid: a71d6c6d-c95e-4ec1-a892-22e21733bf09
   udp: true
   tls: true
   client-fingerprint: qq
-  servername: dl.google.com
-  reality-opts:
-    public-key: Dfgu8Ey0M8Hz4gXGZAwQ3H9jLt2HByVsjAOTWiuKDB0
-    short-id: aabb
-  network: grpc
-  grpc-opts:
-    grpc-service-name: grpc-tunnel
+  servername: files-qzgs.login.opendns.stream
+  xudp: true
+  network: ws
+  ws-opts:
+    path: /origin/246825491/fetch
+    headers:
+      User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:133.0) Gecko/20100101
+        Firefox/133.0
   encryption: none
-- name: 🇵🇱 Poland CIDR
+- name: 🇩🇪 Germany 🌐 CIDR -01
   type: vless
-  server: 189.74.116.30
+  server: hawthorn.falmero.store
   port: 443
-  uuid: 101f4da5-cad5-4009-888d-8d24f496bbd9
+  uuid: 83706ae4-be2f-4b2b-8079-c3eb4e0b2e3e
+  udp: true
+  tls: true
+  client-fingerprint: qq
+  alpn:
+  - h2
+  servername: paperbirch.merlano.monster
+  network: xhttp
+  xhttp-opts:
+    path: /api/de7/preview/
+    host: paperbirch.merlano.monster
+    mode: packet-up
+  encryption: none
+- name: 🇩🇪 Germany 🌐 CIDR -04
+  type: vless
+  server: moonwort.gerqix.autos
+  port: 443
+  uuid: 83706ae4-be2f-4b2b-8079-c3eb4e0b2e3e
   udp: true
   tls: true
   client-fingerprint: firefox
-  servername: api.mediatropa.cc
+  alpn:
+  - h2
+  servername: birchmeadow.moltex.click
+  network: xhttp
+  xhttp-opts:
+    path: /api/de6/preview/
+    host: birchmeadow.moltex.click
+    mode: packet-up
+  encryption: none
+- name: 🇩🇪 Germany 🌐 CIDR -03
+  type: vless
+  server: moonwort.gerqix.autos
+  port: 443
+  uuid: 83706ae4-be2f-4b2b-8079-c3eb4e0b2e3e
+  udp: true
+  tls: true
+  client-fingerprint: chrome
+  alpn:
+  - h2
+  servername: birchmeadow.moltex.click
+  network: xhttp
+  xhttp-opts:
+    path: /api/de6/preview/
+    host: birchmeadow.moltex.click
+    mode: packet-up
+  encryption: none
+- name: 🇩🇪 Germany 🌐 CIDR -05
+  type: vless
+  server: moonwort.gerqix.autos
+  port: 443
+  uuid: 83706ae4-be2f-4b2b-8079-c3eb4e0b2e3e
+  udp: true
+  tls: true
+  client-fingerprint: ios
+  alpn:
+  - h2
+  servername: birchmeadow.moltex.click
+  network: xhttp
+  xhttp-opts:
+    path: /api/de6/preview/
+    host: birchmeadow.moltex.click
+    mode: packet-up
+  encryption: none
+- name: 🇩🇪 Germany 🌐 CIDR -08
+  type: vless
+  server: moonwort.gerqix.autos
+  port: 443
+  uuid: 83706ae4-be2f-4b2b-8079-c3eb4e0b2e3e
+  udp: true
+  tls: true
+  client-fingerprint: safari
+  servername: birchmeadow.moltex.click
+  network: xhttp
+  xhttp-opts:
+    path: /api/de6/preview/
+    host: birchmeadow.moltex.click
+    mode: packet-up
+- name: 🇯🇵 Japan CIDR -01
+  type: vless
+  server: 185.135.82.166
+  port: 443
+  uuid: 42c83523-9f96-41b2-82d6-2edb71a4ac19
+  udp: true
+  tls: true
+  client-fingerprint: qq
+  servername: ds3mibec.vaultcache.shop
   reality-opts:
-    public-key: r5WB5FnSCt4eeBC1FJMfkWHbzsMuabo0Rc6wuAhlZUs
-    short-id: a8
+    public-key: fJnm6-PhJGSwHaAdJOzXkYOfCPPCWSlaZrtfm1XsqhA
+  network: tcp
+  flow: xtls-rprx-vision
+- name: 🇯🇵 Japan CIDR
+  type: vless
+  server: 185.135.82.166
+  port: 443
+  uuid: 42c83523-9f96-41b2-82d6-2edb71a4ac19
+  udp: true
+  tls: true
+  client-fingerprint: firefox
+  servername: ds3mibec.vaultcache.shop
+  reality-opts:
+    public-key: fJnm6-PhJGSwHaAdJOzXkYOfCPPCWSlaZrtfm1XsqhA
+  network: tcp
+  flow: xtls-rprx-vision
+- name: 🇩🇪 Germany 🌐 CIDR -07
+  type: vless
+  server: moonwort.gerqix.autos
+  port: 443
+  uuid: 83706ae4-be2f-4b2b-8079-c3eb4e0b2e3e
+  udp: true
+  tls: true
+  client-fingerprint: firefox
+  servername: birchmeadow.moltex.click
+  network: xhttp
+  xhttp-opts:
+    path: /api/de6/preview/
+    host: birchmeadow.moltex.click
+    mode: packet-up
+- name: 🇯🇵 Japan CIDR -02
+  type: vless
+  server: 185.135.82.166
+  port: 443
+  uuid: 42c83523-9f96-41b2-82d6-2edb71a4ac19
+  udp: true
+  tls: true
+  client-fingerprint: safari
+  servername: ds3mibec.vaultcache.shop
+  reality-opts:
+    public-key: fJnm6-PhJGSwHaAdJOzXkYOfCPPCWSlaZrtfm1XsqhA
+  network: tcp
+  flow: xtls-rprx-vision
+- name: 🇰🇿 Kazakhstan CIDR
+  type: vless
+  server: 201.34.136.78
+  port: 443
+  uuid: 42c83523-9f96-41b2-82d6-2edb71a4ac19
+  udp: true
+  tls: true
+  client-fingerprint: android
+  servername: fjn2vd4dgxb6.dynarix-node41.sbs
+  reality-opts:
+    public-key: fJnm6-PhJGSwHaAdJOzXkYOfCPPCWSlaZrtfm1XsqhA
+  network: tcp
+  flow: xtls-rprx-vision
+- name: 🇰🇿 Kazakhstan CIDR -02
+  type: vless
+  server: 201.34.136.78
+  port: 443
+  uuid: 42c83523-9f96-41b2-82d6-2edb71a4ac19
+  udp: true
+  tls: true
+  client-fingerprint: firefox
+  servername: fjn2vd4dgxb6.dynarix-node41.sbs
+  reality-opts:
+    public-key: fJnm6-PhJGSwHaAdJOzXkYOfCPPCWSlaZrtfm1XsqhA
+  network: tcp
+  flow: xtls-rprx-vision
+- name: 🇵🇱 Poland CIDR
+  type: vless
+  server: 171.22.129.227
+  port: 443
+  uuid: 42c83523-9f96-41b2-82d6-2edb71a4ac19
+  udp: true
+  tls: true
+  client-fingerprint: android
+  servername: nujd35aknu.static-mirror.site
+  reality-opts:
+    public-key: fJnm6-PhJGSwHaAdJOzXkYOfCPPCWSlaZrtfm1XsqhA
+  network: tcp
+  flow: xtls-rprx-vision
+  encryption: none
+- name: 🇰🇿 Kazakhstan CIDR -01
+  type: vless
+  server: 201.34.136.78
+  port: 443
+  uuid: 42c83523-9f96-41b2-82d6-2edb71a4ac19
+  udp: true
+  tls: true
+  client-fingerprint: chrome
+  servername: fjn2vd4dgxb6.dynarix-node41.sbs
+  reality-opts:
+    public-key: fJnm6-PhJGSwHaAdJOzXkYOfCPPCWSlaZrtfm1XsqhA
   network: tcp
   flow: xtls-rprx-vision
 - name: 🇵🇱 Poland CIDR -01
   type: vless
-  server: 87.242.100.134
+  server: 171.22.129.227
   port: 443
-  uuid: 1b7ee703-fa08-4305-8469-ae3e30e61e44
+  uuid: 42c83523-9f96-41b2-82d6-2edb71a4ac19
   udp: true
   tls: true
-  client-fingerprint: firefox
-  servername: tarakan.belka.tv
+  client-fingerprint: chrome
+  servername: nujd35aknu.static-mirror.site
   reality-opts:
-    public-key: _qSbW4JL4Ffqvj25vX-6a2ul9Qlj6PBdlF0ghsf_0RQ
-    short-id: a9dc98a7dc87a7dc
+    public-key: fJnm6-PhJGSwHaAdJOzXkYOfCPPCWSlaZrtfm1XsqhA
   network: tcp
   flow: xtls-rprx-vision
+  encryption: none
 - name: 🇵🇱 Poland CIDR -02
   type: vless
   server: 171.22.129.227
@@ -2476,6 +2682,53 @@ proxies:
     public-key: fJnm6-PhJGSwHaAdJOzXkYOfCPPCWSlaZrtfm1XsqhA
   network: tcp
   flow: xtls-rprx-vision
+  encryption: none
+- name: 🇵🇱 Poland 🌐 CIDR Beeline
+  type: vless
+  server: td.vmagnum.win
+  port: 443
+  uuid: 52d0c9b1-80aa-4b20-bcb1-849991560498
+  udp: true
+  tls: true
+  client-fingerprint: edge
+  alpn:
+  - h2
+  servername: 52d0c9b1.ferrin.uk
+  network: xhttp
+  xhttp-opts:
+    path: /ai
+    mode: stream-one
+  encryption: none
+- name: 🇵🇱 Poland 🌐 CIDR Beeline-01
+  type: vless
+  server: td.vmagnum.win
+  port: 443
+  uuid: 52d0c9b1-80aa-4b20-bcb1-849991560498
+  udp: true
+  tls: true
+  client-fingerprint: ios
+  alpn:
+  - h2
+  servername: 52d0c9b1.ferrin.uk
+  network: xhttp
+  xhttp-opts:
+    path: /ai
+    mode: stream-one
+  encryption: none
+- name: 🇵🇱 Poland 🌐 CIDR -02
+  type: vless
+  server: 45.67.215.111
+  port: 443
+  uuid: 2b7a122f-f6ff-4860-a919-7bf51be03c02
+  udp: true
+  tls: true
+  client-fingerprint: qq
+  servername: mama542.baklajann.ru
+  network: xhttp
+  xhttp-opts:
+    path: /
+    host: mama542.baklajann.ru
+    mode: auto
   encryption: none
 - name: 🇵🇱 Poland 🌐 CIDR
   type: vless
@@ -2492,9 +2745,126 @@ proxies:
     host: mama542.baklajann.ru
     mode: auto
   encryption: none
-- name: 🇺🇸 United States CIDR -01
+- name: 🇵🇱 Poland 🌐 CIDR -01
+  type: vless
+  server: 45.67.215.111
+  port: 443
+  uuid: 2b7a122f-f6ff-4860-a919-7bf51be03c02
+  udp: true
+  tls: true
+  client-fingerprint: edge
+  servername: mama542.baklajann.ru
+  network: xhttp
+  xhttp-opts:
+    path: /
+    host: mama542.baklajann.ru
+    mode: auto
+  encryption: none
+- name: 🇵🇱 Poland 🌐 CIDR -04
+  type: vless
+  server: 45.67.215.20
+  port: 443
+  uuid: 2b7a122f-f6ff-4860-a919-7bf51be03c02
+  udp: true
+  tls: true
+  client-fingerprint: edge
+  servername: mama511.baklajann.ru
+  network: xhttp
+  xhttp-opts:
+    path: /
+    host: mama511.baklajann.ru
+    mode: auto
+  encryption: none
+- name: 🇵🇱 Poland 🌐 CIDR Beeline-02
+  type: vless
+  server: td.vmagnum.win
+  port: 443
+  uuid: 52d0c9b1-80aa-4b20-bcb1-849991560498
+  udp: true
+  tls: true
+  client-fingerprint: chrome
+  alpn:
+  - h2
+  servername: 52d0c9b1.ferrin.uk
+  network: xhttp
+  xhttp-opts:
+    path: /ai
+    mode: stream-one
+  encryption: none
+- name: 🇹🇷 Turkey CIDR
+  type: vless
+  server: 147.45.213.56
+  port: 443
+  uuid: 42c83523-9f96-41b2-82d6-2edb71a4ac19
+  udp: true
+  tls: true
+  client-fingerprint: chrome
+  servername: zkgbzlv5d42.vortenix-data59.cfd
+  reality-opts:
+    public-key: fJnm6-PhJGSwHaAdJOzXkYOfCPPCWSlaZrtfm1XsqhA
+  network: tcp
+  flow: xtls-rprx-vision
+- name: 🇺🇸 United States CIDR
   type: vless
   server: 31.177.111.183
+  port: 443
+  uuid: b432a23a-acff-425c-bf69-70480cd6ed09
+  udp: true
+  tls: true
+  client-fingerprint: chrome
+  alpn:
+  - http/1.1
+  servername: e3.cdnwh.icu
+  network: ws
+  ws-opts:
+    path: /edge/chunk/b2265efffa29/
+    headers:
+      User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101
+        Firefox/133.0
+      Host: e3.cdnwh.icu
+  encryption: none
+- name: 🇬🇧 United Kingdom CIDR
+  type: vless
+  server: 92.246.138.161
+  port: 443
+  uuid: 42c83523-9f96-41b2-82d6-2edb71a4ac19
+  udp: true
+  tls: true
+  client-fingerprint: chrome
+  servername: q88k7v7gi0pg.img-assets.world
+  reality-opts:
+    public-key: jFqwGpIrZSPqlvF4XglDWhsuHxljBLeiaMtESLsZsVk
+  network: tcp
+  flow: xtls-rprx-vision
+- name: 🇬🇧 United Kingdom CIDR -01
+  type: vless
+  server: 92.246.138.161
+  port: 443
+  uuid: 42c83523-9f96-41b2-82d6-2edb71a4ac19
+  udp: true
+  tls: true
+  client-fingerprint: edge
+  servername: q88k7v7gi0pg.img-assets.world
+  reality-opts:
+    public-key: jFqwGpIrZSPqlvF4XglDWhsuHxljBLeiaMtESLsZsVk
+  network: tcp
+  flow: xtls-rprx-vision
+- name: 🇬🇧 United Kingdom CIDR -02
+  type: vless
+  server: 92.246.138.161
+  port: 443
+  uuid: 42c83523-9f96-41b2-82d6-2edb71a4ac19
+  udp: true
+  tls: true
+  client-fingerprint: firefox
+  servername: q88k7v7gi0pg.img-assets.world
+  reality-opts:
+    public-key: jFqwGpIrZSPqlvF4XglDWhsuHxljBLeiaMtESLsZsVk
+  network: tcp
+  flow: xtls-rprx-vision
+- name: 🇺🇸 United States CIDR -02
+  type: vless
+  server: e3.cdnwh.icu
   port: 443
   uuid: b432a23a-acff-425c-bf69-70480cd6ed09
   udp: true
@@ -2507,48 +2877,18 @@ proxies:
   ws-opts:
     path: /edge/chunk/b2265efffa29/
     headers:
-      User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like
-        Gecko) Chrome/131.0.0.0 Safari/537.36
+      User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
+        like Gecko) Chrome/131.0.0.0 Safari/537.36
       Host: e3.cdnwh.icu
-- name: 🇵🇱 Poland 🌐 CIDR -01
-  type: vless
-  server: 45.67.215.20
-  port: 443
-  uuid: 2b7a122f-f6ff-4860-a919-7bf51be03c02
-  udp: true
-  tls: true
-  client-fingerprint: chrome
-  servername: mama511.baklajann.ru
-  network: xhttp
-  xhttp-opts:
-    path: /
-    host: mama511.baklajann.ru
-    mode: auto
   encryption: none
-- name: 🇳🇱 The Netherlands CIDR
+- name: 🇺🇸 United States CIDR -01
   type: vless
-  server: 45.132.179.211
-  port: 9894
-  uuid: e460e7b2-a146-4468-87ed-52510b2caae6
-  udp: true
-  tls: true
-  client-fingerprint: qq
-  servername: dl.google.com
-  reality-opts:
-    public-key: sm3E3hjmT6_Gmg_O9rBz4nfXYrHpnl6-LvcCp6T6_xc
-    short-id: aabbccdd
-  network: grpc
-  grpc-opts:
-    grpc-service-name: grpc-tunnel
-  encryption: none
-- name: 🇺🇸 United States CIDR -02
-  type: vless
-  server: 31.177.111.183
+  server: e3.cdnwh.icu
   port: 443
   uuid: b432a23a-acff-425c-bf69-70480cd6ed09
   udp: true
   tls: true
-  client-fingerprint: safari
+  client-fingerprint: chrome
   alpn:
   - http/1.1
   servername: e3.cdnwh.icu
@@ -2556,10 +2896,11 @@ proxies:
   ws-opts:
     path: /edge/chunk/b2265efffa29/
     headers:
-      User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36
-        (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36
+      User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
+        like Gecko) Chrome/131.0.0.0 Safari/537.36
       Host: e3.cdnwh.icu
-- name: 🇺🇸 United States CIDR -04
+  encryption: none
+- name: 🇺🇸 United States CIDR -03
   type: vless
   server: e3.cdnwh.icu
   port: 443
@@ -2574,226 +2915,10 @@ proxies:
   ws-opts:
     path: /edge/chunk/b2265efffa29/
     headers:
-      User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101
+      User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:133.0) Gecko/20100101
         Firefox/133.0
       Host: e3.cdnwh.icu
   encryption: none
-- name: 🇺🇸 United States CIDR -06
-  type: vless
-  server: 31.177.111.225
-  port: 443
-  uuid: fdd8114b-977d-4bb1-b675-a20af8ad41f5
-  udp: true
-  tls: true
-  client-fingerprint: firefox
-  servername: alt.edge-assets.ru
-  network: xhttp
-  xhttp-opts:
-    path: /e/82tjjqcl-zc2ywbqi-6v0lp8td-u9yssr5w/api/v1/nhde5se4/sync/
-    host: alt.edge-assets.ru
-    mode: packet-up
-  encryption: none
-- name: 🇺🇸 United States CIDR -07
-  type: vless
-  server: 31.177.111.225
-  port: 443
-  uuid: fdd8114b-977d-4bb1-b675-a20af8ad41f5
-  udp: true
-  tls: true
-  client-fingerprint: qq
-  servername: alt.edge-assets.ru
-  network: xhttp
-  xhttp-opts:
-    path: /e/82tjjqcl-zc2ywbqi-6v0lp8td-u9yssr5w/api/v1/nhde5se4/sync/
-    host: alt.edge-assets.ru
-    mode: packet-up
-  encryption: none
-- name: 🇺🇸 United States CIDR -08
-  type: vless
-  server: 31.177.111.225
-  port: 443
-  uuid: fdd8114b-977d-4bb1-b675-a20af8ad41f5
-  udp: true
-  tls: true
-  client-fingerprint: safari
-  servername: alt.edge-assets.ru
-  network: xhttp
-  xhttp-opts:
-    path: /e/82tjjqcl-zc2ywbqi-6v0lp8td-u9yssr5w/api/v1/nhde5se4/sync/
-    host: alt.edge-assets.ru
-    mode: packet-up
-  encryption: none
-- name: 🇺🇸 United States CIDR -09
-  type: vless
-  server: 31.177.111.225
-  port: 443
-  uuid: fdd8114b-977d-4bb1-b675-a20af8ad41f5
-  udp: true
-  tls: true
-  client-fingerprint: firefox
-  servername: alt.edge-assets.ru
-  network: xhttp
-  xhttp-opts:
-    path: /e/82tjjqcl-zc2ywbqi-6v0lp8td-u9yssr5w/api/v1/nhde5se4/sync/
-    mode: packet-up
-  encryption: none
-- name: 🇺🇸 United States CIDR -11
-  type: vless
-  server: alt.edge-assets.ru
-  port: 443
-  uuid: fdd8114b-977d-4bb1-b675-a20af8ad41f5
-  udp: true
-  tls: true
-  client-fingerprint: firefox
-  servername: alt.edge-assets.ru
-  network: xhttp
-  xhttp-opts:
-    path: /e/82tjjqcl-zc2ywbqi-6v0lp8td-u9yssr5w/api/v1/nhde5se4/sync/
-    host: alt.edge-assets.ru
-    mode: packet-up
-- name: 🌐 Anycast-IP 🇦🇷 🇩🇪 🇮🇶 🇸🇬 🇺🇸 CIDR
-  type: vless
-  server: 46.149.66.235
-  port: 443
-  uuid: 1c0250ec-2dbc-40be-bd18-90b5e812ceaa
-  udp: true
-  tls: true
-  client-fingerprint: ios
-  servername: pg.fm6dw.dpdns.org
-  network: ws
-  ws-opts:
-    path: /?ed=2048
-    headers:
-      User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like
-        Gecko) Chrome/131.0.0.0 Safari/537.36
-      Host: pg.fm6dw.dpdns.org
-  encryption: none
-- name: 🌐 Anycast-IP 🇨🇦 🇩🇪 🇮🇪 CIDR
-  type: vless
-  server: 46.149.66.235
-  port: 443
-  uuid: 1c0250ec-2dbc-40be-bd18-90b5e812ceaa
-  udp: true
-  tls: true
-  client-fingerprint: qq
-  servername: pg.fm6dw.dpdns.org
-  network: ws
-  ws-opts:
-    path: /?ed=2048
-    headers:
-      User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:133.0) Gecko/20100101
-        Firefox/133.0
-      Host: pg.fm6dw.dpdns.org
-  encryption: none
-- name: 🇺🇸 United States CIDR -10
-  type: vless
-  server: alt.edge-assets.ru
-  port: 443
-  uuid: fdd8114b-977d-4bb1-b675-a20af8ad41f5
-  udp: true
-  tls: true
-  client-fingerprint: edge
-  servername: alt.edge-assets.ru
-  network: xhttp
-  xhttp-opts:
-    path: /e/82tjjqcl-zc2ywbqi-6v0lp8td-u9yssr5w/api/v1/nhde5se4/sync/
-    host: alt.edge-assets.ru
-    mode: packet-up
-  encryption: none
-- name: 🌐 Anycast-IP 🇨🇦 🇩🇪 🇮🇶 🇸🇬 CIDR
-  type: vless
-  server: 46.149.66.235
-  port: 443
-  uuid: 1c0250ec-2dbc-40be-bd18-90b5e812ceaa
-  udp: true
-  tls: true
-  client-fingerprint: firefox
-  servername: pg.fm6dw.dpdns.org
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36
-        (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36
-      Host: pg.fm6dw.dpdns.org
-    max-early-data: 2048
-    early-data-header-name: Sec-WebSocket-Protocol
-- name: 🌐 Anycast-IP 🇨🇦 🇩🇪 🇮🇶 🇸🇬 🇺🇸 CIDR
-  type: vless
-  server: 46.149.66.235
-  port: 443
-  uuid: 1c0250ec-2dbc-40be-bd18-90b5e812ceaa
-  udp: true
-  tls: true
-  client-fingerprint: edge
-  servername: pg.fm6dw.dpdns.org
-  network: ws
-  ws-opts:
-    path: /?ed=2048
-    headers:
-      User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101
-        Firefox/133.0
-      Host: pg.fm6dw.dpdns.org
-  encryption: none
-- name: 🌐 Anycast-IP 🇨🇦 🇩🇪 🇳🇱 🇸🇪 CIDR
-  type: vless
-  server: 212.116.115.69
-  port: 443
-  uuid: cd3d8e5c-794f-4c34-8222-59d3e99e35fe
-  udp: true
-  tls: true
-  client-fingerprint: firefox
-  servername: joeypg.ezbiz.dynv6.net
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:133.0) Gecko/20100101
-        Firefox/133.0
-      Host: joeypg.ezbiz.dynv6.net
-    max-early-data: 2048
-    early-data-header-name: Sec-WebSocket-Protocol
-- name: 🌐 Anycast-IP 🇨🇦 🇭🇰 🇮🇪 🇸🇪 🇺🇸 CIDR
-  type: vless
-  server: 84.54.57.138
-  port: 443
-  uuid: cd3d8e5c-794f-4c34-8222-59d3e99e35fe
-  udp: true
-  tls: true
-  client-fingerprint: firefox
-  servername: joeypg.ezbiz.dynv6.net
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36
-        (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36
-      Host: joeypg.ezbiz.dynv6.net
-    max-early-data: 2048
-    early-data-header-name: Sec-WebSocket-Protocol
-- name: 🌐 Anycast-IP 🇩🇪 🇳🇱 🇺🇸 CIDR
-  type: vless
-  server: 212.116.115.69
-  port: 443
-  uuid: cd3d8e5c-794f-4c34-8222-59d3e99e35fe
-  udp: true
-  tls: true
-  client-fingerprint: chrome
-  servername: joeypg.ezbiz.dynv6.net
-  network: ws
-  ws-opts:
-    path: /?ed=2048
-    headers:
-      User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like
-        Gecko) Chrome/131.0.0.0 Safari/537.36
-      Host: joeypg.ezbiz.dynv6.net
-  encryption: none
-- name: 🇳🇱 The Netherlands CIDR -01
-  type: hysteria2
-  server: 189.74.114.46
-  port: 54183
-  sni: outh.yandex-cloud.org
-  password: 101f4da5-cad5-4009-888d-8d24f496bbd9
 - type: wireguard
   ip: 172.16.0.2
   ipv6: 2606:4700:110:8728:ea57:7721:6609:7969
@@ -2823,35 +2948,44 @@ proxies:
     h3: 3
     h4: 4
     i1: 16054023518668606636062008499208682827025604772154400556272367850709594268975820509987301877165988970357908166356437188345829090474567584351302358180850523651455345114997667605208879516835192739494986764694726026528691711479480875644693803040867647609980108472688511906480428842021171435978317205853409186071891409558316515688541784813003629334157391542470117315959926516536067788411604021846762413085375527519429549441224654739173243359503639488050722216658146343685771487742314382158776634019425547192043892086725688234744889977427409804982627708004569800157409079888697422255450441102933898258981404894910574356522957621568231823076294842817518839347186451789605402990439446680036479616844863178398896384788211997906328756192498949817267111666134122175908524552445836759629695095894215229151635542995718047011620748507369638355169957481956828416291834852083754813206460816804222033875687683524191593082715756231632517115193596176149077568850288956074173618844541581423719580382707897106500181604572280919191092477947130857934976535205630270260965476802901784293100332182880148054162815140537224675945014179615054979361867512991162212174744538565504601574941205396255823673614932503708277531740745238286855432357498619003189376262717019645982293744922920682151881539193575352585063297041306652851366249022614976245856276431498984348034967584642485744762792110650599830089559196673787434392497168288522720331464978635185818969845769327629314838999524129084142872112477235284090034418010641287650056891473611523919887083087309213858047610973600418053684899470098438932121387876161373583005783666133897455692756248891208594712091907144622356881690728883710443077739804211438930453232402337097518583285921776272101663399612258652183432350011902603067351738702891075756604328624044776189771129906248544963321419370934607585223622794678671135777036573430521508872687114906094448594798744918358581988702500785630560053860118045200703725003321332256644263567325940988428590013498622700622335612731302184881512091035099336473983161931690127709369768340785142246133692159207223207255218282025750308063961840192441567294636948216519600874658925349727657191240270924916360396755588908373904378489685049520436175972128097834834832511321187485470521000618023895724538386072689543889786280815585559999257453189413687357434677471456504586113762614913813626119799162303253934884366713904186188615004730481265091511628977261097014545305136762767133998808401576171707628029218810471066017775937908042399606060656906524729116290001605011129461235827375412898483756398232681108225163417337429301829864475908192439182386451955338255818535495526679989671415795909414787818165102567821139439074842459734322497840679040280684152266981567292727642436643171748434157190274298661280479620829832642199649495428552121980259317740962541084144714944181193629115490323286122406851739688194179020861552700435739872514418314757896782049616763840374329405183740337448636951253371128488406397903586271822886311385041021697719269073936188271616728
-- type: wireguard
-  ip: 172.16.0.2
-  ipv6: 2606:4700:110:8728:ea57:7721:6609:7969
-  private-key: ziDJ9nM6gWZBq62TaDQ/ulzIRZCvMHG8hOp1hC0sGTQ=
-  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-  allowed-ips:
-  - 0.0.0.0/0
+- name: 🇺🇸 United States CIDR-01
+  type: vless
+  server: 31.177.111.183
+  port: 443
+  uuid: b432a23a-acff-425c-bf69-70480cd6ed09
   udp: true
-  mtu: 1280
-  remote-dns-resolve: true
-  dns:
-  - 1.1.1.1
-  - 1.0.0.1
-  - 2606:4700:4700::1111
-  - 2606:4700:4700::1001
-  name: Стандартный 2
-  server: 162.159.192.1
-  port: 4500
-  amnezia-wg-option:
-    jc: 4
-    jmin: 40
-    jmax: 70
-    s1: 0
-    s2: 0
-    h1: 1
-    h2: 2
-    h3: 3
-    h4: 4
-    i1: 15508498447646484948845662646613102013339808559769475380475448271405804929967563944753791952429953428594549416493966421935646962255916682006073387068399937622576895997809440837754543034436196406830582984757658205835790003861761450714906623501416627363256878058379526271228716611603298581642275162285240573816154890767293402555266150939798468941494810895379318272519125401461648011724747157307950635164231534570928490441661175500025662573031705482322646078138860414731819832787868506863696888558163813367763059200030659050893771247575525776614497604873028423561998217412261477312921865312761026238182416474604888292675398968863299676198964476969947719800898308087242839827514430110235180683412159333456614686999034027621882972096160724583328618048488377698013859231484959851350743790751249212252795279948528426338604545380509108765165200858756207053737381511818650958969758361168173295493933425496546329164043443493182527363399133677303709771303234699304778554329134243969688709666170355265570730668172444495230355444308838795312034792648687344453938889051394283833843090756412725383427871865294681542360117642115653726884033143840555055339693948171027271777828914111766890844805116997411376453934473478750657591899873905788486431983423780405433155726743756032348879739365339323324843786177220849987261461433552444731162597059090447716432659426362473938950371339684760207031877467482665675815529112340389092269127586123145041893539535902018942440218154824420028175995520961099037825214811828907228360168797996240432819458079715833574490573994360108876789384772695858739101946215503278746763311068494941977107470251761680635293919911600960221090807997840200856140858171170129873013191767356673212282134007829698900975652052623416096801110294383322534428716409970185489785207179854266584203819509838298787660587450246975667844959706595084483108531660496999349646576543744940625311778824850830028321490336218259178038807812563689905469677114155341724099218417999365162663783587327649569544053670076362920295448440778313867126667820884687622441425422304200373311029996699992324597128502853618256146022005307108631829432678616527884200703229132605679644287682575072916220381605567053627248609364609076145192235097070105155085543651979712206081573294385787614887110443712370727958421292076260089672818179660899399226484029486279387805484886278107208323120808804204875607094425140718807324149558323068382446995501657953204159206115087032853188256300765151104001048818215020493302998519680166349658307405025996738856861373953200465756724720074926515170617105844272592666557203483812597797363976998790603541674343092071238561396558856627063292416059761241201984985462189418546765043631543677696108480629933851536362779889705609489649735139126557326927190758110045150375251932904598320831775535533070198481771479817828220735113685298500387297223753546931130241573267204617723999358271475190842444202926279082300677140101683203665954865134690376733484903403330788224434744662688971487018551767618248063693156948344699069908
+  tls: true
+  client-fingerprint: firefox
+  alpn:
+  - http/1.1
+  servername: e3.cdnwh.icu
+  network: ws
+  ws-opts:
+    path: /edge/chunk/b2265efffa29/
+    headers:
+      User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like
+        Gecko) Chrome/131.0.0.0 Safari/537.36
+      Host: e3.cdnwh.icu
+  encryption: none
+- name: 🇺🇸 United States CIDR -01-01
+  type: vless
+  server: 31.177.111.183
+  port: 443
+  uuid: b432a23a-acff-425c-bf69-70480cd6ed09
+  udp: true
+  tls: true
+  client-fingerprint: safari
+  alpn:
+  - http/1.1
+  servername: e3.cdnwh.icu
+  network: ws
+  ws-opts:
+    path: /edge/chunk/b2265efffa29/
+    headers:
+      User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like
+        Gecko) Chrome/131.0.0.0 Safari/537.36
+      Host: e3.cdnwh.icu
+  encryption: none
 - type: wireguard
   ip: 172.16.0.2
   ipv6: 2606:4700:110:8728:ea57:7721:6609:7969
@@ -2908,67 +3042,38 @@ proxies:
   - 1.0.0.1
   - 2606:4700:4700::1111
   - 2606:4700:4700::1001
-  name: 🇫🇮 FI
-  server: fi.tribukvy.ltd
-  port: 500
-- amnezia-wg-option:
-    jc: 4
-    jmin: 40
-    jmax: 70
-    s1: 0
-    s2: 0
-    h1: 1
-    h2: 2
-    h3: 3
-    h4: 4
-    i1: 33846065602100365953481275426726953440342889446274406706060978896686823607605342277704075771542132572030573481784361744995190382
-  type: wireguard
-  ip: 172.16.0.2
-  ipv6: 2606:4700:110:8728:ea57:7721:6609:7969
-  private-key: ziDJ9nM6gWZBq62TaDQ/ulzIRZCvMHG8hOp1hC0sGTQ=
-  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-  allowed-ips:
-  - 0.0.0.0/0
-  udp: true
-  mtu: 1280
-  remote-dns-resolve: true
-  dns:
-  - 1.1.1.1
-  - 1.0.0.1
-  - 2606:4700:4700::1111
-  - 2606:4700:4700::1001
-  name: 🇳🇱 NL
-  server: nl.tribukvy.ltd
-  port: 500
-- amnezia-wg-option:
-    jc: 4
-    jmin: 40
-    jmax: 70
-    s1: 0
-    s2: 0
-    h1: 1
-    h2: 2
-    h3: 3
-    h4: 4
-    i1: 33846065602100365953481275426726953440342889446274406706060978896686823607605342277704075771542132572030573481784361744995190382
-  type: wireguard
-  ip: 172.16.0.2
-  ipv6: 2606:4700:110:8728:ea57:7721:6609:7969
-  private-key: ziDJ9nM6gWZBq62TaDQ/ulzIRZCvMHG8hOp1hC0sGTQ=
-  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-  allowed-ips:
-  - 0.0.0.0/0
-  udp: true
-  mtu: 1280
-  remote-dns-resolve: true
-  dns:
-  - 1.1.1.1
-  - 1.0.0.1
-  - 2606:4700:4700::1111
-  - 2606:4700:4700::1001
   name: 🇵🇱 PL
   server: pl.tribukvy.ltd
   port: 500
+- type: wireguard
+  ip: 172.16.0.2
+  ipv6: 2606:4700:110:8728:ea57:7721:6609:7969
+  private-key: ziDJ9nM6gWZBq62TaDQ/ulzIRZCvMHG8hOp1hC0sGTQ=
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  allowed-ips:
+  - 0.0.0.0/0
+  udp: true
+  mtu: 1280
+  remote-dns-resolve: true
+  dns:
+  - 1.1.1.1
+  - 1.0.0.1
+  - 2606:4700:4700::1111
+  - 2606:4700:4700::1001
+  name: Стандартный 2
+  server: 162.159.192.1
+  port: 4500
+  amnezia-wg-option:
+    jc: 4
+    jmin: 40
+    jmax: 70
+    s1: 0
+    s2: 0
+    h1: 1
+    h2: 2
+    h3: 3
+    h4: 4
+    i1: 15508498447646484948845662646613102013339808559769475380475448271405804929967563944753791952429953428594549416493966421935646962255916682006073387068399937622576895997809440837754543034436196406830582984757658205835790003861761450714906623501416627363256878058379526271228716611603298581642275162285240573816154890767293402555266150939798468941494810895379318272519125401461648011724747157307950635164231534570928490441661175500025662573031705482322646078138860414731819832787868506863696888558163813367763059200030659050893771247575525776614497604873028423561998217412261477312921865312761026238182416474604888292675398968863299676198964476969947719800898308087242839827514430110235180683412159333456614686999034027621882972096160724583328618048488377698013859231484959851350743790751249212252795279948528426338604545380509108765165200858756207053737381511818650958969758361168173295493933425496546329164043443493182527363399133677303709771303234699304778554329134243969688709666170355265570730668172444495230355444308838795312034792648687344453938889051394283833843090756412725383427871865294681542360117642115653726884033143840555055339693948171027271777828914111766890844805116997411376453934473478750657591899873905788486431983423780405433155726743756032348879739365339323324843786177220849987261461433552444731162597059090447716432659426362473938950371339684760207031877467482665675815529112340389092269127586123145041893539535902018942440218154824420028175995520961099037825214811828907228360168797996240432819458079715833574490573994360108876789384772695858739101946215503278746763311068494941977107470251761680635293919911600960221090807997840200856140858171170129873013191767356673212282134007829698900975652052623416096801110294383322534428716409970185489785207179854266584203819509838298787660587450246975667844959706595084483108531660496999349646576543744940625311778824850830028321490336218259178038807812563689905469677114155341724099218417999365162663783587327649569544053670076362920295448440778313867126667820884687622441425422304200373311029996699992324597128502853618256146022005307108631829432678616527884200703229132605679644287682575072916220381605567053627248609364609076145192235097070105155085543651979712206081573294385787614887110443712370727958421292076260089672818179660899399226484029486279387805484886278107208323120808804204875607094425140718807324149558323068382446995501657953204159206115087032853188256300765151104001048818215020493302998519680166349658307405025996738856861373953200465756724720074926515170617105844272592666557203483812597797363976998790603541674343092071238561396558856627063292416059761241201984985462189418546765043631543677696108480629933851536362779889705609489649735139126557326927190758110045150375251932904598320831775535533070198481771479817828220735113685298500387297223753546931130241573267204617723999358271475190842444202926279082300677140101683203665954865134690376733484903403330788224434744662688971487018551767618248063693156948344699069908
 - amnezia-wg-option:
     jc: 4
     jmin: 40
@@ -3053,66 +3158,37 @@ proxies:
   - 1.0.0.1
   - 2606:4700:4700::1111
   - 2606:4700:4700::1001
-  name: 🇩🇪 DE
-  server: de.tribukvy.ltd
-  port: 500
-- amnezia-wg-option:
-    jc: 4
-    jmin: 40
-    jmax: 70
-    s1: 0
-    s2: 0
-    h1: 1
-    h2: 2
-    h3: 3
-    h4: 4
-    i1: 33846065602100365953481275426726953440342889446274406706060978896686823607605342277704075771542132572030573481784361744995190382
-  type: wireguard
-  ip: 172.16.0.2
-  ipv6: 2606:4700:110:8728:ea57:7721:6609:7969
-  private-key: ziDJ9nM6gWZBq62TaDQ/ulzIRZCvMHG8hOp1hC0sGTQ=
-  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-  allowed-ips:
-  - 0.0.0.0/0
-  udp: true
-  mtu: 1280
-  remote-dns-resolve: true
-  dns:
-  - 1.1.1.1
-  - 1.0.0.1
-  - 2606:4700:4700::1111
-  - 2606:4700:4700::1001
-  name: 🇪🇪 EE
-  server: ee.tribukvy.ltd
-  port: 500
-- amnezia-wg-option:
-    jc: 4
-    jmin: 40
-    jmax: 70
-    s1: 0
-    s2: 0
-    h1: 1
-    h2: 2
-    h3: 3
-    h4: 4
-    i1: 33846065602100365953481275426726953440342889446274406706060978896686823607605342277704075771542132572030573481784361744995190382
-  type: wireguard
-  ip: 172.16.0.2
-  ipv6: 2606:4700:110:8728:ea57:7721:6609:7969
-  private-key: ziDJ9nM6gWZBq62TaDQ/ulzIRZCvMHG8hOp1hC0sGTQ=
-  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-  allowed-ips:
-  - 0.0.0.0/0
-  udp: true
-  mtu: 1280
-  remote-dns-resolve: true
-  dns:
-  - 1.1.1.1
-  - 1.0.0.1
-  - 2606:4700:4700::1111
-  - 2606:4700:4700::1001
   name: LTE 🇩🇪 DE
   server: tel.de.tribukvy.ltd
+  port: 500
+- type: wireguard
+  ip: 172.16.0.2
+  ipv6: 2606:4700:110:8855:dbf2:927e:6d71:6687
+  private-key: 9Ujt+AHyoA+FHILgCox20d2TdEFpKJGlQVDQ28o4MlI=
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  allowed-ips:
+  - 0.0.0.0/0
+  udp: true
+  mtu: 1280
+  remote-dns-resolve: true
+  dns:
+  - 1.1.1.1
+  - 1.0.0.1
+  - 2606:4700:4700::1111
+  - 2606:4700:4700::1001
+  amnezia-wg-option:
+    jc: 4
+    jmin: 40
+    jmax: 70
+    s1: 0
+    s2: 0
+    h1: 1
+    h2: 2
+    h3: 3
+    h4: 4
+    i1: 33846065602100365953481275426726953440342889446274406706060978896686823607605342277704075771542132572030573481784361744995190382
+  name: 🇵🇱 PL-01
+  server: pl.tribukvy.ltd
   port: 500
 - amnezia-wg-option:
     jc: 4
@@ -3198,8 +3274,8 @@ proxies:
     h3: 3
     h4: 4
     i1: 33846065602100365953481275426726953440342889446274406706060978896686823607605342277704075771542132572030573481784361744995190382
-  name: 🇵🇱 PL-01
-  server: pl.tribukvy.ltd
+  name: 🇳🇱 NL
+  server: nl.tribukvy.ltd
   port: 500
 - type: wireguard
   ip: 172.16.0.2
@@ -3227,36 +3303,7 @@ proxies:
     h3: 3
     h4: 4
     i1: 33846065602100365953481275426726953440342889446274406706060978896686823607605342277704075771542132572030573481784361744995190382
-  name: 🇷🇺 RU-01
-  server: ru0.tribukvy.ltd
-  port: 500
-- type: wireguard
-  ip: 172.16.0.2
-  ipv6: 2606:4700:110:8855:dbf2:927e:6d71:6687
-  private-key: 9Ujt+AHyoA+FHILgCox20d2TdEFpKJGlQVDQ28o4MlI=
-  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-  allowed-ips:
-  - 0.0.0.0/0
-  udp: true
-  mtu: 1280
-  remote-dns-resolve: true
-  dns:
-  - 1.1.1.1
-  - 1.0.0.1
-  - 2606:4700:4700::1111
-  - 2606:4700:4700::1001
-  amnezia-wg-option:
-    jc: 4
-    jmin: 40
-    jmax: 70
-    s1: 0
-    s2: 0
-    h1: 1
-    h2: 2
-    h3: 3
-    h4: 4
-    i1: 33846065602100365953481275426726953440342889446274406706060978896686823607605342277704075771542132572030573481784361744995190382
-  name: 🇫🇮 FI-01
+  name: 🇫🇮 FI
   server: fi.tribukvy.ltd
   port: 500
 - type: wireguard
@@ -3285,8 +3332,8 @@ proxies:
     h3: 3
     h4: 4
     i1: 33846065602100365953481275426726953440342889446274406706060978896686823607605342277704075771542132572030573481784361744995190382
-  name: 🇳🇱 NL-01
-  server: nl.tribukvy.ltd
+  name: 🇩🇪 DE
+  server: de.tribukvy.ltd
   port: 500
 - type: wireguard
   ip: 172.16.0.2
@@ -3343,8 +3390,8 @@ proxies:
     h3: 3
     h4: 4
     i1: 33846065602100365953481275426726953440342889446274406706060978896686823607605342277704075771542132572030573481784361744995190382
-  name: 🇩🇪 DE-01
-  server: de.tribukvy.ltd
+  name: 🇷🇺 RU-01
+  server: ru0.tribukvy.ltd
   port: 500
 - type: wireguard
   ip: 172.16.0.2
@@ -3372,37 +3419,8 @@ proxies:
     h3: 3
     h4: 4
     i1: 33846065602100365953481275426726953440342889446274406706060978896686823607605342277704075771542132572030573481784361744995190382
-  name: LTE 🇩🇪 DE-01
-  server: tel.de.tribukvy.ltd
-  port: 500
-- type: wireguard
-  ip: 172.16.0.2
-  ipv6: 2606:4700:110:8855:dbf2:927e:6d71:6687
-  private-key: 9Ujt+AHyoA+FHILgCox20d2TdEFpKJGlQVDQ28o4MlI=
-  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-  allowed-ips:
-  - 0.0.0.0/0
-  udp: true
-  mtu: 1280
-  remote-dns-resolve: true
-  dns:
-  - 1.1.1.1
-  - 1.0.0.1
-  - 2606:4700:4700::1111
-  - 2606:4700:4700::1001
-  amnezia-wg-option:
-    jc: 4
-    jmin: 40
-    jmax: 70
-    s1: 0
-    s2: 0
-    h1: 1
-    h2: 2
-    h3: 3
-    h4: 4
-    i1: 33846065602100365953481275426726953440342889446274406706060978896686823607605342277704075771542132572030573481784361744995190382
-  name: LTE 🇵🇱 PL-01
-  server: tel.pl.tribukvy.ltd
+  name: 🇪🇪 EE
+  server: ee.tribukvy.ltd
   port: 500
 - type: wireguard
   ip: 172.16.0.2
@@ -3459,6 +3477,35 @@ proxies:
     h3: 3
     h4: 4
     i1: 33846065602100365953481275426726953440342889446274406706060978896686823607605342277704075771542132572030573481784361744995190382
+  name: 🇳🇱 NL-01
+  server: nl.tribukvy.ltd
+  port: 500
+- type: wireguard
+  ip: 172.16.0.2
+  ipv6: 2606:4700:110:8e5f:e687:82aa:bd9b:da9a
+  private-key: mlHR/Xomqs63jlaryRVpZOndFzPvWK5DolXylLVHSeU=
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  allowed-ips:
+  - 0.0.0.0/0
+  udp: true
+  mtu: 1280
+  remote-dns-resolve: true
+  dns:
+  - 1.1.1.1
+  - 1.0.0.1
+  - 2606:4700:4700::1111
+  - 2606:4700:4700::1001
+  amnezia-wg-option:
+    jc: 4
+    jmin: 40
+    jmax: 70
+    s1: 0
+    s2: 0
+    h1: 1
+    h2: 2
+    h3: 3
+    h4: 4
+    i1: 33846065602100365953481275426726953440342889446274406706060978896686823607605342277704075771542132572030573481784361744995190382
   name: 🇵🇱 PL-02
   server: pl.tribukvy.ltd
   port: 500
@@ -3488,8 +3535,8 @@ proxies:
     h3: 3
     h4: 4
     i1: 33846065602100365953481275426726953440342889446274406706060978896686823607605342277704075771542132572030573481784361744995190382
-  name: 🇳🇱 NL-02
-  server: nl.tribukvy.ltd
+  name: 🇷🇺 RU-02
+  server: ru0.tribukvy.ltd
   port: 500
 - type: wireguard
   ip: 172.16.0.2
@@ -3517,7 +3564,7 @@ proxies:
     h3: 3
     h4: 4
     i1: 33846065602100365953481275426726953440342889446274406706060978896686823607605342277704075771542132572030573481784361744995190382
-  name: 🇫🇮 FI-02
+  name: 🇫🇮 FI-01
   server: fi.tribukvy.ltd
   port: 500
 - type: wireguard
@@ -3575,13 +3622,186 @@ proxies:
     h3: 3
     h4: 4
     i1: 33846065602100365953481275426726953440342889446274406706060978896686823607605342277704075771542132572030573481784361744995190382
-  name: LTE 🇫🇮 FI-02
-  server: tel.fi.tribukvy.ltd
+  name: 🇩🇪 DE-01
+  server: de.tribukvy.ltd
   port: 500
 - type: wireguard
   ip: 172.16.0.2
   ipv6: 2606:4700:110:8e5f:e687:82aa:bd9b:da9a
   private-key: mlHR/Xomqs63jlaryRVpZOndFzPvWK5DolXylLVHSeU=
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  allowed-ips:
+  - 0.0.0.0/0
+  udp: true
+  mtu: 1280
+  remote-dns-resolve: true
+  dns:
+  - 1.1.1.1
+  - 1.0.0.1
+  - 2606:4700:4700::1111
+  - 2606:4700:4700::1001
+  amnezia-wg-option:
+    jc: 4
+    jmin: 40
+    jmax: 70
+    s1: 0
+    s2: 0
+    h1: 1
+    h2: 2
+    h3: 3
+    h4: 4
+    i1: 33846065602100365953481275426726953440342889446274406706060978896686823607605342277704075771542132572030573481784361744995190382
+  name: 🇪🇪 EE-01
+  server: ee.tribukvy.ltd
+  port: 500
+- type: wireguard
+  ip: 172.16.0.2
+  ipv6: 2606:4700:110:8e5f:e687:82aa:bd9b:da9a
+  private-key: mlHR/Xomqs63jlaryRVpZOndFzPvWK5DolXylLVHSeU=
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  allowed-ips:
+  - 0.0.0.0/0
+  udp: true
+  mtu: 1280
+  remote-dns-resolve: true
+  dns:
+  - 1.1.1.1
+  - 1.0.0.1
+  - 2606:4700:4700::1111
+  - 2606:4700:4700::1001
+  amnezia-wg-option:
+    jc: 4
+    jmin: 40
+    jmax: 70
+    s1: 0
+    s2: 0
+    h1: 1
+    h2: 2
+    h3: 3
+    h4: 4
+    i1: 33846065602100365953481275426726953440342889446274406706060978896686823607605342277704075771542132572030573481784361744995190382
+  name: LTE 🇵🇱 PL-01
+  server: tel.pl.tribukvy.ltd
+  port: 500
+- type: wireguard
+  ip: 172.16.0.2
+  ipv6: 2606:4700:110:8e5f:e687:82aa:bd9b:da9a
+  private-key: mlHR/Xomqs63jlaryRVpZOndFzPvWK5DolXylLVHSeU=
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  allowed-ips:
+  - 0.0.0.0/0
+  udp: true
+  mtu: 1280
+  remote-dns-resolve: true
+  dns:
+  - 1.1.1.1
+  - 1.0.0.1
+  - 2606:4700:4700::1111
+  - 2606:4700:4700::1001
+  amnezia-wg-option:
+    jc: 4
+    jmin: 40
+    jmax: 70
+    s1: 0
+    s2: 0
+    h1: 1
+    h2: 2
+    h3: 3
+    h4: 4
+    i1: 33846065602100365953481275426726953440342889446274406706060978896686823607605342277704075771542132572030573481784361744995190382
+  name: LTE 🇩🇪 DE-01
+  server: tel.de.tribukvy.ltd
+  port: 500
+- type: wireguard
+  ip: 172.16.0.2
+  ipv6: 2606:4700:110:8e5f:e687:82aa:bd9b:da9a
+  private-key: mlHR/Xomqs63jlaryRVpZOndFzPvWK5DolXylLVHSeU=
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  allowed-ips:
+  - 0.0.0.0/0
+  udp: true
+  mtu: 1280
+  remote-dns-resolve: true
+  dns:
+  - 1.1.1.1
+  - 1.0.0.1
+  - 2606:4700:4700::1111
+  - 2606:4700:4700::1001
+  amnezia-wg-option:
+    jc: 4
+    jmin: 40
+    jmax: 70
+    s1: 0
+    s2: 0
+    h1: 1
+    h2: 2
+    h3: 3
+    h4: 4
+    i1: 33846065602100365953481275426726953440342889446274406706060978896686823607605342277704075771542132572030573481784361744995190382
+  name: LTE 🇫🇮 FI-02
+  server: tel.fi.tribukvy.ltd
+  port: 500
+- type: wireguard
+  ip: 172.16.0.2
+  ipv6: 2606:4700:110:8855:dbf2:927e:6d71:6687
+  private-key: 9Ujt+AHyoA+FHILgCox20d2TdEFpKJGlQVDQ28o4MlI=
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  allowed-ips:
+  - 0.0.0.0/0
+  udp: true
+  mtu: 1280
+  remote-dns-resolve: true
+  dns:
+  - 1.1.1.1
+  - 1.0.0.1
+  - 2606:4700:4700::1111
+  - 2606:4700:4700::1001
+  name: Стандартный 2-01
+  server: 162.159.192.1
+  port: 4500
+  amnezia-wg-option:
+    jc: 4
+    jmin: 40
+    jmax: 70
+    s1: 0
+    s2: 0
+    h1: 1
+    h2: 2
+    h3: 3
+    h4: 4
+    i1: 15508498447646484948845662646613102013339808559769475380475448271405804929967563944753791952429953428594549416493966421935646962255916682006073387068399937622576895997809440837754543034436196406830582984757658205835790003861761450714906623501416627363256878058379526271228716611603298581642275162285240573816154890767293402555266150939798468941494810895379318272519125401461648011724747157307950635164231534570928490441661175500025662573031705482322646078138860414731819832787868506863696888558163813367763059200030659050893771247575525776614497604873028423561998217412261477312921865312761026238182416474604888292675398968863299676198964476969947719800898308087242839827514430110235180683412159333456614686999034027621882972096160724583328618048488377698013859231484959851350743790751249212252795279948528426338604545380509108765165200858756207053737381511818650958969758361168173295493933425496546329164043443493182527363399133677303709771303234699304778554329134243969688709666170355265570730668172444495230355444308838795312034792648687344453938889051394283833843090756412725383427871865294681542360117642115653726884033143840555055339693948171027271777828914111766890844805116997411376453934473478750657591899873905788486431983423780405433155726743756032348879739365339323324843786177220849987261461433552444731162597059090447716432659426362473938950371339684760207031877467482665675815529112340389092269127586123145041893539535902018942440218154824420028175995520961099037825214811828907228360168797996240432819458079715833574490573994360108876789384772695858739101946215503278746763311068494941977107470251761680635293919911600960221090807997840200856140858171170129873013191767356673212282134007829698900975652052623416096801110294383322534428716409970185489785207179854266584203819509838298787660587450246975667844959706595084483108531660496999349646576543744940625311778824850830028321490336218259178038807812563689905469677114155341724099218417999365162663783587327649569544053670076362920295448440778313867126667820884687622441425422304200373311029996699992324597128502853618256146022005307108631829432678616527884200703229132605679644287682575072916220381605567053627248609364609076145192235097070105155085543651979712206081573294385787614887110443712370727958421292076260089672818179660899399226484029486279387805484886278107208323120808804204875607094425140718807324149558323068382446995501657953204159206115087032853188256300765151104001048818215020493302998519680166349658307405025996738856861373953200465756724720074926515170617105844272592666557203483812597797363976998790603541674343092071238561396558856627063292416059761241201984985462189418546765043631543677696108480629933851536362779889705609489649735139126557326927190758110045150375251932904598320831775535533070198481771479817828220735113685298500387297223753546931130241573267204617723999358271475190842444202926279082300677140101683203665954865134690376733484903403330788224434744662688971487018551767618248063693156948344699069908
+- type: wireguard
+  name: LTEfWARPv1_86
+  server: tel.fi.tribukvy.ltd
+  port: 1701
+  ip: 172.16.0.2
+  private-key: 9Ujt+AHyoA+FHILgCox20d2TdEFpKJGlQVDQ28o4MlI=
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  udp: true
+  dns:
+  - 8.8.8.8
+  - 8.8.4.4
+  - 2001:4860:4860::8888
+  - 2001:4860:4860::8844
+  mtu: 1280
+  allowed-ips:
+  - 0.0.0.0/0
+  - ::/0
+  amnezia-wg-option:
+    jc: 4
+    jmin: 40
+    jmax: 70
+    s1: 0
+    s2: 0
+    h1: 1
+    h2: 2
+    h3: 3
+    h4: 4
+    i1: 16054023518668606636062008499208682827025604772154400556272367850709594268975820509987301877165988970357908166356437188345829090474567584351302358180850523651455345114997667605208879516835192739494986764694726026528691711479480875644693803040867647609980108472688511906480428842021171435978317205853409186071891409558316515688541784813003629334157391542470117315959926516536067788411604021846762413085375527519429549441224654739173243359503639488050722216658146343685771487742314382158776634019425547192043892086725688234744889977427409804982627708004569800157409079888697422255450441102933898258981404894910574356522957621568231823076294842817518839347186451789605402990439446680036479616844863178398896384788211997906328756192498949817267111666134122175908524552445836759629695095894215229151635542995718047011620748507369638355169957481956828416291834852083754813206460816804222033875687683524191593082715756231632517115193596176149077568850288956074173618844541581423719580382707897106500181604572280919191092477947130857934976535205630270260965476802901784293100332182880148054162815140537224675945014179615054979361867512991162212174744538565504601574941205396255823673614932503708277531740745238286855432357498619003189376262717019645982293744922920682151881539193575352585063297041306652851366249022614976245856276431498984348034967584642485744762792110650599830089559196673787434392497168288522720331464978635185818969845769327629314838999524129084142872112477235284090034418010641287650056891473611523919887083087309213858047610973600418053684899470098438932121387876161373583005783666133897455692756248891208594712091907144622356881690728883710443077739804211438930453232402337097518583285921776272101663399612258652183432350011902603067351738702891075756604328624044776189771129906248544963321419370934607585223622794678671135777036573430521508872687114906094448594798744918358581988702500785630560053860118045200703725003321332256644263567325940988428590013498622700622335612731302184881512091035099336473983161931690127709369768340785142246133692159207223207255218282025750308063961840192441567294636948216519600874658925349727657191240270924916360396755588908373904378489685049520436175972128097834834832511321187485470521000618023895724538386072689543889786280815585559999257453189413687357434677471456504586113762614913813626119799162303253934884366713904186188615004730481265091511628977261097014545305136762767133998808401576171707628029218810471066017775937908042399606060656906524729116290001605011129461235827375412898483756398232681108225163417337429301829864475908192439182386451955338255818535495526679989671415795909414787818165102567821139439074842459734322497840679040280684152266981567292727642436643171748434157190274298661280479620829832642199649495428552121980259317740962541084144714944181193629115490323286122406851739688194179020861552700435739872514418314757896782049616763840374329405183740337448636951253371128488406397903586271822886311385041021697719269073936188271616728
+- type: wireguard
+  ip: 172.16.0.2
+  ipv6: 2606:4700:110:8855:dbf2:927e:6d71:6687
+  private-key: 9Ujt+AHyoA+FHILgCox20d2TdEFpKJGlQVDQ28o4MlI=
   public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
   allowed-ips:
   - 0.0.0.0/0
@@ -3609,125 +3829,9 @@ proxies:
     i1: 3345087713861295570553254735180291573424174682435120648469301562956411482632384697483016179072988111025677991941952933518040451486655919695138189461232123225388225902358549773117281758542049091312595114952109697593732614244543079457544721562578169029618596886214079435971801990635908052714881251242689398666346672943474893598530939392420656051313844833037603947648545666735758966123596222308514001397875471894311633002815175670404752621187057232158776179100114667610670564393485553493830774330278924806991302370343685889105696941956488573349964687283588534157246747321859993074836076149297030419951174821044553368406590271626289199939910860543915117924372904846086936484724363865355234952310516900168499384884023768073300670836398749829684555177448416574219678499360151773954903855634508529257414211093395456703994262171882623893250903306
     i2: 33972344620236196561725410237637550394869480771740669505108041747909740424651914926422476654186899367816192823490031733472002907926418122286029857404385256824308244935973900342057392585269348454089720897002972267033055318677397292986275631793123246325344721794215787124475762234635473830493112481554309180161186835533582648930759563891517487359318222873952222449438080050889495066141070850338531539649272932058459349772853044895566695728843144120677206460600728754603676551253811908919700059539721907503170431267220021063633539617037791993313821985418884970550904741909496351593257591508234
 - type: wireguard
-  ip: 172.16.0.2
-  ipv6: 2606:4700:110:8e5f:e687:82aa:bd9b:da9a
-  private-key: mlHR/Xomqs63jlaryRVpZOndFzPvWK5DolXylLVHSeU=
-  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-  allowed-ips:
-  - 0.0.0.0/0
-  udp: true
-  mtu: 1280
-  remote-dns-resolve: true
-  dns:
-  - 1.1.1.1
-  - 1.0.0.1
-  - 2606:4700:4700::1111
-  - 2606:4700:4700::1001
-  name: Стандартный 1-01
-  server: 162.159.192.1
-  port: 4500
-  amnezia-wg-option:
-    jc: 4
-    jmin: 40
-    jmax: 70
-    s1: 0
-    s2: 0
-    h1: 1
-    h2: 2
-    h3: 3
-    h4: 4
-    i1: 16054023518668606636062008499208682827025604772154400556272367850709594268975820509987301877165988970357908166356437188345829090474567584351302358180850523651455345114997667605208879516835192739494986764694726026528691711479480875644693803040867647609980108472688511906480428842021171435978317205853409186071891409558316515688541784813003629334157391542470117315959926516536067788411604021846762413085375527519429549441224654739173243359503639488050722216658146343685771487742314382158776634019425547192043892086725688234744889977427409804982627708004569800157409079888697422255450441102933898258981404894910574356522957621568231823076294842817518839347186451789605402990439446680036479616844863178398896384788211997906328756192498949817267111666134122175908524552445836759629695095894215229151635542995718047011620748507369638355169957481956828416291834852083754813206460816804222033875687683524191593082715756231632517115193596176149077568850288956074173618844541581423719580382707897106500181604572280919191092477947130857934976535205630270260965476802901784293100332182880148054162815140537224675945014179615054979361867512991162212174744538565504601574941205396255823673614932503708277531740745238286855432357498619003189376262717019645982293744922920682151881539193575352585063297041306652851366249022614976245856276431498984348034967584642485744762792110650599830089559196673787434392497168288522720331464978635185818969845769327629314838999524129084142872112477235284090034418010641287650056891473611523919887083087309213858047610973600418053684899470098438932121387876161373583005783666133897455692756248891208594712091907144622356881690728883710443077739804211438930453232402337097518583285921776272101663399612258652183432350011902603067351738702891075756604328624044776189771129906248544963321419370934607585223622794678671135777036573430521508872687114906094448594798744918358581988702500785630560053860118045200703725003321332256644263567325940988428590013498622700622335612731302184881512091035099336473983161931690127709369768340785142246133692159207223207255218282025750308063961840192441567294636948216519600874658925349727657191240270924916360396755588908373904378489685049520436175972128097834834832511321187485470521000618023895724538386072689543889786280815585559999257453189413687357434677471456504586113762614913813626119799162303253934884366713904186188615004730481265091511628977261097014545305136762767133998808401576171707628029218810471066017775937908042399606060656906524729116290001605011129461235827375412898483756398232681108225163417337429301829864475908192439182386451955338255818535495526679989671415795909414787818165102567821139439074842459734322497840679040280684152266981567292727642436643171748434157190274298661280479620829832642199649495428552121980259317740962541084144714944181193629115490323286122406851739688194179020861552700435739872514418314757896782049616763840374329405183740337448636951253371128488406397903586271822886311385041021697719269073936188271616728
-- type: wireguard
-  ip: 172.16.0.2
-  ipv6: 2606:4700:110:8855:dbf2:927e:6d71:6687
-  private-key: 9Ujt+AHyoA+FHILgCox20d2TdEFpKJGlQVDQ28o4MlI=
-  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-  allowed-ips:
-  - 0.0.0.0/0
-  udp: true
-  mtu: 1280
-  remote-dns-resolve: true
-  dns:
-  - 1.1.1.1
-  - 1.0.0.1
-  - 2606:4700:4700::1111
-  - 2606:4700:4700::1001
-  name: Стандартный 1-02
-  server: 162.159.192.1
-  port: 4500
-  amnezia-wg-option:
-    jc: 4
-    jmin: 40
-    jmax: 70
-    s1: 0
-    s2: 0
-    h1: 1
-    h2: 2
-    h3: 3
-    h4: 4
-    i1: 16054023518668606636062008499208682827025604772154400556272367850709594268975820509987301877165988970357908166356437188345829090474567584351302358180850523651455345114997667605208879516835192739494986764694726026528691711479480875644693803040867647609980108472688511906480428842021171435978317205853409186071891409558316515688541784813003629334157391542470117315959926516536067788411604021846762413085375527519429549441224654739173243359503639488050722216658146343685771487742314382158776634019425547192043892086725688234744889977427409804982627708004569800157409079888697422255450441102933898258981404894910574356522957621568231823076294842817518839347186451789605402990439446680036479616844863178398896384788211997906328756192498949817267111666134122175908524552445836759629695095894215229151635542995718047011620748507369638355169957481956828416291834852083754813206460816804222033875687683524191593082715756231632517115193596176149077568850288956074173618844541581423719580382707897106500181604572280919191092477947130857934976535205630270260965476802901784293100332182880148054162815140537224675945014179615054979361867512991162212174744538565504601574941205396255823673614932503708277531740745238286855432357498619003189376262717019645982293744922920682151881539193575352585063297041306652851366249022614976245856276431498984348034967584642485744762792110650599830089559196673787434392497168288522720331464978635185818969845769327629314838999524129084142872112477235284090034418010641287650056891473611523919887083087309213858047610973600418053684899470098438932121387876161373583005783666133897455692756248891208594712091907144622356881690728883710443077739804211438930453232402337097518583285921776272101663399612258652183432350011902603067351738702891075756604328624044776189771129906248544963321419370934607585223622794678671135777036573430521508872687114906094448594798744918358581988702500785630560053860118045200703725003321332256644263567325940988428590013498622700622335612731302184881512091035099336473983161931690127709369768340785142246133692159207223207255218282025750308063961840192441567294636948216519600874658925349727657191240270924916360396755588908373904378489685049520436175972128097834834832511321187485470521000618023895724538386072689543889786280815585559999257453189413687357434677471456504586113762614913813626119799162303253934884366713904186188615004730481265091511628977261097014545305136762767133998808401576171707628029218810471066017775937908042399606060656906524729116290001605011129461235827375412898483756398232681108225163417337429301829864475908192439182386451955338255818535495526679989671415795909414787818165102567821139439074842459734322497840679040280684152266981567292727642436643171748434157190274298661280479620829832642199649495428552121980259317740962541084144714944181193629115490323286122406851739688194179020861552700435739872514418314757896782049616763840374329405183740337448636951253371128488406397903586271822886311385041021697719269073936188271616728
-- type: wireguard
-  ip: 172.16.0.2
-  ipv6: 2606:4700:110:8e5f:e687:82aa:bd9b:da9a
-  private-key: mlHR/Xomqs63jlaryRVpZOndFzPvWK5DolXylLVHSeU=
-  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-  allowed-ips:
-  - 0.0.0.0/0
-  udp: true
-  mtu: 1280
-  remote-dns-resolve: true
-  dns:
-  - 1.1.1.1
-  - 1.0.0.1
-  - 2606:4700:4700::1111
-  - 2606:4700:4700::1001
-  name: Стандартный 2-01
-  server: 162.159.192.1
-  port: 4500
-  amnezia-wg-option:
-    jc: 4
-    jmin: 40
-    jmax: 70
-    s1: 0
-    s2: 0
-    h1: 1
-    h2: 2
-    h3: 3
-    h4: 4
-    i1: 15508498447646484948845662646613102013339808559769475380475448271405804929967563944753791952429953428594549416493966421935646962255916682006073387068399937622576895997809440837754543034436196406830582984757658205835790003861761450714906623501416627363256878058379526271228716611603298581642275162285240573816154890767293402555266150939798468941494810895379318272519125401461648011724747157307950635164231534570928490441661175500025662573031705482322646078138860414731819832787868506863696888558163813367763059200030659050893771247575525776614497604873028423561998217412261477312921865312761026238182416474604888292675398968863299676198964476969947719800898308087242839827514430110235180683412159333456614686999034027621882972096160724583328618048488377698013859231484959851350743790751249212252795279948528426338604545380509108765165200858756207053737381511818650958969758361168173295493933425496546329164043443493182527363399133677303709771303234699304778554329134243969688709666170355265570730668172444495230355444308838795312034792648687344453938889051394283833843090756412725383427871865294681542360117642115653726884033143840555055339693948171027271777828914111766890844805116997411376453934473478750657591899873905788486431983423780405433155726743756032348879739365339323324843786177220849987261461433552444731162597059090447716432659426362473938950371339684760207031877467482665675815529112340389092269127586123145041893539535902018942440218154824420028175995520961099037825214811828907228360168797996240432819458079715833574490573994360108876789384772695858739101946215503278746763311068494941977107470251761680635293919911600960221090807997840200856140858171170129873013191767356673212282134007829698900975652052623416096801110294383322534428716409970185489785207179854266584203819509838298787660587450246975667844959706595084483108531660496999349646576543744940625311778824850830028321490336218259178038807812563689905469677114155341724099218417999365162663783587327649569544053670076362920295448440778313867126667820884687622441425422304200373311029996699992324597128502853618256146022005307108631829432678616527884200703229132605679644287682575072916220381605567053627248609364609076145192235097070105155085543651979712206081573294385787614887110443712370727958421292076260089672818179660899399226484029486279387805484886278107208323120808804204875607094425140718807324149558323068382446995501657953204159206115087032853188256300765151104001048818215020493302998519680166349658307405025996738856861373953200465756724720074926515170617105844272592666557203483812597797363976998790603541674343092071238561396558856627063292416059761241201984985462189418546765043631543677696108480629933851536362779889705609489649735139126557326927190758110045150375251932904598320831775535533070198481771479817828220735113685298500387297223753546931130241573267204617723999358271475190842444202926279082300677140101683203665954865134690376733484903403330788224434744662688971487018551767618248063693156948344699069908
-- type: wireguard
-  ip: 172.16.0.2
-  ipv6: 2606:4700:110:8855:dbf2:927e:6d71:6687
-  private-key: 9Ujt+AHyoA+FHILgCox20d2TdEFpKJGlQVDQ28o4MlI=
-  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-  allowed-ips:
-  - 0.0.0.0/0
-  udp: true
-  mtu: 1280
-  remote-dns-resolve: true
-  dns:
-  - 1.1.1.1
-  - 1.0.0.1
-  - 2606:4700:4700::1111
-  - 2606:4700:4700::1001
-  name: Стандартный 2-02
-  server: 162.159.192.1
-  port: 4500
-  amnezia-wg-option:
-    jc: 4
-    jmin: 40
-    jmax: 70
-    s1: 0
-    s2: 0
-    h1: 1
-    h2: 2
-    h3: 3
-    h4: 4
-    i1: 15508498447646484948845662646613102013339808559769475380475448271405804929967563944753791952429953428594549416493966421935646962255916682006073387068399937622576895997809440837754543034436196406830582984757658205835790003861761450714906623501416627363256878058379526271228716611603298581642275162285240573816154890767293402555266150939798468941494810895379318272519125401461648011724747157307950635164231534570928490441661175500025662573031705482322646078138860414731819832787868506863696888558163813367763059200030659050893771247575525776614497604873028423561998217412261477312921865312761026238182416474604888292675398968863299676198964476969947719800898308087242839827514430110235180683412159333456614686999034027621882972096160724583328618048488377698013859231484959851350743790751249212252795279948528426338604545380509108765165200858756207053737381511818650958969758361168173295493933425496546329164043443493182527363399133677303709771303234699304778554329134243969688709666170355265570730668172444495230355444308838795312034792648687344453938889051394283833843090756412725383427871865294681542360117642115653726884033143840555055339693948171027271777828914111766890844805116997411376453934473478750657591899873905788486431983423780405433155726743756032348879739365339323324843786177220849987261461433552444731162597059090447716432659426362473938950371339684760207031877467482665675815529112340389092269127586123145041893539535902018942440218154824420028175995520961099037825214811828907228360168797996240432819458079715833574490573994360108876789384772695858739101946215503278746763311068494941977107470251761680635293919911600960221090807997840200856140858171170129873013191767356673212282134007829698900975652052623416096801110294383322534428716409970185489785207179854266584203819509838298787660587450246975667844959706595084483108531660496999349646576543744940625311778824850830028321490336218259178038807812563689905469677114155341724099218417999365162663783587327649569544053670076362920295448440778313867126667820884687622441425422304200373311029996699992324597128502853618256146022005307108631829432678616527884200703229132605679644287682575072916220381605567053627248609364609076145192235097070105155085543651979712206081573294385787614887110443712370727958421292076260089672818179660899399226484029486279387805484886278107208323120808804204875607094425140718807324149558323068382446995501657953204159206115087032853188256300765151104001048818215020493302998519680166349658307405025996738856861373953200465756724720074926515170617105844272592666557203483812597797363976998790603541674343092071238561396558856627063292416059761241201984985462189418546765043631543677696108480629933851536362779889705609489649735139126557326927190758110045150375251932904598320831775535533070198481771479817828220735113685298500387297223753546931130241573267204617723999358271475190842444202926279082300677140101683203665954865134690376733484903403330788224434744662688971487018551767618248063693156948344699069908
-- type: wireguard
-  name: LTEfWARPv3_35
+  name: LTEfWARPv2_44
   server: tel.fi.tribukvy.ltd
-  port: 2506
+  port: 1018
   ip: 172.16.0.2
   private-key: 9Ujt+AHyoA+FHILgCox20d2TdEFpKJGlQVDQ28o4MlI=
   public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
@@ -3751,8 +3855,62 @@ proxies:
     h2: 2
     h3: 3
     h4: 4
-    i1: 3345087713861295570553254735180291573424174682435120648469301562956411482632384697483016179072988111025677991941952933518040451486655919695138189461232123225388225902358549773117281758542049091312595114952109697593732614244543079457544721562578169029618596886214079435971801990635908052714881251242689398666346672943474893598530939392420656051313844833037603947648545666735758966123596222308514001397875471894311633002815175670404752621187057232158776179100114667610670564393485553493830774330278924806991302370343685889105696941956488573349964687283588534157246747321859993074836076149297030419951174821044553368406590271626289199939910860543915117924372904846086936484724363865355234952310516900168499384884023768073300670836398749829684555177448416574219678499360151773954903855634508529257414211093395456703994262171882623893250903306
-    i2: 33972344620236196561725410237637550394869480771740669505108041747909740424651914926422476654186899367816192823490031733472002907926418122286029857404385256824308244935973900342057392585269348454089720897002972267033055318677397292986275631793123246325344721794215787124475762234635473830493112481554309180161186835533582648930759563891517487359318222873952222449438080050889495066141070850338531539649272932058459349772853044895566695728843144120677206460600728754603676551253811908919700059539721907503170431267220021063633539617037791993313821985418884970550904741909496351593257591508234
+    i1: 15508498447646484948845662646613102013339808559769475380475448271405804929967563944753791952429953428594549416493966421935646962255916682006073387068399937622576895997809440837754543034436196406830582984757658205835790003861761450714906623501416627363256878058379526271228716611603298581642275162285240573816154890767293402555266150939798468941494810895379318272519125401461648011724747157307950635164231534570928490441661175500025662573031705482322646078138860414731819832787868506863696888558163813367763059200030659050893771247575525776614497604873028423561998217412261477312921865312761026238182416474604888292675398968863299676198964476969947719800898308087242839827514430110235180683412159333456614686999034027621882972096160724583328618048488377698013859231484959851350743790751249212252795279948528426338604545380509108765165200858756207053737381511818650958969758361168173295493933425496546329164043443493182527363399133677303709771303234699304778554329134243969688709666170355265570730668172444495230355444308838795312034792648687344453938889051394283833843090756412725383427871865294681542360117642115653726884033143840555055339693948171027271777828914111766890844805116997411376453934473478750657591899873905788486431983423780405433155726743756032348879739365339323324843786177220849987261461433552444731162597059090447716432659426362473938950371339684760207031877467482665675815529112340389092269127586123145041893539535902018942440218154824420028175995520961099037825214811828907228360168797996240432819458079715833574490573994360108876789384772695858739101946215503278746763311068494941977107470251761680635293919911600960221090807997840200856140858171170129873013191767356673212282134007829698900975652052623416096801110294383322534428716409970185489785207179854266584203819509838298787660587450246975667844959706595084483108531660496999349646576543744940625311778824850830028321490336218259178038807812563689905469677114155341724099218417999365162663783587327649569544053670076362920295448440778313867126667820884687622441425422304200373311029996699992324597128502853618256146022005307108631829432678616527884200703229132605679644287682575072916220381605567053627248609364609076145192235097070105155085543651979712206081573294385787614887110443712370727958421292076260089672818179660899399226484029486279387805484886278107208323120808804204875607094425140718807324149558323068382446995501657953204159206115087032853188256300765151104001048818215020493302998519680166349658307405025996738856861373953200465756724720074926515170617105844272592666557203483812597797363976998790603541674343092071238561396558856627063292416059761241201984985462189418546765043631543677696108480629933851536362779889705609489649735139126557326927190758110045150375251932904598320831775535533070198481771479817828220735113685298500387297223753546931130241573267204617723999358271475190842444202926279082300677140101683203665954865134690376733484903403330788224434744662688971487018551767618248063693156948344699069908
+- type: wireguard
+  name: LTEfWARPw_73
+  server: tel.fi.tribukvy.ltd
+  port: 7281
+  ip: 172.16.0.2
+  private-key: 9Ujt+AHyoA+FHILgCox20d2TdEFpKJGlQVDQ28o4MlI=
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  udp: true
+  dns:
+  - 8.8.8.8
+  - 8.8.4.4
+  - 2001:4860:4860::8888
+  - 2001:4860:4860::8844
+  mtu: 1280
+  allowed-ips:
+  - 0.0.0.0/0
+  - ::/0
+  amnezia-wg-option:
+    jc: 4
+    jmin: 40
+    jmax: 70
+    s1: 0
+    s2: 0
+    h1: 1
+    h2: 2
+    h3: 3
+    h4: 4
+- type: wireguard
+  name: LTEpWARPv1_50
+  server: tel.pl.tribukvy.ltd
+  port: 3138
+  ip: 172.16.0.2
+  private-key: ziDJ9nM6gWZBq62TaDQ/ulzIRZCvMHG8hOp1hC0sGTQ=
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  udp: true
+  dns:
+  - 8.8.8.8
+  - 8.8.4.4
+  - 2001:4860:4860::8888
+  - 2001:4860:4860::8844
+  mtu: 1280
+  allowed-ips:
+  - 0.0.0.0/0
+  - ::/0
+  amnezia-wg-option:
+    jc: 4
+    jmin: 40
+    jmax: 70
+    s1: 0
+    s2: 0
+    h1: 1
+    h2: 2
+    h3: 3
+    h4: 4
+    i1: 16054023518668606636062008499208682827025604772154400556272367850709594268975820509987301877165988970357908166356437188345829090474567584351302358180850523651455345114997667605208879516835192739494986764694726026528691711479480875644693803040867647609980108472688511906480428842021171435978317205853409186071891409558316515688541784813003629334157391542470117315959926516536067788411604021846762413085375527519429549441224654739173243359503639488050722216658146343685771487742314382158776634019425547192043892086725688234744889977427409804982627708004569800157409079888697422255450441102933898258981404894910574356522957621568231823076294842817518839347186451789605402990439446680036479616844863178398896384788211997906328756192498949817267111666134122175908524552445836759629695095894215229151635542995718047011620748507369638355169957481956828416291834852083754813206460816804222033875687683524191593082715756231632517115193596176149077568850288956074173618844541581423719580382707897106500181604572280919191092477947130857934976535205630270260965476802901784293100332182880148054162815140537224675945014179615054979361867512991162212174744538565504601574941205396255823673614932503708277531740745238286855432357498619003189376262717019645982293744922920682151881539193575352585063297041306652851366249022614976245856276431498984348034967584642485744762792110650599830089559196673787434392497168288522720331464978635185818969845769327629314838999524129084142872112477235284090034418010641287650056891473611523919887083087309213858047610973600418053684899470098438932121387876161373583005783666133897455692756248891208594712091907144622356881690728883710443077739804211438930453232402337097518583285921776272101663399612258652183432350011902603067351738702891075756604328624044776189771129906248544963321419370934607585223622794678671135777036573430521508872687114906094448594798744918358581988702500785630560053860118045200703725003321332256644263567325940988428590013498622700622335612731302184881512091035099336473983161931690127709369768340785142246133692159207223207255218282025750308063961840192441567294636948216519600874658925349727657191240270924916360396755588908373904378489685049520436175972128097834834832511321187485470521000618023895724538386072689543889786280815585559999257453189413687357434677471456504586113762614913813626119799162303253934884366713904186188615004730481265091511628977261097014545305136762767133998808401576171707628029218810471066017775937908042399606060656906524729116290001605011129461235827375412898483756398232681108225163417337429301829864475908192439182386451955338255818535495526679989671415795909414787818165102567821139439074842459734322497840679040280684152266981567292727642436643171748434157190274298661280479620829832642199649495428552121980259317740962541084144714944181193629115490323286122406851739688194179020861552700435739872514418314757896782049616763840374329405183740337448636951253371128488406397903586271822886311385041021697719269073936188271616728
 - type: wireguard
   name: LTEpWARPv2_90
   server: tel.pl.tribukvy.ltd
@@ -3782,34 +3940,6 @@ proxies:
     h4: 4
     i1: 15508498447646484948845662646613102013339808559769475380475448271405804929967563944753791952429953428594549416493966421935646962255916682006073387068399937622576895997809440837754543034436196406830582984757658205835790003861761450714906623501416627363256878058379526271228716611603298581642275162285240573816154890767293402555266150939798468941494810895379318272519125401461648011724747157307950635164231534570928490441661175500025662573031705482322646078138860414731819832787868506863696888558163813367763059200030659050893771247575525776614497604873028423561998217412261477312921865312761026238182416474604888292675398968863299676198964476969947719800898308087242839827514430110235180683412159333456614686999034027621882972096160724583328618048488377698013859231484959851350743790751249212252795279948528426338604545380509108765165200858756207053737381511818650958969758361168173295493933425496546329164043443493182527363399133677303709771303234699304778554329134243969688709666170355265570730668172444495230355444308838795312034792648687344453938889051394283833843090756412725383427871865294681542360117642115653726884033143840555055339693948171027271777828914111766890844805116997411376453934473478750657591899873905788486431983423780405433155726743756032348879739365339323324843786177220849987261461433552444731162597059090447716432659426362473938950371339684760207031877467482665675815529112340389092269127586123145041893539535902018942440218154824420028175995520961099037825214811828907228360168797996240432819458079715833574490573994360108876789384772695858739101946215503278746763311068494941977107470251761680635293919911600960221090807997840200856140858171170129873013191767356673212282134007829698900975652052623416096801110294383322534428716409970185489785207179854266584203819509838298787660587450246975667844959706595084483108531660496999349646576543744940625311778824850830028321490336218259178038807812563689905469677114155341724099218417999365162663783587327649569544053670076362920295448440778313867126667820884687622441425422304200373311029996699992324597128502853618256146022005307108631829432678616527884200703229132605679644287682575072916220381605567053627248609364609076145192235097070105155085543651979712206081573294385787614887110443712370727958421292076260089672818179660899399226484029486279387805484886278107208323120808804204875607094425140718807324149558323068382446995501657953204159206115087032853188256300765151104001048818215020493302998519680166349658307405025996738856861373953200465756724720074926515170617105844272592666557203483812597797363976998790603541674343092071238561396558856627063292416059761241201984985462189418546765043631543677696108480629933851536362779889705609489649735139126557326927190758110045150375251932904598320831775535533070198481771479817828220735113685298500387297223753546931130241573267204617723999358271475190842444202926279082300677140101683203665954865134690376733484903403330788224434744662688971487018551767618248063693156948344699069908
 - type: wireguard
-  name: flWARPv1_59
-  server: fi.tribukvy.ltd
-  port: 3476
-  ip: 172.16.0.2
-  private-key: 9Ujt+AHyoA+FHILgCox20d2TdEFpKJGlQVDQ28o4MlI=
-  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-  udp: true
-  dns:
-  - 8.8.8.8
-  - 8.8.4.4
-  - 2001:4860:4860::8888
-  - 2001:4860:4860::8844
-  mtu: 1280
-  allowed-ips:
-  - 0.0.0.0/0
-  - ::/0
-  amnezia-wg-option:
-    jc: 4
-    jmin: 40
-    jmax: 70
-    s1: 0
-    s2: 0
-    h1: 1
-    h2: 2
-    h3: 3
-    h4: 4
-    i1: 16054023518668606636062008499208682827025604772154400556272367850709594268975820509987301877165988970357908166356437188345829090474567584351302358180850523651455345114997667605208879516835192739494986764694726026528691711479480875644693803040867647609980108472688511906480428842021171435978317205853409186071891409558316515688541784813003629334157391542470117315959926516536067788411604021846762413085375527519429549441224654739173243359503639488050722216658146343685771487742314382158776634019425547192043892086725688234744889977427409804982627708004569800157409079888697422255450441102933898258981404894910574356522957621568231823076294842817518839347186451789605402990439446680036479616844863178398896384788211997906328756192498949817267111666134122175908524552445836759629695095894215229151635542995718047011620748507369638355169957481956828416291834852083754813206460816804222033875687683524191593082715756231632517115193596176149077568850288956074173618844541581423719580382707897106500181604572280919191092477947130857934976535205630270260965476802901784293100332182880148054162815140537224675945014179615054979361867512991162212174744538565504601574941205396255823673614932503708277531740745238286855432357498619003189376262717019645982293744922920682151881539193575352585063297041306652851366249022614976245856276431498984348034967584642485744762792110650599830089559196673787434392497168288522720331464978635185818969845769327629314838999524129084142872112477235284090034418010641287650056891473611523919887083087309213858047610973600418053684899470098438932121387876161373583005783666133897455692756248891208594712091907144622356881690728883710443077739804211438930453232402337097518583285921776272101663399612258652183432350011902603067351738702891075756604328624044776189771129906248544963321419370934607585223622794678671135777036573430521508872687114906094448594798744918358581988702500785630560053860118045200703725003321332256644263567325940988428590013498622700622335612731302184881512091035099336473983161931690127709369768340785142246133692159207223207255218282025750308063961840192441567294636948216519600874658925349727657191240270924916360396755588908373904378489685049520436175972128097834834832511321187485470521000618023895724538386072689543889786280815585559999257453189413687357434677471456504586113762614913813626119799162303253934884366713904186188615004730481265091511628977261097014545305136762767133998808401576171707628029218810471066017775937908042399606060656906524729116290001605011129461235827375412898483756398232681108225163417337429301829864475908192439182386451955338255818535495526679989671415795909414787818165102567821139439074842459734322497840679040280684152266981567292727642436643171748434157190274298661280479620829832642199649495428552121980259317740962541084144714944181193629115490323286122406851739688194179020861552700435739872514418314757896782049616763840374329405183740337448636951253371128488406397903586271822886311385041021697719269073936188271616728
-- type: wireguard
   name: WARPv1_72
   server: 8.34.70.2
   port: 908
@@ -3838,34 +3968,6 @@ proxies:
     h4: 4
     i1: 16054023518668606636062008499208682827025604772154400556272367850709594268975820509987301877165988970357908166356437188345829090474567584351302358180850523651455345114997667605208879516835192739494986764694726026528691711479480875644693803040867647609980108472688511906480428842021171435978317205853409186071891409558316515688541784813003629334157391542470117315959926516536067788411604021846762413085375527519429549441224654739173243359503639488050722216658146343685771487742314382158776634019425547192043892086725688234744889977427409804982627708004569800157409079888697422255450441102933898258981404894910574356522957621568231823076294842817518839347186451789605402990439446680036479616844863178398896384788211997906328756192498949817267111666134122175908524552445836759629695095894215229151635542995718047011620748507369638355169957481956828416291834852083754813206460816804222033875687683524191593082715756231632517115193596176149077568850288956074173618844541581423719580382707897106500181604572280919191092477947130857934976535205630270260965476802901784293100332182880148054162815140537224675945014179615054979361867512991162212174744538565504601574941205396255823673614932503708277531740745238286855432357498619003189376262717019645982293744922920682151881539193575352585063297041306652851366249022614976245856276431498984348034967584642485744762792110650599830089559196673787434392497168288522720331464978635185818969845769327629314838999524129084142872112477235284090034418010641287650056891473611523919887083087309213858047610973600418053684899470098438932121387876161373583005783666133897455692756248891208594712091907144622356881690728883710443077739804211438930453232402337097518583285921776272101663399612258652183432350011902603067351738702891075756604328624044776189771129906248544963321419370934607585223622794678671135777036573430521508872687114906094448594798744918358581988702500785630560053860118045200703725003321332256644263567325940988428590013498622700622335612731302184881512091035099336473983161931690127709369768340785142246133692159207223207255218282025750308063961840192441567294636948216519600874658925349727657191240270924916360396755588908373904378489685049520436175972128097834834832511321187485470521000618023895724538386072689543889786280815585559999257453189413687357434677471456504586113762614913813626119799162303253934884366713904186188615004730481265091511628977261097014545305136762767133998808401576171707628029218810471066017775937908042399606060656906524729116290001605011129461235827375412898483756398232681108225163417337429301829864475908192439182386451955338255818535495526679989671415795909414787818165102567821139439074842459734322497840679040280684152266981567292727642436643171748434157190274298661280479620829832642199649495428552121980259317740962541084144714944181193629115490323286122406851739688194179020861552700435739872514418314757896782049616763840374329405183740337448636951253371128488406397903586271822886311385041021697719269073936188271616728
 - type: wireguard
-  name: flWARPv2_19
-  server: fi.tribukvy.ltd
-  port: 988
-  ip: 172.16.0.2
-  private-key: 9Ujt+AHyoA+FHILgCox20d2TdEFpKJGlQVDQ28o4MlI=
-  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-  udp: true
-  dns:
-  - 8.8.8.8
-  - 8.8.4.4
-  - 2001:4860:4860::8888
-  - 2001:4860:4860::8844
-  mtu: 1280
-  allowed-ips:
-  - 0.0.0.0/0
-  - ::/0
-  amnezia-wg-option:
-    jc: 4
-    jmin: 40
-    jmax: 70
-    s1: 0
-    s2: 0
-    h1: 1
-    h2: 2
-    h3: 3
-    h4: 4
-    i1: 15508498447646484948845662646613102013339808559769475380475448271405804929967563944753791952429953428594549416493966421935646962255916682006073387068399937622576895997809440837754543034436196406830582984757658205835790003861761450714906623501416627363256878058379526271228716611603298581642275162285240573816154890767293402555266150939798468941494810895379318272519125401461648011724747157307950635164231534570928490441661175500025662573031705482322646078138860414731819832787868506863696888558163813367763059200030659050893771247575525776614497604873028423561998217412261477312921865312761026238182416474604888292675398968863299676198964476969947719800898308087242839827514430110235180683412159333456614686999034027621882972096160724583328618048488377698013859231484959851350743790751249212252795279948528426338604545380509108765165200858756207053737381511818650958969758361168173295493933425496546329164043443493182527363399133677303709771303234699304778554329134243969688709666170355265570730668172444495230355444308838795312034792648687344453938889051394283833843090756412725383427871865294681542360117642115653726884033143840555055339693948171027271777828914111766890844805116997411376453934473478750657591899873905788486431983423780405433155726743756032348879739365339323324843786177220849987261461433552444731162597059090447716432659426362473938950371339684760207031877467482665675815529112340389092269127586123145041893539535902018942440218154824420028175995520961099037825214811828907228360168797996240432819458079715833574490573994360108876789384772695858739101946215503278746763311068494941977107470251761680635293919911600960221090807997840200856140858171170129873013191767356673212282134007829698900975652052623416096801110294383322534428716409970185489785207179854266584203819509838298787660587450246975667844959706595084483108531660496999349646576543744940625311778824850830028321490336218259178038807812563689905469677114155341724099218417999365162663783587327649569544053670076362920295448440778313867126667820884687622441425422304200373311029996699992324597128502853618256146022005307108631829432678616527884200703229132605679644287682575072916220381605567053627248609364609076145192235097070105155085543651979712206081573294385787614887110443712370727958421292076260089672818179660899399226484029486279387805484886278107208323120808804204875607094425140718807324149558323068382446995501657953204159206115087032853188256300765151104001048818215020493302998519680166349658307405025996738856861373953200465756724720074926515170617105844272592666557203483812597797363976998790603541674343092071238561396558856627063292416059761241201984985462189418546765043631543677696108480629933851536362779889705609489649735139126557326927190758110045150375251932904598320831775535533070198481771479817828220735113685298500387297223753546931130241573267204617723999358271475190842444202926279082300677140101683203665954865134690376733484903403330788224434744662688971487018551767618248063693156948344699069908
-- type: wireguard
   name: v1admin
   server: 150.241.70.138
   port: 51821
@@ -3891,9 +3993,9 @@ proxies:
     h4: 130360269
     i1: 72999492972226095920520451897070129067317328669339135085205827103724491430844228585619185589217146679
 - type: wireguard
-  name: flWARPv3_69
+  name: flWARPv1_59
   server: fi.tribukvy.ltd
-  port: 880
+  port: 3476
   ip: 172.16.0.2
   private-key: 9Ujt+AHyoA+FHILgCox20d2TdEFpKJGlQVDQ28o4MlI=
   public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
@@ -3917,8 +4019,7 @@ proxies:
     h2: 2
     h3: 3
     h4: 4
-    i1: 3345087713861295570553254735180291573424174682435120648469301562956411482632384697483016179072988111025677991941952933518040451486655919695138189461232123225388225902358549773117281758542049091312595114952109697593732614244543079457544721562578169029618596886214079435971801990635908052714881251242689398666346672943474893598530939392420656051313844833037603947648545666735758966123596222308514001397875471894311633002815175670404752621187057232158776179100114667610670564393485553493830774330278924806991302370343685889105696941956488573349964687283588534157246747321859993074836076149297030419951174821044553368406590271626289199939910860543915117924372904846086936484724363865355234952310516900168499384884023768073300670836398749829684555177448416574219678499360151773954903855634508529257414211093395456703994262171882623893250903306
-    i2: 33972344620236196561725410237637550394869480771740669505108041747909740424651914926422476654186899367816192823490031733472002907926418122286029857404385256824308244935973900342057392585269348454089720897002972267033055318677397292986275631793123246325344721794215787124475762234635473830493112481554309180161186835533582648930759563891517487359318222873952222449438080050889495066141070850338531539649272932058459349772853044895566695728843144120677206460600728754603676551253811908919700059539721907503170431267220021063633539617037791993313821985418884970550904741909496351593257591508234
+    i1: 16054023518668606636062008499208682827025604772154400556272367850709594268975820509987301877165988970357908166356437188345829090474567584351302358180850523651455345114997667605208879516835192739494986764694726026528691711479480875644693803040867647609980108472688511906480428842021171435978317205853409186071891409558316515688541784813003629334157391542470117315959926516536067788411604021846762413085375527519429549441224654739173243359503639488050722216658146343685771487742314382158776634019425547192043892086725688234744889977427409804982627708004569800157409079888697422255450441102933898258981404894910574356522957621568231823076294842817518839347186451789605402990439446680036479616844863178398896384788211997906328756192498949817267111666134122175908524552445836759629695095894215229151635542995718047011620748507369638355169957481956828416291834852083754813206460816804222033875687683524191593082715756231632517115193596176149077568850288956074173618844541581423719580382707897106500181604572280919191092477947130857934976535205630270260965476802901784293100332182880148054162815140537224675945014179615054979361867512991162212174744538565504601574941205396255823673614932503708277531740745238286855432357498619003189376262717019645982293744922920682151881539193575352585063297041306652851366249022614976245856276431498984348034967584642485744762792110650599830089559196673787434392497168288522720331464978635185818969845769327629314838999524129084142872112477235284090034418010641287650056891473611523919887083087309213858047610973600418053684899470098438932121387876161373583005783666133897455692756248891208594712091907144622356881690728883710443077739804211438930453232402337097518583285921776272101663399612258652183432350011902603067351738702891075756604328624044776189771129906248544963321419370934607585223622794678671135777036573430521508872687114906094448594798744918358581988702500785630560053860118045200703725003321332256644263567325940988428590013498622700622335612731302184881512091035099336473983161931690127709369768340785142246133692159207223207255218282025750308063961840192441567294636948216519600874658925349727657191240270924916360396755588908373904378489685049520436175972128097834834832511321187485470521000618023895724538386072689543889786280815585559999257453189413687357434677471456504586113762614913813626119799162303253934884366713904186188615004730481265091511628977261097014545305136762767133998808401576171707628029218810471066017775937908042399606060656906524729116290001605011129461235827375412898483756398232681108225163417337429301829864475908192439182386451955338255818535495526679989671415795909414787818165102567821139439074842459734322497840679040280684152266981567292727642436643171748434157190274298661280479620829832642199649495428552121980259317740962541084144714944181193629115490323286122406851739688194179020861552700435739872514418314757896782049616763840374329405183740337448636951253371128488406397903586271822886311385041021697719269073936188271616728
 proxy-groups:
 - name: PROXY
   type: select
@@ -3931,48 +4032,59 @@ proxy-groups:
   interval: 300
   tolerance: 100
   proxies:
-  - 🇨🇭_瑞士 6 t.me/rjsxrd
   - 🇫🇷_法国 8 t.me/rjsxrd
-  - 🇩🇪_德国 32 t.me/rjsxrd
+  - 🇬🇧_英国 37 t.me/rjsxrd
+  - 🇳🇱_荷兰 25 t.me/rjsxrd
+  - 🇨🇭_瑞士 6 t.me/rjsxrd
   - 🇫🇷_法国 4 t.me/rjsxrd
   - 🇺🇸_美国 t.me/rjsxrd
-  - 🇳🇱_荷兰 25 t.me/rjsxrd
-  - 🇩🇪_德国 41 t.me/rjsxrd
-  - 🇬🇧_英国 37 t.me/rjsxrd
-  - 🇨🇭_瑞士 3 t.me/rjsxrd
   - 🇩🇪_德国 23 t.me/rjsxrd
-  - 🇩🇪_德国 2 t.me/rjsxrd
-  - 🇮🇹 Italy сервер 🌐 Выход не определён @RaViraNet t.me/rjsxrd
+  - 🇨🇭_瑞士 3 t.me/rjsxrd
+  - 🇩🇪_德国 41 t.me/rjsxrd
+  - 🇩🇪_德国 32 t.me/rjsxrd
+  - '🇳🇱 Netherlands TG: @HardVpn_robot t.me/rjsxrd'
+  - 意大利 @ripaojiedian t.me/rjsxrd
+  - '🇷🇺 Russian Federation TG: @HardVpn_robot t.me/rjsxrd'
   - 🇬🇧_英国 41 t.me/rjsxrd
+  - 🇩🇪_德国 2 t.me/rjsxrd
+  - 🇫🇷_法国 7 t.me/rjsxrd
   - 🇬🇧_英国 45 t.me/rjsxrd
   - 🇫🇷_法国 5 t.me/rjsxrd
-  - 🇫🇷_法国 7 t.me/rjsxrd
-  - 意大利 @ripaojiedian t.me/rjsxrd
   - 🇳🇴_挪威 t.me/rjsxrd
-  - '🇷🇺 Russian Federation TG: @HardVpn_robot t.me/rjsxrd'
-  - '🇷🇺 Russian Federation TG: @HardVpn_robot t.me/rjsxrd-01'
+  - 🇸🇪_瑞典 t.me/rjsxrd
   - '🇷🇺 Russian Federation TG: @HardVpn_robot t.me/rjsxrd-03'
+  - '🇷🇺 Russian Federation TG: @HardVpn_robot t.me/rjsxrd-01'
   - 🇮🇹
+  - '🇷🇺 Russian Federation TG: @HardVpn_robot t.me/rjsxrd-02'
+  - '83. VMESS SNI: xmfhlpy.com CIDR: ? TG: @wlrustg'
+  - 🇸🇪
+  - 🇳🇱
   - 45.🇳🇱Нидерланды @LimeVPNFREE t.me/rjsxrd
+  - 🇺🇸_美国 11
   - 🇺🇸_美国 26 t.me/rjsxrd
-  - 🇩🇪 德国 DEU t.me/rjsxrd
+  - '🇷🇺 Russian Federation TG: @HardVpn_robot t.me/rjsxrd-04'
   - 🇳🇱-01
-  - 🇳🇱-02
   - 🇺🇸_美国 2 t.me/rjsxrd
+  - 🇳🇱-02
   - '🇳🇱 Netherlands TG: @HardVpn_robot t.me/rjsxrd-01'
+  - 🇮🇹 意大利 ITA t.me/rjsxrd
+  - 🇺🇸_美国 51 t.me/rjsxrd
+  - 🇳🇱-03
   - 🇷🇺 Russia 🌐 CIDR VK t.me/rjsxrd
-  - '🇷🇺 Russian Federation TG: @HardVpn_robot t.me/rjsxrd-05'
-  - 🇺🇸_美国 41
   - 🇫🇮 Finland сервер 🇫🇮 Finland выход 2.26.52.121 @RaViraNet t.
+  - '🇺🇸 United States TG: @HardVpn_robot t.me/rjsxrd'
+  - 🇺🇸_美国 41
   - 🇨🇦_加拿大 11 t.me/rjsxrd
   - '🇩🇪 Germany TG: @HardVpn_robot t.me/rjsxrd'
-  - 🇺🇸_美国 38 t.me/rjsxrd
   - 🇺🇸_美国 43 t.me/rjsxrd
+  - 🇺🇸_美国 38 t.me/rjsxrd
+  - 16.🇳🇱Нидерланды @LimeVPNFREE t.me/rjsxrd
+  - 🇳🇱 The Netherlands CIDR t.me/rjsxrd
   - 🇷🇺 Russia 🌐 CIDR VK t.me/rjsxrd-01
-  - 🇳🇱-04
   - '🇩🇪 Germany TG: @HardVpn_robot t.me/rjsxrd-01'
-  - 🇷🇺 Russia 🌐 CIDR VK t.me/rjsxrd-01-01
   - 🇺🇸
+  - 🇷🇺 Russia 🌐 CIDR VK t.me/rjsxrd-01-01
+  - 🇨🇦_加拿大 6
   - 🇺🇸_美国 58 t.me/rjsxrd
   - 🇷🇺 Russia сервер 🇳🇱 The Netherlands выход 79.182.39.163 @RaV
   - 🇩🇪
@@ -3981,202 +4093,199 @@ proxy-groups:
   - '🇷🇺 Russian Federation TG: @HardVpn_robot t.me/rjsxrd-06'
   - 🇺🇸_美国 44 t.me/rjsxrd
   - 🇺🇸_美国 51 t.me/rjsxrd-01
-  - '🇺🇸 United States TG: @HardVpn_robot t.me/rjsxrd-02'
   - 454ms
-  - 🇺🇸_美国 49 t.me/rjsxrd
+  - '🇷🇺 Russian Federation TG: @HardVpn_robot t.me/rjsxrd-07'
+  - 🇷🇺 Russia сервер 🇷🇺 Russia выход 147.45.175.81 @RaViraNet t.
   - '🇺🇸 United States TG: @HardVpn_robot t.me/rjsxrd-03'
   - '🇷🇺 Russian Federation TG: @HardVpn_robot t.me/rjsxrd-08'
-  - '🇷🇺 Russian Federation TG: @HardVpn_robot t.me/rjsxrd-07'
   - 🇺🇸-01
+  - '🇺🇸 United States TG: @HardVpn_robot t.me/rjsxrd-04'
   - '85. VLESS SNI: dualarrow.net CIDR: ? TG: @wlrustg t.me/rjsxr'
-  - 🇫🇷 France 🌐 CIDR t.me/rjsxrd
-  - 🇷🇺
-  - '🇷🇺 Russian Federation TG: @HardVpn_robot t.me/rjsxrd-09'
+  - 🇺🇸_美国 23
+  - 1091ms
   - 🇳🇱 The Netherlands CIDR t.me/rjsxrd-02
+  - 🇺🇸_美国 25 t.me/rjsxrd
+  - '🇷🇺 Russian Federation TG: @HardVpn_robot t.me/rjsxrd-10'
   - '🇷🇺 Russian Federation TG: @HardVpn_robot t.me/rjsxrd-11'
+  - 🇩🇪_德国 8 t.me/rjsxrd
   - 🇺🇸_美国 33 t.me/rjsxrd
-  - '🇷🇺 Russian Federation TG: @HardVpn_robot t.me/rjsxrd-12'
+  - 🇳🇱_荷兰 20 t.me/rjsxrd
   - 🇺🇸-02
-  - 761ms
+  - 🇸🇬_新加坡 9 t.me/rjsxrd
   - 529ms
-  - 🇷🇺 Russia 🌐 CIDR VK t.me/rjsxrd-02
   - 电报群：t.me/vvkj11 t.me/rjsxrd
-  - '🇩🇪 Germany TG: @HardVpn_robot t.me/rjsxrd-02'
+  - 🇺🇸_美国 50 t.me/rjsxrd
   - '🇺🇸 United States TG: @HardVpn_robot t.me/rjsxrd-05'
-  - 🇺🇸_美国 31 t.me/rjsxrd
-  - 🇸🇬_新加坡 14 t.me/rjsxrd
   - '🇷🇺 Russian Federation TG: @HardVpn_robot t.me/rjsxrd-13'
+  - 🇺🇸_美国 31 t.me/rjsxrd
+  - '🇩🇪 Germany TG: @HardVpn_robot t.me/rjsxrd-02'
   - '🇷🇺 Russian Federation TG: @HardVpn_robot t.me/rjsxrd-14'
-  - '🇷🇺 Russian Federation TG: @HardVpn_robot t.me/rjsxrd-16'
+  - '🇷🇺 Russian Federation TG: @HardVpn_robot t.me/rjsxrd-15'
+  - '🇷🇺 Russian Federation TG: @HardVpn_robot t.me/rjsxrd-17'
   - 🇸🇬_新加坡 10 t.me/rjsxrd
-  - 🇸🇬_新加坡
-  - 🇸🇬_新加坡 11 t.me/rjsxrd
-  - '🇷🇺 Russian Federation TG: @HardVpn_robot t.me/rjsxrd-18'
-  - 519ms
   - 🇺🇸_美国 28 t.me/rjsxrd
+  - 🇷🇺 Russia 🌐 CIDR VK t.me/rjsxrd-01-02
   - '🇩🇪 Germany TG: @HardVpn_robot t.me/rjsxrd-03'
-  - '🇩🇪 Germany TG: @HardVpn_robot t.me/rjsxrd-04'
-  - 🇷🇺 Russia 🌐 CIDR VK t.me/rjsxrd-02-01
   - 🇸🇬_新加坡 2
+  - 🇷🇺 Russia 🌐 CIDR VK t.me/rjsxrd-02
   - '🇷🇺 Russian Federation TG: @HardVpn_robot t.me/rjsxrd-19'
   - 🇷🇺 Russia 🌐 CIDR VK t.me/rjsxrd-03
-  - OpenRay 🇺🇸 US-15122
+  - 1010ms
   - 未知13
-  - 🇷🇺 Russia 🌐 CIDR VK t.me/rjsxrd-03-01
+  - OpenRay 🇺🇸 US-15122
   - 🇳🇱 The Netherlands CIDR t.me/rjsxrd-03
-  - '🇺🇸 United States TG: @HardVpn_robot t.me/rjsxrd-06'
-  - '🇫🇮 Finland TG: @HardVpn_robot t.me/rjsxrd'
+  - '🇩🇪 Germany TG: @HardVpn_robot t.me/rjsxrd-04'
+  - 🇷🇺 Russia 🌐 CIDR VK t.me/rjsxrd-03-01
   - '🇷🇺 Russian Federation TG: @HardVpn_robot t.me/rjsxrd-20'
-  - 🇸🇬_新加坡 12 t.me/rjsxrd
-  - '🇷🇺 Russian Federation TG: @HardVpn_robot t.me/rjsxrd-21'
   - '🇷🇺 Russian Federation TG: @HardVpn_robot t.me/rjsxrd-22'
   - '🇷🇺 Russian Federation TG: @HardVpn_robot t.me/rjsxrd-24'
-  - '🇷🇺 Russian Federation TG: @HardVpn_robot t.me/rjsxrd-23'
-  - '🇷🇺 Russian Federation TG: @HardVpn_robot t.me/rjsxrd-25'
   - '🇷🇺 Russian Federation TG: @HardVpn_robot t.me/rjsxrd-26'
-  - 🇨🇦 Join+Telegram:@SolVPN 🇨🇦
+  - '🇷🇺 Russian Federation TG: @HardVpn_robot t.me/rjsxrd-25'
   - '🇺🇸 United States — #688 t.me/rjsxrd'
   - 🇸🇬_新加坡 6
   - 🇳🇱 The Netherlands CIDR t.me/rjsxrd-04
-  - 🇷🇺 Russia 🌐 CIDR VK t.me/rjsxrd-04
+  - 🇨🇦 Join+Telegram:@SolVPN 🇨🇦
   - 🇪🇸 机场推荐:dafei.de 西班牙 07 t.me/rjsxrd
   - '🇷🇺 Russian Federation TG: @HardVpn_robot t.me/rjsxrd-27'
-  - '🇷🇺 Russian Federation TG: @HardVpn_robot t.me/rjsxrd-30'
   - 🇩🇪_德国 4 t.me/rjsxrd
+  - 🇺🇸_美国 30
   - '🇷🇺 Russian Federation TG: @HardVpn_robot t.me/rjsxrd-28'
-  - 🇺🇸 Join+Telegram:@SolVPN 🇺🇸
+  - '🇷🇺 Russian Federation TG: @HardVpn_robot t.me/rjsxrd-29'
   - '🇷🇺 Russian Federation TG: @HardVpn_robot t.me/rjsxrd-31'
-  - '🇩🇪 Germany TG: @HardVpn_robot t.me/rjsxrd-05'
-  - 1071ms
+  - 🇷🇺 Russia сервер 🇬🇧 United Kingdom выход 2a06:7e00:ade:600:b
   - 🇩🇪 机场推荐:dafei.de 德国 26 t.me/rjsxrd
+  - 74.🇳🇱Нидерланды @LimeVPNFREE t.me/rjsxrd
+  - 🇫🇮 Finland сервер 🇫🇮 Finland выход 196.196.204.135 @RaViraNe
+  - '🇳🇱 Netherlands TG: @HardVpn_robot t.me/rjsxrd-02'
+  - '🇷🇺 Russian Federation TG: @HardVpn_robot t.me/rjsxrd-33'
   - '1. 🇧🇬 VLESS SNI: plaindune.com CIDR: ? TG: @wlrustg t.me/rjs'
   - '🇩🇪 Germany TG: @HardVpn_robot t.me/rjsxrd-06'
-  - '🇳🇱 Netherlands TG: @HardVpn_robot t.me/rjsxrd-02'
-  - 🇦🇹
-  - 🇨🇦
-  - '🇺🇸 United States TG: @HardVpn_robot t.me/rjsxrd-07'
-  - '🇩🇪 Germany TG: @HardVpn_robot t.me/rjsxrd-08'
-  - '🇷🇺 Russian Federation TG: @HardVpn_robot t.me/rjsxrd-34'
   - '🇷🇺 Russian Federation TG: @HardVpn_robot t.me/rjsxrd-35'
   - 🇯🇵_日本 6
-  - '🇷🇺 Russian Federation TG: @HardVpn_robot t.me/rjsxrd-36'
-  - '🇷🇺 Russian Federation TG: @HardVpn_robot t.me/rjsxrd-37'
   - 🇺🇸_美国 25 t.me/rjsxrd-01
   - 461ms
-  - 🇺🇸 Join+Telegram:@SolVPN 🇺🇸-01
-  - US13
-  - '🇷🇺 Russian Federation TG: @HardVpn_robot t.me/rjsxrd-40'
-  - US7
+  - '🇷🇺 Russian Federation TG: @HardVpn_robot t.me/rjsxrd-38'
+  - '🇷🇺 Russian Federation TG: @HardVpn_robot t.me/rjsxrd-41'
+  - '🇩🇪 Germany TG: @HardVpn_robot t.me/rjsxrd-09'
   - US11
-  - '🇷🇺 Russian Federation TG: @HardVpn_robot t.me/rjsxrd-44'
+  - US13
+  - US7
+  - '🇷🇺 Russian Federation TG: @HardVpn_robot t.me/rjsxrd-43'
   - 🇺🇸-03
   - 🇺🇸_美国 17 t.me/rjsxrd
+  - 🇺🇸_美国 29
   - '🇷🇺 Russian Federation TG: @HardVpn_robot t.me/rjsxrd-45'
   - '🇷🇺 Russian Federation TG: @HardVpn_robot t.me/rjsxrd-46'
   - 🇺🇸-04
-  - 🇺🇸-05
   - US8
-  - 🇩🇿 Algeria CIDR
-  - 🇩🇿 Algeria CIDR -03
-  - 🇩🇿 Algeria CIDR -02
-  - 🇦🇹 Austria CIDR
-  - 🇩🇿 Algeria CIDR -04
-  - 🇦🇹 Austria CIDR -01
-  - 🇦🇹 Austria CIDR -02
-  - 🇦🇿 Azerbaijan 🌐 CIDR
-  - 🇦🇿 Azerbaijan 🌐 CIDR -02
-  - 🇦🇿 Azerbaijan 🌐 CIDR -03
-  - 🇨🇿 Czechia CIDR -01
-  - 🇦🇿 Azerbaijan 🌐 CIDR -04
-  - 🇩🇰 Denmark CIDR
-  - 🇨🇿 Czechia CIDR
-  - 🇪🇪 Estonia CIDR
-  - 🇫🇷 France CIDR
-  - 🇫🇷 France CIDR -01
-  - 🇫🇷 France 🌐 CIDR -02
+  - 🇺🇸-05
+  - .𖥔 ݁ ˖ִ🛸༄˖°. CIDR
+  - .𖥔 ݁ ˖ִ🛸༄˖°. CIDR -02
+  - .𖥔 ݁ ˖ִ🛸༄˖°. CIDR -03
+  - .𖥔 ݁ ˖ִ🛸༄˖°. CIDR -06
+  - .𖥔 ݁ ˖ִ🛸༄˖°. CIDR -05
   - 🇫🇷 France 🌐 CIDR -01
+  - 🇫🇷 France 🌐 CIDR -03
   - 🇫🇷 France 🌐 CIDR -04
   - 🇫🇷 France 🌐 CIDR -05
   - 🇫🇷 France 🌐 CIDR -06
-  - 🇫🇷 France 🌐 CIDR -07
-  - 🇫🇷 France 🌐 CIDR -09
-  - 🇫🇷 France 🌐 CIDR -10
+  - 🇫🇷 France 🌐 CIDR -02
+  - 🇫🇷 France 🌐 CIDR
+  - 🇫🇷 France 🌐 CIDR -03-01
+  - 🇫🇷 France 🌐 CIDR -04-01
+  - 🇫🇷 France 🌐 CIDR -01-01
+  - 🇫🇷 France 🌐 CIDR -05-01
+  - 🇫🇷 France 🌐 CIDR -06-01
+  - 🇫🇷 France 🌐 CIDR -08
   - 🇫🇷 France 🌐 CIDR -11
+  - 🇫🇷 France 🌐 CIDR -12
   - 🇫🇷 France 🌐 CIDR -13
-  - 🇩🇪 Germany CIDR -03
+  - 🇫🇷 France 🌐 CIDR -14
+  - 🇫🇷 France 🌐 CIDR -15
+  - 🇫🇷 France 🌐 CIDR -16
+  - 🇫🇷 France 🌐 CIDR -18
+  - 🇫🇷 France 🌐 CIDR -20
+  - 🇫🇷 France 🌐 CIDR -19
+  - 🇫🇷 France 🌐 CIDR -17
   - 🇩🇪 Germany CIDR
-  - 🇩🇪 Germany CIDR -04
+  - 🇩🇪 Germany CIDR -02
+  - 🇩🇪 Germany CIDR -01
+  - 🇩🇪 Germany CIDR-01
   - 🇩🇪 Germany CIDR -05
+  - 🇩🇪 Germany CIDR -03
+  - 🇩🇪 Germany CIDR -06
+  - 🇩🇪 Germany CIDR -08
   - 🇩🇪 Germany CIDR -07
   - 🇩🇪 Germany CIDR -09
-  - 🇩🇪 Germany CIDR -10
-  - 🇩🇪 Germany CIDR -08
-  - 🇩🇪 Germany CIDR -11
-  - 🇩🇪 Germany CIDR -13
-  - 🇩🇪 Germany CIDR -12
-  - 🇳🇴 Norway CIDR
+  - 🇩🇪 Germany 🌐 CIDR -01
+  - 🇩🇪 Germany 🌐 CIDR -04
+  - 🇩🇪 Germany 🌐 CIDR -03
+  - 🇩🇪 Germany 🌐 CIDR -05
+  - 🇩🇪 Germany 🌐 CIDR -08
+  - 🇯🇵 Japan CIDR -01
+  - 🇯🇵 Japan CIDR
+  - 🇩🇪 Germany 🌐 CIDR -07
+  - 🇯🇵 Japan CIDR -02
+  - 🇰🇿 Kazakhstan CIDR
+  - 🇰🇿 Kazakhstan CIDR -02
   - 🇵🇱 Poland CIDR
+  - 🇰🇿 Kazakhstan CIDR -01
   - 🇵🇱 Poland CIDR -01
   - 🇵🇱 Poland CIDR -02
+  - 🇵🇱 Poland 🌐 CIDR Beeline
+  - 🇵🇱 Poland 🌐 CIDR Beeline-01
+  - 🇵🇱 Poland 🌐 CIDR -02
   - 🇵🇱 Poland 🌐 CIDR
-  - 🇺🇸 United States CIDR -01
   - 🇵🇱 Poland 🌐 CIDR -01
-  - 🇳🇱 The Netherlands CIDR
+  - 🇵🇱 Poland 🌐 CIDR -04
+  - 🇵🇱 Poland 🌐 CIDR Beeline-02
+  - 🇹🇷 Turkey CIDR
+  - 🇺🇸 United States CIDR
+  - 🇬🇧 United Kingdom CIDR
+  - 🇬🇧 United Kingdom CIDR -01
+  - 🇬🇧 United Kingdom CIDR -02
   - 🇺🇸 United States CIDR -02
-  - 🇺🇸 United States CIDR -04
-  - 🇺🇸 United States CIDR -06
-  - 🇺🇸 United States CIDR -07
-  - 🇺🇸 United States CIDR -08
-  - 🇺🇸 United States CIDR -09
-  - 🇺🇸 United States CIDR -11
-  - 🌐 Anycast-IP 🇦🇷 🇩🇪 🇮🇶 🇸🇬 🇺🇸 CIDR
-  - 🌐 Anycast-IP 🇨🇦 🇩🇪 🇮🇪 CIDR
-  - 🇺🇸 United States CIDR -10
-  - 🌐 Anycast-IP 🇨🇦 🇩🇪 🇮🇶 🇸🇬 CIDR
-  - 🌐 Anycast-IP 🇨🇦 🇩🇪 🇮🇶 🇸🇬 🇺🇸 CIDR
-  - 🌐 Anycast-IP 🇨🇦 🇩🇪 🇳🇱 🇸🇪 CIDR
-  - 🌐 Anycast-IP 🇨🇦 🇭🇰 🇮🇪 🇸🇪 🇺🇸 CIDR
-  - 🌐 Anycast-IP 🇩🇪 🇳🇱 🇺🇸 CIDR
-  - 🇳🇱 The Netherlands CIDR -01
+  - 🇺🇸 United States CIDR -01
+  - 🇺🇸 United States CIDR -03
   - Стандартный 1
-  - Стандартный 2
+  - 🇺🇸 United States CIDR-01
+  - 🇺🇸 United States CIDR -01-01
   - Стандартный 3
-  - 🇫🇮 FI
-  - 🇳🇱 NL
   - 🇵🇱 PL
+  - Стандартный 2
   - 🇷🇺 RU
   - 🇱🇻 LV
-  - 🇩🇪 DE
-  - 🇪🇪 EE
   - LTE 🇩🇪 DE
+  - 🇵🇱 PL-01
   - LTE 🇵🇱 PL
   - LTE 🇫🇮 FI
-  - 🇵🇱 PL-01
-  - 🇷🇺 RU-01
-  - 🇫🇮 FI-01
-  - 🇳🇱 NL-01
+  - 🇳🇱 NL
+  - 🇫🇮 FI
+  - 🇩🇪 DE
   - 🇱🇻 LV-01
-  - 🇩🇪 DE-01
-  - LTE 🇩🇪 DE-01
-  - LTE 🇵🇱 PL-01
+  - 🇷🇺 RU-01
+  - 🇪🇪 EE
   - LTE 🇫🇮 FI-01
+  - 🇳🇱 NL-01
   - 🇵🇱 PL-02
-  - 🇳🇱 NL-02
-  - 🇫🇮 FI-02
+  - 🇷🇺 RU-02
+  - 🇫🇮 FI-01
   - 🇱🇻 LV-02
+  - 🇩🇪 DE-01
+  - 🇪🇪 EE-01
+  - LTE 🇵🇱 PL-01
+  - LTE 🇩🇪 DE-01
   - LTE 🇫🇮 FI-02
-  - Стандартный 3-01
-  - Стандартный 1-01
-  - Стандартный 1-02
   - Стандартный 2-01
-  - Стандартный 2-02
-  - LTEfWARPv3_35
+  - LTEfWARPv1_86
+  - Стандартный 3-01
+  - LTEfWARPv2_44
+  - LTEfWARPw_73
+  - LTEpWARPv1_50
   - LTEpWARPv2_90
-  - flWARPv1_59
   - WARPv1_72
-  - flWARPv2_19
   - v1admin
-  - flWARPv3_69
+  - flWARPv1_59
 rules:
 - DOMAIN-SUFFIX,ru,DIRECT
 - DOMAIN-SUFFIX,рф,DIRECT
